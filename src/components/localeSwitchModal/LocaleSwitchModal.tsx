@@ -35,7 +35,6 @@ const LocaleSwitchModal = () => {
             <LocaleSwitchPill
               key={el.code}
               text={el.name}
-              size="md"
               active={i18n.language === el.code}
               onClick={() => {
                 i18n.changeLanguage(el.code);
