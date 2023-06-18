@@ -4,7 +4,7 @@ import styles from './LocaleSwitchPill.module.scss';
 interface MenuPillProps {
   text: string;
   active?: boolean;
-  onClick: (...args) => unknown;
+  onClick: any;
 }
 
 const LocaleSwitchPill = ({ text, active = false, onClick }: MenuPillProps) => {
