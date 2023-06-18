@@ -1,0 +1,17 @@
+.root {
+  font-weight: 500;
+  font-size: 16px;
+  color: #EAEAEC;
+  text-align: center;
+}
+
+.root a {
+  color: inherit;
+  border-radius: 16px;
+  text-decoration: none;
+  padding: 5px 11px;
+  white-space: nowrap;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+  }
+}

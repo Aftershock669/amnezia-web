@@ -1,0 +1,72 @@
+// --------------------- FONT SIZE ---------------------
+
+.fz15 {font-size: 15px}
+.fz16 {font-size: 16px}
+.fz18 {font-size: 18px}
+.fz20 {font-size: 20px}
+.fz22 {font-size: 22px}
+.fz24 {font-size: 24px}
+.fz26 {font-size: 26px}
+.fz28 {font-size: 28px}
+.fz30 {font-size: 30px}
+.fz32 {font-size: 32px}
+.fz34 {font-size: 34px}
+.fz48 {font-size: 48px}
+.fz70 {font-size: 70px}
+.fz80 {font-size: 80px}
+
+// --------------------- FONT WIDTH ---------------------
+
+.fw400 {font-weight: 400}
+.fw500 {font-weight: 500}
+.fw600 {font-weight: 600}
+.fw700 {font-weight: 700}
+.fw800 {font-weight: 800}
+.fw900 {font-weight: 900}
+
+// --------------------- LINE HEIGHT ---------------------
+
+.lh100 {line-height: 100%}
+.lh110 {line-height: 110%}
+.lh120 {line-height: 120%}
+.lh130 {line-height: 130%}
+.lh140 {line-height: 140%}
+.lh150 {line-height: 150%}
+
+// ----------------------- HEADERS ------------------------
+
+.h80 {
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 100%;
+  letter-spacing: -0.01em;
+}
+
+.h70 {
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 100%;
+  letter-spacing: -0.01em;
+}
+
+.h40 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: -0.01em;
+}
+
+
+// ---------------------- ? ----------------------
+
+.d-flex {
+  display: flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-col {
+  flex-direction: column;
+}
