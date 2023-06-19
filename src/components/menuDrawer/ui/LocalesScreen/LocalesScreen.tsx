@@ -31,6 +31,7 @@ const LocalesScreen = ({ closeDrawer, goToMainScreen }: PT) => {
             active={i18n.language === el.code}
             onClick={() => {
               i18n.changeLanguage(el.code);
+              goToMainScreen();
             }}
           />
         ))}

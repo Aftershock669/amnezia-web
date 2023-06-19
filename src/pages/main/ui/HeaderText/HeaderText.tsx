@@ -1,13 +1,12 @@
+import { useTranslation } from 'react-i18next';
 import styles from './HeaderText.module.scss';
 
 const HeaderText = () => {
+  const { t } = useTranslation('main-page');
   return (
     <div className={styles.root}>
-      <div className={styles.primaryWrapper}>Создай свой персональный VPN</div>
-      <div className={styles.secondaryWrapper}>
-        Amnezia VPN — простое и бесплатное приложение для запуска self-hosted VPN с высокими
-        требованиями к приватности
-      </div>
+      <div className={styles.primaryWrapper}>{t('header.mainText')}</div>
+      <div className={styles.secondaryWrapper}>{t('header.subtext')}</div>
     </div>
   );
 };
