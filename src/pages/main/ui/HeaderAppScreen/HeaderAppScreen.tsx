@@ -14,7 +14,7 @@ const HeaderAppScreen = () => {
         </div>
       ) : undefined}
       <div className={styles.screenWrapper}>
-        <img src="/app-screen-main.png" className={styles.screenImg} alt="Amnezia logo" />
+        <img src="/app-screen.png" className={styles.screenImg} alt="Amnezia logo" />
         <div className={styles.glow} />
       </div>
       {/* <img src="/app-bg.jpg" className={styles.bgLightImg} alt="Amnezia logo" /> */}
