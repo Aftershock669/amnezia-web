@@ -1,15 +1,22 @@
 .root {
-  margin-top: 220px;
+  margin-top: 100px;
   padding-bottom: 60px;
   border-bottom: 1px solid #20201F;
+  @media (min-width: 680px) {
+    margin-top: 190px;
+  }
+  @media (min-width: 768px) {
+    margin-top: 220px;
+  }
 }
 
 .logo-container {
   margin-top: 25px;
   display: flex;
   justify-content: center;
-  column-gap: 30px;
-  flex-wrap: wrap;
+   flex-wrap: wrap;
+  column-gap: 20px;
+  row-gap: 25px;
   @media (min-width: 768px) {
     row-gap: 40px;
     column-gap: 58px;
@@ -23,11 +30,21 @@
   }
 }
 
-.logo {
+.logo-link {
+  height: 40px;
   cursor: pointer;
   transition: all .2s ease;
   &:hover {
     transform: scale(1.02);
+  }
+  & > img {
+    height: 40px;
+  }
+  @media (min-width: 768px) {
+    height: 55px;
+    & > img {
+      height: 55px;
+    }
   }
 }
 

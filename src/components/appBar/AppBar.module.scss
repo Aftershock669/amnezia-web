@@ -16,3 +16,11 @@
     display: flex;
   }
 }
+
+.logo-link-wrapper {
+  cursor: pointer;
+  transition: all .2s ease;
+  &:hover {
+    transform: scale(1.02);
+  }
+}

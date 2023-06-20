@@ -45,7 +45,10 @@ const LocaleSwitchModal = () => {
         </ul>
       </Modal>
       <button type="button" className={styles.button} onClick={open}>
-        <Languages /> <ChevronDown />
+        <Languages />
+        <span className={styles.iconButton}>
+          <ChevronDown />
+        </span>
       </button>
     </>
   );

@@ -18,13 +18,13 @@ const AppBar = ({ openDrawerAction }: PT) => {
 
   return (
     <div className={styles.appBar}>
-      <div className={styles.section}>
+      <div className={styles.logoLinkWrapper}>
         <NavLink to="/">
           <img
             height={25}
             width={94}
             src="/logo-text-colorfull.png"
-            className="logo"
+            className={styles.logo}
             alt="Amnezia logo"
           />
         </NavLink>
