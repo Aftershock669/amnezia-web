@@ -1,0 +1,39 @@
+.root {
+  margin-top: 220px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid #20201F;
+}
+
+.logo-container {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  column-gap: 30px;
+  flex-wrap: wrap;
+  @media (min-width: 768px) {
+    row-gap: 40px;
+    column-gap: 58px;
+  }
+  @media (min-width: 1024px) {
+    column-gap: 90px;
+  }
+  @media (min-width: 1440px) {
+    padding: 0;
+    column-gap: 85px;
+  }
+}
+
+.logo {
+  cursor: pointer;
+  transition: all .2s ease;
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+.text {
+  font-size: 15px;
+  text-align: center;
+  color: var(--yellow-faded);
+  opacity: 0.4;
+}
