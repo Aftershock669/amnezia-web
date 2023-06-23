@@ -25,7 +25,7 @@ const HeaderDownload = () => {
         </div>
       </div>
       <a href="/" className={styles.textContainer}>
-        {t('downloadHeader.text', { ns: 'main-page' })}
+        {t('headerDownload', { ns: 'main-page' })}
       </a>
     </div>
   );

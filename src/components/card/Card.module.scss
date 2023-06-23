@@ -1,0 +1,18 @@
+.root {
+  display: block;
+  border-radius: 20px;
+  color: inherit;
+  overflow: hidden;
+}
+
+.grad-gray {
+  background: var(--bg-gradient-gray);
+}
+
+.grad-purple {
+  background: var(--bg-gradient-purple);
+}
+
+.plain-gray {
+  background-color: var(--black-70)
+}

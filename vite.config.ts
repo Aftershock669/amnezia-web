@@ -1,12 +1,14 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import tsconfigPaths from 'vite-tsconfig-paths';
+import viteSvgr from 'vite-plugin-svgr';
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     react(),
     tsconfigPaths(), // take care of aliases from tsconfig.json
+    viteSvgr(), // import svg as components import {logo as Logo} from "./logo.svg"
   ],
   css: {
     modules: {

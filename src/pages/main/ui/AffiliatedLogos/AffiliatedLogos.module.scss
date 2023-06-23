@@ -10,23 +10,28 @@
   }
 }
 
-.logo-container {
-  margin-top: 25px;
+.logo-container-wrapper {
   display: flex;
   justify-content: center;
-   flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   column-gap: 20px;
   row-gap: 25px;
   @media (min-width: 768px) {
     row-gap: 40px;
-    column-gap: 58px;
+    column-gap: 50px;
   }
   @media (min-width: 1024px) {
-    column-gap: 90px;
+    column-gap: 80px;
   }
   @media (min-width: 1440px) {
     padding: 0;
-    column-gap: 85px;
+    justify-content: space-between;
   }
 }
 

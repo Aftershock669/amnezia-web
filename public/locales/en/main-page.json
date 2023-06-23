@@ -3,7 +3,48 @@
     "mainText": "Create your personal VPN",
     "subtext": "Amnezia VPN — simple and free app to run a self-hosted VPN with high privacy requirements"
   },
-  "downloadHeader": {
-    "text": "How to run your VPN with Amnezia"
+  "headerDownload": "How to run your VPN with Amnezia",
+  "affiliatedLinks": {
+    "theyWriteAboutAmneziaVPN": "They write about Amzezia VPN"
+  },
+  "protocolsCard": {
+    "header": "Supports modern protocols to bypass blocking",
+    "mainText": {
+      "part1": "To work even in places where other VPNs don't work - China, Iran, and Turkmenistan.",
+      "part2": "For countries with low internet censorship, Amnezia supports WireGuard and OpenVPN."
+    },
+    "link": "List of supported protocols by platform"
+  },
+  "featuresCard": {
+    "feature1": {
+      "header": "Share your VPN connection to a VPN with anyone",
+      "text": "In a few clicks and no restrictions"
+    },
+    "feature2": {
+      "header": "Choose which sites will be opened via VPN and which will not",
+      "text": "Split tunneling is available on Windows, Linux and Android"
+    },
+    "feature3": {
+      "header": "Import connection settings for WireGuard and OpenVPN",
+      "text": "For a simplified setup"
+    }
+  },
+  "secureSimpleFreeSection": {
+    "secure": {
+      "header": "Secure",
+      "text": {
+        "part1": "In 2022, Amnezia VPN successfully passed the security audit conducted by 7ASecurity.",
+        "link": "We publish",
+        "part2": " in free access not only the source codes of the client part, but also the source codes of the server part."
+      }
+    },
+    "simple": {
+      "header": "Simple",
+      "text": "Enter the IP-address, username and password of your server, and the program will automatically configure everything to connect via VPN"
+    },
+    "free": {
+      "header": "Free",
+      "text": "With Amnezia VPN you don't connect to our servers and don't pay us anything. To connect you use your own or buy any VPS from any provider. The application is also free."
+    }
   }
 }

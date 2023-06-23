@@ -1,0 +1,30 @@
+.root {
+  & {
+    cursor: pointer;
+    font-size: inherit;
+    font-weight: inherit;
+  }
+}
+
+.link-underline {
+  &:hover {
+    text-decoration: underline;
+    color: var(--yellow-70)
+  }
+  text-decoration-color: var(--yellow-70)
+}
+
+.link-dark {
+  color: var(--yellow-70);
+  &:hover {
+    text-decoration: underline;
+  }
+  text-decoration-color: var(--yellow-70)
+}
+
+.link-light {
+  color: var(--yellow-50);
+  &:hover {
+    color: var(--yellow-70);
+  }
+}
