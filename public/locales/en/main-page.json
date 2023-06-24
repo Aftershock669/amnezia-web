@@ -46,5 +46,34 @@
       "header": "Free",
       "text": "With Amnezia VPN you don't connect to our servers and don't pay us anything. To connect you use your own or buy any VPS from any provider. The application is also free."
     }
+  },
+  "privacyTextSection": {
+    "header": "Your privacy is a priority",
+    "text": "You have full control over your data. The app does not collect or transmit any statistics, logs, or other information about users or their data."
+  },
+  "logsEncryptSection": {
+    "logs": {
+      "header": "Doesn't save logs",
+      "text": "A separate container is started for each VPN protocol. They can be removed in one click. They do not write logs internally and do nothing but their direct task."
+    },
+    "encrypt": {
+      "header": "Uses smart encryption",
+      "text": "Each time the client connects, it generates a new key and a new security certificate and sends them to the server"
+    }
+  },
+  "moreFeaturesSection": {
+    "header": "Besides VPN in Amnezia you can create a lot of interesting things",
+    "tor": {
+      "header": "Site on the Tor Network",
+      "text": "Allows you to deploy your own site on WordPress on Tor in two clicks"
+    },
+    "dns": {
+      "header": "Own DNS server",
+      "text": "To prevent the ISP from seeing your site accesses"
+    },
+    "stash": {
+      "header": "Secure storage\nfiles",
+      "text": "SFTP server for secure and reliable file transfer over a secure connection"
+    }
   }
 }

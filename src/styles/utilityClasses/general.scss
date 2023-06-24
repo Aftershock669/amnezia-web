@@ -35,14 +35,18 @@
 
 // ----------------------- HEADERS ------------------------
 
-.h80 {
+.h-80 {
   font-weight: 700;
-  font-size: 70px;
+  font-size: 40px;
   line-height: 100%;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.8px;
+  @media (min-width: 680px) {
+    font-size: 80px;
+    letter-spacing: -1.196px;
+  }
 }
 
-.h70 {
+.h-70 {
   font-weight: 700;
   font-size: 80px;
   line-height: 100%;
@@ -69,16 +73,6 @@ h2 {
   color: var(--main-text-color);
   @media (min-width: 768px) {
     font-size: 32px;
-  }
-}
-
-h3 {
-  font-size: 22px;
-  font-weight: 500;
-  line-height: 120%;
-  color: var(--main-text-color);
-  @media (min-width: 768px) {
-    font-size: 28px;
   }
 }
 
