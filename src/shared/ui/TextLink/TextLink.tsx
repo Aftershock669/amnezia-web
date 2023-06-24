@@ -26,9 +26,9 @@ const TextLink = ({
       reloadDocument={reloadDocument || false}
       className={classNames(
         styles.root,
-        { [styles.linkLight]: false },
-        { [styles.linkDark]: false },
-        { [styles.linkUnderline]: true },
+        { [styles.linkLight]: variant === 'light' },
+        { [styles.linkDark]: variant === 'dark' },
+        { [styles.linkUnderline]: variant === 'underline' },
         className
       )}
     >

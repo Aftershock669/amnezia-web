@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import styles from './ProtocolsCard.module.scss';
 import { ReactComponent as ProtocolsImage } from './assets/protocols-main.svg';
+import TextLink from '@src/shared/ui/TextLink/TextLink';
 
 const ProtocolsCard = () => {
   const { t } = useTranslation('main-page');
@@ -20,9 +21,7 @@ const ProtocolsCard = () => {
               {t('protocolsCard.mainText.part2')}
             </div>
             <div className={classNames(styles.link)}>
-              <Link className={classNames('link')} to="/">
-                {t('protocolsCard.link')}
-              </Link>
+              <TextLink text={t('protocolsCard.link')} variant="light" to="/" />
             </div>
           </div>
           <ProtocolsImage className={styles.image} />

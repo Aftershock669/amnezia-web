@@ -13,19 +13,16 @@ const SecureSimpleFreeSection = () => {
         <Card>
           <div className={classNames(styles.secureCard, styles.cardContent)}>
             <img className={styles.auditedImage} src={auditedImage} alt="audited" />
-            <section>
+            <section className="main-text dimmed">
               <h2>{t('secureSimpleFreeSection.secure.header')}</h2>
-              <div className={classNames('main-text', 'dimmed')}>
-                {t('secureSimpleFreeSection.secure.text.part1')}
-              </div>
+              <div>{t('secureSimpleFreeSection.secure.text.part1')}</div>
               <TextLink
                 text={t('secureSimpleFreeSection.secure.text.link')}
                 to="https://github.com/amnezia-vpn"
                 openInNewTab
                 variant="underline"
-                className="main-text dimmed"
               />
-              <span className={classNames('main-text', 'dimmed', 'text-indent-top')}>
+              <span className="text-indent-top">
                 {t('secureSimpleFreeSection.secure.text.part2')}
               </span>
             </section>
