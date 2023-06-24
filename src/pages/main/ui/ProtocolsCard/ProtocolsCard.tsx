@@ -25,7 +25,7 @@ const ProtocolsCard = () => {
               </Link>
             </div>
           </div>
-          <ProtocolsImage className={styles.image} alt="Used protocols" />
+          <ProtocolsImage className={styles.image} />
         </div>
       </Card>
     </div>

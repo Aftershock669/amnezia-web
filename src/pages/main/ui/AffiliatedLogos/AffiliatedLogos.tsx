@@ -16,21 +16,21 @@ const AffiliatedLogos = () => {
       <div className={styles.logoContainerWrapper}>
         <div className={styles.logoContainer}>
           <Link className={styles.logoLink} to="https://www.wired.com/" reloadDocument>
-            <WiredLogo alt="wired logo" />
+            <WiredLogo />
           </Link>
           <Link className={styles.logoLink} to="https://www.techradar.com/" reloadDocument>
-            <TechRadarLogo alt="Used protocols" />
+            <TechRadarLogo />
           </Link>
           {i18n.language === 'ru' ? (
             <>
               <Link className={styles.logoLink} to="https://theins.ru/" reloadDocument>
-                <TheInsiderLogo alt="theInsider logo" />
+                <TheInsiderLogo />
               </Link>
               <Link className={styles.logoLink} to="https://meduza.io/" reloadDocument>
-                <MeduzaLogo alt="meduza logo" />
+                <MeduzaLogo />
               </Link>
               <Link className={styles.logoLink} to="https://roskomsvoboda.org/" reloadDocument>
-                <RoscomLogo alt="rosComSvoboda logo" />
+                <RoscomLogo />
               </Link>
             </>
           ) : undefined}
