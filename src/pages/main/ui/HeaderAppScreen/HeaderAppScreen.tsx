@@ -1,8 +1,10 @@
 import classNames from 'classnames';
 import { useMediaQuery } from '@mantine/hooks';
+import { useTranslation } from 'react-i18next';
 import styles from './HeaderAppScreen.module.scss';
 
 const HeaderAppScreen = () => {
+  const { t, i18n } = useTranslation();
   const isDesktop = useMediaQuery('(min-width: 1024px)');
   return (
     <div className={styles.root}>
@@ -14,7 +16,11 @@ const HeaderAppScreen = () => {
         </div>
       ) : undefined}
       <div className={styles.screenWrapper}>
-        <img src="/app-screen.png" className={styles.screenImg} alt="Amnezia logo" />
+        <img
+          src={`/img/${i18n.language}/app-screen.png`}
+          className={styles.screenImg}
+          alt="Amnezia logo"
+        />
         <div className={styles.glow} />
       </div>
       {/* <img src="/app-bg.jpg" className={styles.bgLightImg} alt="Amnezia logo" /> */}
