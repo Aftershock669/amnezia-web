@@ -10,6 +10,7 @@ export default defineConfig({
     tsconfigPaths(), // take care of aliases from tsconfig.json
     viteSvgr(), // import svg as components import {logo as Logo} from "./logo.svg"
   ],
+  assetsInclude: ['**/*.md'],
   css: {
     modules: {
       localsConvention: 'camelCaseOnly', // доступ к свойствам css только через styles.fooBar
