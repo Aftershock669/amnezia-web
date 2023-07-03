@@ -3,6 +3,9 @@ import Card from '@src/components/card/Card';
 import { FileDown, Merge, Share2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import styles from './FeaturesCard.module.scss';
+import { ReactComponent as ShareIcon } from './assets/share.svg';
+import { ReactComponent as MergeIcon } from './assets/merge.svg';
+import { ReactComponent as FileDownIcon } from './assets/file-down.svg';
 
 const FeaturesCard = () => {
   const { t } = useTranslation('main-page');
@@ -11,7 +14,7 @@ const FeaturesCard = () => {
       <Card>
         <ul>
           <li>
-            <Share2 className={styles.icon} color="#FAC462" strokeWidth={1.75} />
+            <ShareIcon className={styles.icon} />
             <div>
               <h3 className={styles.headerText}>{t('featuresCard.feature1.header')}</h3>
               <div className={classNames(styles.mainText, 'main-text', 'dimmed')}>
@@ -20,7 +23,7 @@ const FeaturesCard = () => {
             </div>
           </li>
           <li>
-            <Merge className={styles.icon} color="#88DA1F" strokeWidth={1.75} />
+            <MergeIcon className={styles.icon} />
             <div>
               <h3 className={styles.headerText}>{t('featuresCard.feature2.header')}</h3>
               <div className={classNames(styles.mainText, 'main-text', 'dimmed')}>
@@ -29,7 +32,7 @@ const FeaturesCard = () => {
             </div>
           </li>
           <li>
-            <FileDown className={styles.icon} color="#F7F058" strokeWidth={1.75} />
+            <FileDownIcon className={styles.icon} />
             <div>
               <h3 className={styles.headerText}>{t('featuresCard.feature3.header')}</h3>
               <div className={classNames(styles.mainText, 'main-text', 'dimmed')}>

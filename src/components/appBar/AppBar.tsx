@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import AppBarLink from '@src/components/appBar/ui/appBarLink/AppBarLink';
-import LangSwitch from '@src/components/langSwitch/LangSwitch';
+import DwnVariantsDropdown from '@src/pages/downloads/ui/DwnCard/ui/DwnVariantsList/ui/DwnVariantsDropdown/DwnVariantsDropdown';
 import { MenuIcon } from 'lucide-react';
 import MenuButton from '@src/components/menuButton/MenuButton';
 import { useDisclosure } from '@mantine/hooks';
@@ -35,7 +35,7 @@ const AppBar = ({ openDrawerAction }: PT) => {
         <AppBarLink to="/about" text={t('navigation.about')} />
       </nav>
 
-      {/* <LangSwitch /> */}
+      {/* <DwnVariantsDropdown /> */}
       <LocaleSwitchModal />
       <MenuButton onClick={openDrawerAction} />
     </div>

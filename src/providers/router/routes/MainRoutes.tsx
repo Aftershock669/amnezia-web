@@ -6,6 +6,7 @@ import AboutPage from '@src/pages/about/AboutPage';
 import SupportPage from '@src/pages/support/SupportPage';
 import InstructionsPage from '@src/pages/instructions/InstructionsPage';
 import Instruction from '@src/pages/instructions/ui/Instruction';
+import StarterGuidePage from '@src/pages/starter-guide/StarterGuidePage';
 
 const MainRoutes: RouteObject = {
   element: <Layout />,
@@ -26,6 +27,10 @@ const MainRoutes: RouteObject = {
     {
       path: 'about',
       element: <AboutPage />,
+    },
+    {
+      path: 'starter-guide',
+      element: <StarterGuidePage />,
     },
     {
       path: 'instructions',

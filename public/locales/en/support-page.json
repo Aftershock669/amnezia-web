@@ -1,0 +1,15 @@
+{
+  "header": {
+    "mainText": "Support",
+    "subText": "Helphelp helphelp help helphelphelp helphelp help help helphelphelp help helphelp help"
+  },
+  "howToCard": {
+    "header": "How to start your VPN",
+    "text": "Where to get a server if you don't have one and how to connect it to the application"
+  },
+  "instructionsCard": {
+    "header": "Instructions",
+    "text": "Setting up the application, working with SSH keys, etc etc"
+  },
+  "contactsCardLabel": "Contact the chat for help if something does not work"
+}

@@ -2,7 +2,11 @@
   "languageName": "English",
   "navigation": {
     "support": "Support",
-    "about": "About"
+    "about": "About us"
   },
-  "download": "Download"
+  "download": "Download",
+  "footer": {
+    "contacts": "Contacts",
+    "allDwnOpt": "All download options"
+  }
 }

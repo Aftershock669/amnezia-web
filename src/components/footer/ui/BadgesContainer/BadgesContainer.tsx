@@ -1,31 +1,20 @@
 import classNames from 'classnames';
 import TextLink from '@src/shared/ui/TextLink/TextLink';
 import { useTranslation } from 'react-i18next';
+import DownloadBadge from '@src/components/downloadBadge/DownloadBadge';
 import styles from './BadgesContainer.module.scss';
 
 const BadgesContainer = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   return (
     <div className={styles.root}>
-      <div className={styles.label}>СКАЧАТЬ AMNEZIA VPN</div>
+      <div className={styles.label}>{`${t('download')} AMNEZIA VPN`}</div>
       <div className={styles.badgesWrapper}>
-        <a
-          target="_blank"
-          href="https://play.google.com/store/apps/details?id=org.amnezia.vpn"
-          rel="noreferrer"
-        >
-          <img src={`/img/${i18n.language}/dwn-play.png`} alt="google play badge" />
-        </a>
-        <a
-          target="_blank"
-          href="https://apps.apple.com/us/app/amneziavpn/id1600529900"
-          rel="noreferrer"
-        >
-          <img src={`/img/${i18n.language}/dwn-app-store.png`} alt="app store badge" />
-        </a>
+        <DownloadBadge variant="googlePlay" />
+        <DownloadBadge variant="appStore" />
         <div className={styles.linkWrapper}>
           <TextLink
-            text="Все варианты загрузки"
+            text={t('footer.allDwnOpt')}
             to="/downloads"
             variant="light"
             className={styles.link}

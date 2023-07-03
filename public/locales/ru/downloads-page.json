@@ -1,0 +1,14 @@
+{
+  "header": "Скачайте Amnezia VPN",
+  "dwnCard": {
+    "forWin32": "Для Windows 32-bit",
+    "forWin64": "Для Windows 64-bit",
+    "downloadFromSite": "Скачать с сайта",
+    "downloadFromGithub": "Скачать с GitHub",
+    "oldVersions": "Старые версии приложения"
+  },
+  "dwnInfoCard": {
+    "header": "Узнайте, как запустить свой VPN с помощью Amnezia",
+    "text": "Где взять сервер, если его у вас нет и как соединить его с приложением"
+  }
+}

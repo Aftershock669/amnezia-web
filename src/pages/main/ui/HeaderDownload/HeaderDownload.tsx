@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import DownloadButton from '@src/shared/ui/DownloadButton/DownloadButton';
+import DownloadButtonMain from '@src/shared/ui/DownloadButtonMain/DownloadButtonMain';
 import windowsIcon from '@assets/windows.svg';
 import macIcon from '@assets/mac-os.svg';
 import iosIcon from '@assets/ios.svg';
@@ -15,7 +15,7 @@ const HeaderDownload = () => {
   return (
     <div className={classNames(styles.root)}>
       <div className={styles.buttonContainer}>
-        <DownloadButton text={t('download')} link="/downloads" />
+        <DownloadButtonMain text={t('download')} link="/downloads" />
         <div className={styles.iconLinks}>
           <img height="24px" width="24px" src={windowsIcon} className="logo" alt="Windows logo" />
           <img height="24px" width="24px" src={macIcon} className="logo" alt="Apple logo" />

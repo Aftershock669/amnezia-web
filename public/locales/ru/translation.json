@@ -2,7 +2,11 @@
   "languageName": "Русский",
   "navigation": {
     "support": "Поддержка",
-    "about": "О нас"
+    "about": "О проекте"
   },
-  "download": "Скачать"
+  "download": "Скачать",
+  "footer": {
+    "contacts": "Контакты",
+    "allDwnOpt": "Все варианты загрузки"
+  }
 }

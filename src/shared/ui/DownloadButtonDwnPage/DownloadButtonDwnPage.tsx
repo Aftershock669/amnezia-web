@@ -1,17 +1,24 @@
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
-import styles from './DownloadButton.module.scss';
+import styles from './DownloadButtonDwnPage.module.scss';
 
 interface DownloadButtonProps {
   text: string;
   link: string;
   reloadDocument?: boolean;
+  openInNewTab?: boolean;
 }
 
-const DownloadButton = ({ text, link, reloadDocument }: DownloadButtonProps) => {
+const DownloadButtonDwnPage = ({
+  text,
+  link,
+  reloadDocument,
+  openInNewTab,
+}: DownloadButtonProps) => {
   return (
     <Link
       to={link}
+      target={openInNewTab ? '_blank' : ''}
       reloadDocument={reloadDocument || false}
       type="button"
       className={classNames(styles.root)}
@@ -21,4 +28,4 @@ const DownloadButton = ({ text, link, reloadDocument }: DownloadButtonProps) => 
   );
 };
 
-export default DownloadButton;
+export default DownloadButtonDwnPage;
