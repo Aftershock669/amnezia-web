@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { ChevronRight } from 'lucide-react';
-import Card from '@src/components/card/Card';
-import DownloadButtonMain from '@src/shared/ui/DownloadButtonMain/DownloadButtonMain';
+import Card from '@src/shared/ui/Card/Card';
+import DownloadButtonMain from '@src/components/DownloadButtonMain/DownloadButtonMain';
 import DwnVariantsList from '@src/pages/downloads/ui/DwnCard/ui/DwnVariantsList/DwnVariantsList';
 import TextLink from '@src/shared/ui/TextLink/TextLink';
 import styles from './DwnCard.module.scss';

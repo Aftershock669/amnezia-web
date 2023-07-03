@@ -4,7 +4,7 @@ import { Languages, ChevronDown } from 'lucide-react';
 import { useDisclosure } from '@mantine/hooks';
 import classNames from 'classnames';
 import localesList from '@src/shared/config/i18n/localesList';
-import LocaleSwitchPill from '@src/shared/ui/LocaleSwitchPill/LocaleSwitchPill';
+import LocaleSwitchPill from '@src/components/LocaleSwitchPill/LocaleSwitchPill';
 import { useTranslation } from 'react-i18next';
 import styles from './LocaleSwitchModal.module.scss';
 

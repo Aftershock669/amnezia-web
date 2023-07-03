@@ -1,6 +1,6 @@
 import { ArrowLeft, X } from 'lucide-react';
 import classNames from 'classnames';
-import LocaleSwitchPill from '@src/shared/ui/LocaleSwitchPill/LocaleSwitchPill';
+import LocaleSwitchPill from '@src/components/LocaleSwitchPill/LocaleSwitchPill';
 import { useTranslation } from 'react-i18next';
 import localesList from '@src/shared/config/i18n/localesList';
 import styles from './LocalesScreen.module.scss';

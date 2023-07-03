@@ -1,12 +1,11 @@
-# Dillinger
-## _The Last Markdown Editor, Ever_
+# Автоматическая настройка
+## _Купите сервер, если его у вас нет_
 
 [//]: # ([![N|Solid]&#40;https://cldup.com/dTxpPi9lDf.thumb.png&#41;]&#40;https://nodesource.com/products/nsolid&#41;)
 ![App screen](/docs/en/manual-install/img/app-screen.png)
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
-Dillinger is a cloud-enabled, mobile-ready, offline-storage compatible,
-AngularJS-powered HTML5 Markdown editor.
+Чтобы вам было удобней, мы подобрали несколько компаний, чьи серверы удовлетворяют требованиям к VPN: серверы располагаются не в России, неограниченный трафик и низкая стоимость. Вы можете выбрать любой другой сервис на своё усмотрение. Amnezia работает с любыми серверами с операционой системой Ubuntu (официально поддерживаемая версия - 20.04), так же поддерживается Debian 10.
 
 - Type some Markdown on the left
 - See HTML in the right

@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import DownloadButtonMain from '@src/shared/ui/DownloadButtonMain/DownloadButtonMain';
+import DownloadButtonMain from '@src/components/DownloadButtonMain/DownloadButtonMain';
 import windowsIcon from '@assets/windows.svg';
 import macIcon from '@assets/mac-os.svg';
 import iosIcon from '@assets/ios.svg';

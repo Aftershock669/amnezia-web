@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import Card from '@src/components/card/Card';
+import Card from '@src/shared/ui/Card/Card';
 import { FileDown, Merge, Share2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import styles from './FeaturesCard.module.scss';

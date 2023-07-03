@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import Card from '@src/components/card/Card';
+import Card from '@src/shared/ui/Card/Card';
 import { useTranslation } from 'react-i18next';
 import TextLink from '@src/shared/ui/TextLink/TextLink';
 import styles from './SecureSimpleFreeSection.module.scss';

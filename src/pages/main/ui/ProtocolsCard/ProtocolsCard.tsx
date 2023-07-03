@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import Card from '@src/components/card/Card';
+import Card from '@src/shared/ui/Card/Card';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import styles from './ProtocolsCard.module.scss';

@@ -1,0 +1,52 @@
+.item {
+  list-style: none;
+  border-bottom: 1px solid var(--black-70);
+  cursor: pointer;
+  &:hover {
+    .control {
+      background-color: rgba(255, 255, 255, 0.12);
+    }
+  }
+}
+
+.button {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  color: var(--main-text-color);
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  padding: 30px 0;
+}
+
+.active {
+
+}
+
+.control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .2s;
+  padding: 2px;
+  border-radius: 8px;
+}
+
+.content-wrapper {
+  height: 0;
+  overflow: hidden;
+  transition: height ease .2s;
+}
+
+.content {
+  padding-bottom: 30px;
+}
+
+.open {
+  height: auto;
+}

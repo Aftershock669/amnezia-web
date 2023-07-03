@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import Card from '@src/components/card/Card';
+import Card from '@src/shared/ui/Card/Card';
 import { useTranslation } from 'react-i18next';
 import styles from './MoreFeaturesSection.module.scss';
 import { ReactComponent as TorIcon } from './assets/tor.svg';

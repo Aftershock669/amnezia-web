@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import Card from '@src/components/card/Card';
+import Card from '@src/shared/ui/Card/Card';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import styles from './SupportCardLink.module.scss';

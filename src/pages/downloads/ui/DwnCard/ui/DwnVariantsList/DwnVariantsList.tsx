@@ -1,11 +1,11 @@
 import { Tabs } from '@mantine/core';
-import DownloadButtonMain from '@src/shared/ui/DownloadButtonMain/DownloadButtonMain';
+import DownloadButtonMain from '@src/components/DownloadButtonMain/DownloadButtonMain';
 import { useState } from 'react';
 import DwnVariantsDropdown from '@src/pages/downloads/ui/DwnCard/ui/DwnVariantsList/ui/DwnVariantsDropdown/DwnVariantsDropdown';
 import WindowsVariants from '@src/pages/downloads/ui/DwnCard/ui/DwnVariantsList/ui/WindowsVariants/WindowsVariants';
 import { useOs } from '@mantine/hooks';
 import DownloadBadge from '@src/components/downloadBadge/DownloadBadge';
-import DownloadButtonDwnPage from '@src/shared/ui/DownloadButtonDwnPage/DownloadButtonDwnPage';
+import DownloadButtonDwnPage from '@src/components/DownloadButtonDwnPage/DownloadButtonDwnPage';
 import { useTranslation } from 'react-i18next';
 import styles from './DwnVariantsList.module.scss';
 import { ReactComponent as WindowsLogo } from './assets/windows.svg';
