@@ -1,29 +1,11 @@
+@import "reset";
 @import "variables/colors";
 @import "utilityClasses/general";
 @import "utilityClasses/colors";
 
-// --------------------- RESET ---------------------
-
-* {
-  margin: 0;
-  //padding: 0;
-  box-sizing: border-box;
-
-  //font-synthesis: none;
-  //text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
-input, button, textarea, select {
-  margin: 0;
-  font: inherit;
-}
-
 // -------------------------------------------------
 
-.app {
+body {
   font-family: 'IBM Plex Sans', sans-serif;
   font-size: 16px;
   font-weight: 400;

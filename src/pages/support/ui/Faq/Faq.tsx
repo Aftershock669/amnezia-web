@@ -1,22 +1,20 @@
-import { PlusIcon, MinusIcon } from 'lucide-react';
-
+import Accordion from '@src/shared/ui/Accordeon/Accordion';
 import styles from './Faq.module.scss';
-import Accordion from "@src/shared/ui/Accordeon/Accordion";
 
 const faqs = [
   {
-    question: 'Lorem ipsum dolor sit amet?',
-    answer:
+    label: 'Lorem ipsum dolor sit amet?',
+    content:
       'Tenetur ullam rerum ad iusto possimus sequi mollitia dolore sunt quam praesentium. Tenetur ullam rerum ad iusto possimus sequi mollitia dolore sunt quam praesentium.Tenetur ullam rerum ad iusto possimus sequi mollitia dolore sunt quam praesentium.',
   },
   {
-    question: 'Dignissimos sequi architecto?',
-    answer:
+    label: 'Dignissimos sequi architecto?',
+    content:
       'Aperiam ab atque incidunt dolores ullam est, earum ipsa recusandae velit cumque. Aperiam ab atque incidunt dolores ullam est, earum ipsa recusandae velit cumque.',
   },
   {
-    question: 'Voluptas praesentium facere?',
-    answer: 'Blanditiis aliquid adipisci quisquam reiciendis voluptates itaque.',
+    label: 'Voluptas praesentium facere?',
+    content: 'Blanditiis aliquid adipisci quisquam reiciendis voluptates itaque.',
   },
 ];
 

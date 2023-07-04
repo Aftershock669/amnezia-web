@@ -47,10 +47,16 @@
 }
 
 .h-70 {
+  font-size: 40px;
+  font-style: normal;
   font-weight: 700;
-  font-size: 80px;
   line-height: 100%;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.4px;
+  @media (min-width: 680px) {
+    font-size: 70px;
+    font-weight: 700;
+    letter-spacing: -0.7px;
+  }
 }
 
 h1 {
@@ -125,4 +131,34 @@ h3 {
 
 .text-indent-top {
   margin-top: 10px;
+}
+
+.text-indent-bottom {
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 30px;
+  font-size: 20px;
+}
+
+blockquote {
+  font-size: 20px;
+  padding: 20px;
+  background-color: var(--black-70);
+  border-radius: 16px;
+  margin: 30px 0;
+  & > *{
+    margin-bottom: 16px;
+  }
+  & > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+ol {
+  padding: 0;
+  margin: 20px 0 20px 20px;
+  list-style-type: none;
+  counter-reset: li-counter;
 }

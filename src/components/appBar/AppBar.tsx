@@ -23,7 +23,7 @@ const AppBar = ({ openDrawerAction }: PT) => {
           <img
             height={25}
             width={94}
-            src="/logo-text-colorfull.png"
+            src="/img/logos/logo-text-colorfull.png"
             className={styles.logo}
             alt="Amnezia logo"
           />

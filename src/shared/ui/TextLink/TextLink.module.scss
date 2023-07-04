@@ -2,18 +2,18 @@
   & {
     color: inherit;
     cursor: pointer;
-    //font-size: inherit;
-    //font-weight: inherit;
     transition: .2s;
   }
 }
 
-.link-underline {
-  &:hover {
+.link-underline  {
+  &:link, &:visited {
     text-decoration: underline;
+    text-decoration-color: var(--yellow-70);
+  }
+  &:hover {
     color: var(--yellow-70)
   }
-  text-decoration-color: var(--yellow-70)
 }
 
 .link-dark {

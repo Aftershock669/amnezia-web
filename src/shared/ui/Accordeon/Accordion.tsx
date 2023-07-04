@@ -3,8 +3,8 @@ import styles from './Accordion.module.scss';
 import AccordionItem from './ui/AccordionItem/AccordionItem';
 
 export interface AccItem {
-  question: string;
-  answer: string;
+  label: string;
+  content: any;
 }
 
 export interface AccordionProps {
@@ -25,10 +25,12 @@ const Accordion = ({ data }: AccordionProps) => {
         {data.map((item, index) => (
           <AccordionItem
             key={index}
-            data={item}
+            label={item.label}
             onToggle={() => handleToggle(index)}
             active={clicked === index}
-          />
+          >
+            {item.content}
+          </AccordionItem>
         ))}
       </ul>
     </div>

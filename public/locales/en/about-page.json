@@ -1,3 +1,32 @@
 {
-  "about": "About us info"
+  "about": "About us",
+  "p1": "The idea of creating AmneziaVPN was born in 2020 at the first Demhack hackathon, and then continued its development with the ",
+  "p2": "We wanted users of all technical backgrounds to be able to create your own VPNs, both to simply bypass blocking, and to ensure privacy and protecting your data. It was important for us to create a free and open source application, so as not to collect user data and there was not even a hypothetical possibility of a data leak.",
+  "principles": {
+    "header": "Throughout the development of the project, we adhere to 5 principles:",
+    "principle1": {
+      "header": "1. Maximum openness",
+      "text": "Therefore, our application and website are open source, both for the client side and for the server side. We do not collect or store any data, including logs and analytics."
+    },
+    "principle2": {
+      "header": "2. Maximum security",
+      "text": "To do this, the best thing you can do is create and use your own personal VPN."
+    },
+    "principle3": {
+      "header": "3. Maximum ease of use",
+      "text": "We have created a simple application with automatic installation so that you do not have to figure out complex settings. Also on our website, we have collected instructions for buying a VPS from some popular hosting."
+    },
+    "principle4": {
+      "header": "4. Maximum invulnerability",
+      "text": "To do this, we added support for all modern popular protocols, as well as traffic masking to bypass the most severe blocking. This is especially true for countries with the highest level of censorship, where all VPN protocols and almost all commercial and non-commercial VPNs are blocked."
+    },
+    "principle5": {
+      "header": "5. Maximum Flexibility",
+      "text": "Maximum Flexibility Amnesia does not oblige you to use the client. You can start your VPN from the Amnezia app, create a configured connection file and use it with other original clients like OpenVPN, Wireguard and more..."
+    }
+  },
+  "p3": "Our main goal is to make a self-hosted client that does not differ in functionality from top commercial VPNs. Therefore, we already have a kill-switch, separate tunneling of sites and applications. We also added the ability to create a corporate VPN network and the ability to share a VPN connection with other users unlimitedly.",
+  "p4": "Amnesia is not only a VPN. Using the client, you can create your own DNS server, secure file storage and deploy a WordPress site on the Tor network in two clicks. We make the best invulnerable free self-hosted VPN in the world and we want everyone who needs a free internet to know about it.",
+  "donate": "If you want to help the project, you can send a donation or take part in the development.",
+  "downloadLogo": "Download Amnezia logo"
 }

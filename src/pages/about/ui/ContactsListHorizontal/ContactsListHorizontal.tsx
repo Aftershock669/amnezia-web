@@ -1,9 +1,8 @@
-import classNames from 'classnames';
 import TextLink from '@src/shared/ui/TextLink/TextLink';
 import { useTranslation } from 'react-i18next';
-import styles from './ContactsContainer.module.scss';
+import styles from './ContactsListHorizontal.module.scss';
 
-const ContactsContainer = () => {
+const ContactsListHorizontal = () => {
   const { t } = useTranslation();
   return (
     <div className={styles.root}>
@@ -36,10 +35,9 @@ const ContactsContainer = () => {
           variant="light"
           className={styles.link}
         />
-        <TextLink text={t('navigation.about')} to="/about" variant="light" className={styles.link} />
       </div>
     </div>
   );
 };
 
-export default ContactsContainer;
+export default ContactsListHorizontal;
