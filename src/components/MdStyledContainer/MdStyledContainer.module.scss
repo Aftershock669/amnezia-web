@@ -1,6 +1,18 @@
 .root {
   display: block;
-  font-size: 20px;
+  font-size: 17px;
+  @media (min-width: 768px) {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: inherit;
+  }
+
+  blockquote {
+    font-size: inherit;
+  }
+
   & img {
     max-width: 100%;
     height: auto;

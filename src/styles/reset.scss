@@ -28,6 +28,10 @@ ol,ul {
   list-style: none
 }
 
+li {
+  word-break: break-word;
+}
+
 blockquote,q {
   quotes: none
 }
