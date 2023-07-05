@@ -1,64 +1,103 @@
+// import AccordionV2 from '@src/shared/ui/Accordeon/AccordionV2';
+import { useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import remarkGfm from 'remark-gfm';
+import ReactMarkdown from 'react-markdown';
+import MdStyledContainer from '@src/components/MdStyledContainer/MdStyledContainer';
 import Accordion from '@src/shared/ui/Accordeon/Accordion';
+import TextLink from '@src/shared/ui/TextLink/TextLink';
+import faqDataRu from '@src/pages/support/ui/Faq/faqDataRu';
+import faqDataEn from '@src/pages/support/ui/Faq/faqDataEn';
 import styles from './Faq.module.scss';
 
-const faqs = [
-  {
-    label: 'Lorem ipsum dolor sit amet?',
-    content:
-      'Tenetur ullam rerum ad iusto possimus sequi mollitia dolore sunt quam praesentium. Tenetur ullam rerum ad iusto possimus sequi mollitia dolore sunt quam praesentium.Tenetur ullam rerum ad iusto possimus sequi mollitia dolore sunt quam praesentium.',
-  },
-  {
-    label: 'Dignissimos sequi architecto?',
-    content:
-      'Aperiam ab atque incidunt dolores ullam est, earum ipsa recusandae velit cumque. Aperiam ab atque incidunt dolores ullam est, earum ipsa recusandae velit cumque.',
-  },
-  {
-    label: 'Voluptas praesentium facere?',
-    content: 'Blanditiis aliquid adipisci quisquam reiciendis voluptates itaque.',
-  },
-];
-
 const Faq = () => {
+  const { t, i18n } = useTranslation('support-page');
+
+  // const [read, setRead] = useState('');
+
+  // useEffect(() => {
+  //   const gitLink = `https://raw.githubusercontent.com/Aftershock669/amnezia-open-docs/master/docs/${i18n.language}/faq/faq.md`;
+  //
+  //   const fetchData = () => {
+  //     return fetch(gitLink)
+  //       .then((response) => response.text())
+  //       .then((text) => setRead(text));
+  //   };
+  //
+  //   fetchData();
+  // }, [i18n.language]);
+
+  // const generateAccordionItem = ({ children }) => {
+  //   const faqDataRu = [];
+  //
+  //   children.forEach((liEl, i) => {
+  //     if (liEl.type === 'li') {
+  //       let label = '';
+  //       const content = [];
+  //       liEl.props.children.forEach((liInnerEl, liInnerElIndex) => {
+  //         // elements inside li
+  //         if (liInnerEl.type === 'h2') {
+  //           label = liInnerEl.props.children[0];
+  //         }
+  //         if (liInnerEl.type && liInnerEl.type !== 'h2') {
+  //           content.push(liInnerEl);
+  //         }
+  //       });
+  //
+  //       faqDataRu.push({
+  //         label,
+  //         content,
+  //       });
+  //     }
+  //   });
+  //
+  //   console.log(faqDataRu);
+  //
+  //   // return faqDataRu;
+  // };
+
+  // const generateAccordionItems = ({ children }) => {
+  //   const faqDataRu = [];
+  //
+  //   children.forEach((liEl, i) => {
+  //     if (liEl.type === 'li') {
+  //       let label = '';
+  //       const content = [];
+  //       liEl.props.children.forEach((liInnerEl, liInnerElIndex) => {
+  //         // elements inside li
+  //         if (liInnerEl.type === 'h2') {
+  //           label = liInnerEl.props.children[0];
+  //         }
+  //         if (liInnerEl.type && liInnerEl.type !== 'h2') {
+  //           content.push(liInnerEl);
+  //         }
+  //       });
+  //
+  //       faqDataRu.push(
+  //         <AccordionItemV2
+  //           value={i.toString()}
+  //           key={i}
+  //           label={label}
+  //           onToggle={() => undefined}
+  //           active={false}
+  //         >
+  //           {content}
+  //         </AccordionItemV2>
+  //       );
+  //     }
+  //   });
+  //
+  //   console.log(faqDataRu);
+  //
+  //   return faqDataRu;
+  // };
+
   return (
     <div className={styles.root}>
-      <div className={styles.header}>Часто задаваемые вопросы - TODO</div>
-      <Accordion data={faqs} />
-      {/* <Accordion */}
-      {/*  chevron={<PlusIcon size="30px" />} */}
-      {/*  classNames={{ */}
-      {/*    item: styles.item, */}
-      {/*    itemTitle: styles.itemTitle, */}
-      {/*    control: styles.control, */}
-      {/*    label: styles.label, */}
-      {/*    icon: styles.icon, */}
-      {/*    chevron: styles.chevron, */}
-      {/*    panel: styles.panel, */}
-      {/*    content: styles.content, */}
-      {/*  }} */}
-      {/* > */}
-      {/*  <Accordion.Item value="one"> */}
-      {/*    <Accordion.Control>Можно ли доверять AmneziaVPN?</Accordion.Control> */}
-      {/*    <Accordion.Panel> */}
-      {/*      Да. AmneziaVPN является проектом с открытым исходным кодом и разворачивает на сервере приложения OpenVPN, ShadowSocks, WireGuard и/или Cloak по желанию пользователя. У пользователя есть возможность как оперативно развернуть, так и полностью удалить любой из установленных на сервер VPN сервисов, а также полностью очистить сервер от всех установленных Амнезией сервисов всего в один клик. Вопрос в другом - доверяете ли Вы серверу, который собираетесь использовать? ;) */}
-      {/*    </Accordion.Panel> */}
-      {/*  </Accordion.Item> */}
-
-      {/*  <Accordion.Item value="two"> */}
-      {/*    <Accordion.Control>Как именно происходит установка?</Accordion.Control> */}
-      {/*    <Accordion.Panel> */}
-      {/*      Configure components appearance and behavior with vast amount of settings or overwrite */}
-      {/*      any part of component styles */}
-      {/*    </Accordion.Panel> */}
-      {/*  </Accordion.Item> */}
-
-      {/*  <Accordion.Item value="three"> */}
-      {/*    <Accordion.Control>Можно ли использовать авторизацию по ключам для AmneziaVPN?</Accordion.Control> */}
-      {/*    <Accordion.Panel> */}
-      {/*      With new :focus-visible pseudo-class focus ring appears only when user navigates with */}
-      {/*      keyboard */}
-      {/*    </Accordion.Panel> */}
-      {/*  </Accordion.Item> */}
-      {/* </Accordion> */}
+      <div className={styles.header}>{t('faq.header')}</div>
+      <Accordion data={i18n.language === 'ru' ? faqDataRu : faqDataEn} />
+      {/* <ReactMarkdown remarkPlugins={[remarkGfm]}>{read}</ReactMarkdown> */}
     </div>
   );
 };

@@ -1,0 +1,40 @@
+.root {
+  display: block;
+  font-size: 20px;
+  & img {
+    max-width: 100%;
+    height: auto;
+    margin: 40px auto;
+    display: block;
+  }
+
+  & ul {
+    padding-left: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  & li {
+    list-style: disc;
+  }
+
+  & h1, h2, h3 {
+    line-height: 1.2;
+    padding-top: 20px;
+  }
+
+  & h1 {
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+
+  & h2 {
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  & h3 {
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+}

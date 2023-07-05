@@ -3,7 +3,7 @@ import styles from './Accordion.module.scss';
 import AccordionItem from './ui/AccordionItem/AccordionItem';
 
 export interface AccItem {
-  label: string;
+  label: any;
   content: any;
 }
 

@@ -1,6 +1,6 @@
 import { Tabs } from '@mantine/core';
 import DownloadButtonMain from '@src/components/DownloadButtonMain/DownloadButtonMain';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import DwnVariantsDropdown from '@src/pages/downloads/ui/DwnCard/ui/DwnVariantsList/ui/DwnVariantsDropdown/DwnVariantsDropdown';
 import WindowsVariants from '@src/pages/downloads/ui/DwnCard/ui/DwnVariantsList/ui/WindowsVariants/WindowsVariants';
 import { useOs } from '@mantine/hooks';
@@ -20,24 +20,28 @@ const DwnVariantsList = () => {
   const { t } = useTranslation(['translation', 'downloads-page']);
   const os = useOs();
 
-  const osSwitcher = () => {
-    switch (os) {
-      case 'windows':
-        return 'win';
-      case 'linux':
-        return 'linux';
-      case 'macos':
-        return 'mac';
-      case 'android':
-        return 'android';
-      case 'ios':
-        return 'ios';
-      default:
-        return 'win';
-    }
-  };
+  const [activeTab, setActiveTab] = useState<string | null>(null);
 
-  const [activeTab, setActiveTab] = useState<string | null>(osSwitcher());
+  useEffect(() => {
+    const osSwitcher = () => {
+      switch (os) {
+        case 'windows':
+          return 'win';
+        case 'linux':
+          return 'linux';
+        case 'macos':
+          return 'mac';
+        case 'android':
+          return 'android';
+        case 'ios':
+          return 'ios';
+        default:
+          return 'win';
+      }
+    };
+
+    setActiveTab(osSwitcher());
+  }, [os]);
 
   return (
     <div className={styles.root}>

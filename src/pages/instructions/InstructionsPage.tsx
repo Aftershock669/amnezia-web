@@ -1,6 +1,8 @@
 import TextLink from '@src/shared/ui/TextLink/TextLink';
+import { useEffect } from 'react';
 
 const InstructionsPage = () => {
+  useEffect(() => {}, []);
   return (
     <>
       <div>

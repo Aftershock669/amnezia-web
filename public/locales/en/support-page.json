@@ -11,5 +11,8 @@
     "header": "Instructions",
     "text": "Setting up the application, working with SSH keys, etc etc"
   },
-  "contactsCardLabel": "Contact the chat for help if something does not work"
+  "contactsCardLabel": "Contact the chat for help if something does not work",
+  "faq": {
+    "header": "Frequently asked questions"
+  }
 }
