@@ -1,18 +1,12 @@
-// import styles from './ScrollToTop.module.scss';
-//
-// interface ScrollToTopProps {}
-//
-// const ScrollToTop = ({ history, children }) => {
-//   useEffect(() => {
-//     const unlisten = history.listen(() => {
-//       window.scrollTo(0, 0);
-//     });
-//     return () => {
-//       unlisten();
-//     };
-//   }, []);
-//
-//   return <>{children}</>;
-// };
-//
-// export default ScrollToTop;
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
+export default function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}

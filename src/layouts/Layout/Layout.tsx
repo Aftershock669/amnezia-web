@@ -5,6 +5,7 @@ import { useDisclosure } from '@mantine/hooks';
 import { createContext, useEffect, useState } from 'react';
 import MenuDrawer from '@src/components/menuDrawer/MenuDrawer';
 // import AppContainer from '@src/components/AppContainer/AppContainer';
+import ScrollToTop from '@src/components/ScrollToTop/ScrollToTop';
 import styles from './Layout.module.scss';
 
 // export const ThemeContext = createContext({
@@ -36,7 +37,9 @@ export default function Layout() {
 
   return (
     // <AppContainer>
+
     <div className={styles.appContainer}>
+      <ScrollToTop />
       <AppBar openDrawerAction={open} />
       <MenuDrawer closeDrawer={close} drawerOpened={opened} />
       <div className={styles.pageContainer}>
@@ -44,6 +47,7 @@ export default function Layout() {
       </div>
       <Footer />
     </div>
+
     // </AppContainer>
   );
 }
