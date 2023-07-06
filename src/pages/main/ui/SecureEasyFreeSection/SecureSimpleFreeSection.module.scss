@@ -24,7 +24,7 @@
   @media (min-width: 768px) {
     row-gap: 22px;
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 1200px) {
     gap: 22px;
     grid-template-areas:
       "sec simple"
@@ -49,7 +49,7 @@
   @media (min-width: 768px) {
     flex-direction: row;
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 1200px) {
     flex-direction: column;
     & h2 {
       text-align: center;
@@ -69,7 +69,7 @@
       align-self: flex-start;
       max-width: 273px;
     }
-    @media (min-width: 1440px) {
+    @media (min-width: 1200px) {
       align-self: center;
       max-width: 273px;
     }
