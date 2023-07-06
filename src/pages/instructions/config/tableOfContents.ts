@@ -1,9 +1,9 @@
 const tableOfContents = [
-  // {
-  //   title: 'Как запустить свой VPN с помощью Amnezia',
-  //   href: '/instructions/auto-install',
-  //   subtext: 'Тест инструкции которой нет',
-  // },
+  {
+    title: 'Как запустить свой VPN с помощью Amnezia',
+    href: '/instructions/starter-guide',
+    subtext: 'Покупка и настройка хостинга для Amnezia',
+  },
   {
     title: 'Автоматическая настройка',
     href: '/instructions/auto-install',

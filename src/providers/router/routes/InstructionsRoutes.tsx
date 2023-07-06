@@ -1,5 +1,5 @@
 import { RouteObject } from 'react-router-dom';
-import Layout from '@src/layouts/Layout';
+import Layout from '@src/layouts/Layout/Layout';
 import InstructionsPage from '@src/pages/instructions/InstructionsPage';
 
 const InstructionsRoutes: RouteObject = {

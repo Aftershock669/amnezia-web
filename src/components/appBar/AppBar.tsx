@@ -1,10 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import AppBarLink from '@src/components/appBar/ui/appBarLink/AppBarLink';
 import DwnVariantsDropdown from '@src/pages/downloads/ui/DwnCard/ui/DwnVariantsList/ui/DwnVariantsDropdown/DwnVariantsDropdown';
-import { MenuIcon } from 'lucide-react';
 import MenuButton from '@src/components/menuButton/MenuButton';
-import { useDisclosure } from '@mantine/hooks';
-import { Modal } from '@mantine/core';
 import LocaleSwitchModal from '@src/components/localeSwitchModal/LocaleSwitchModal';
 import { useTranslation } from 'react-i18next';
 import styles from './AppBar.module.scss';

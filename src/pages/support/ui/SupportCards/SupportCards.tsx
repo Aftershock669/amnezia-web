@@ -9,7 +9,7 @@ const SupportCards = () => {
       <SupportCard
         header={t('howToCard.header')}
         text={t('howToCard.text')}
-        to="/starter-guide"
+        to="/instructions/starter-guide"
       />
       <SupportCard
         header={t('instructionsCard.header')}

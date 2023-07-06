@@ -23,12 +23,6 @@
   @media (screen and min-width: 768px) {
     justify-content: flex-start;
   }
-
-  //@media (screen and min-width: 768px) {
-  //  display: grid;
-  //  grid-template-rows: auto auto;
-  //  grid-template-columns: 180px 180px;
-  //}
 }
 
 .label {
@@ -38,6 +32,9 @@
   line-height: 24px;
   letter-spacing: 0.36px;
   text-transform: uppercase;
+  @media (screen and min-width: 768px) {
+    text-align: start;
+  }
 }
 
 .link-wrapper {
@@ -51,5 +48,8 @@
 .link {
   font-size: 18px;
   text-align: center;
+  @media (screen and min-width: 768px) {
+    text-align: start;
+  }
   letter-spacing: 0.36px;
 }

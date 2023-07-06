@@ -7,8 +7,8 @@ import androidIcon from '@assets/android.svg';
 import linuxIcon from '@assets/linux.svg';
 import githubIcon from '@assets/github.svg';
 import { useTranslation } from 'react-i18next';
-import styles from './HeaderDownload.module.scss';
 import TextLink from '@src/shared/ui/TextLink/TextLink';
+import styles from './HeaderDownload.module.scss';
 
 const HeaderDownload = () => {
   const { t } = useTranslation(['translation', 'main-page']);
@@ -25,10 +25,15 @@ const HeaderDownload = () => {
           <img height="24px" width="24px" src={githubIcon} className="logo" alt="Github logo" />
         </div>
       </div>
-      <TextLink text={t('headerDownload', { ns: 'main-page' })} to="/downloads" variant="light" className={styles.textContainer}/>
-      {/*<a href="/" className={styles.textContainer}>*/}
-      {/*  {t('headerDownload', { ns: 'main-page' })}*/}
-      {/*</a>*/}
+      <TextLink
+        text={t('headerDownload', { ns: 'main-page' })}
+        to="/instructions/starter-guide"
+        variant="light"
+        className={styles.textContainer}
+      />
+      {/* <a href="/" className={styles.textContainer}> */}
+      {/*  {t('headerDownload', { ns: 'main-page' })} */}
+      {/* </a> */}
     </div>
   );
 };

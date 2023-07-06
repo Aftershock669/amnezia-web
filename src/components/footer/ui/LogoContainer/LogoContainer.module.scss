@@ -16,10 +16,14 @@
     height: 144px;
   }
 
+  a {
+    position: absolute;
+    display: block;
+  }
+
   img {
     width: 140px;
     height: auto;
-    position: absolute;
     @media (screen and min-width: 768px) {
       width: 230px;
       height: auto;
