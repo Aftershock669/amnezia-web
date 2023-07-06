@@ -8,5 +8,10 @@
   "footer": {
     "contacts": "Контакты",
     "allDwnOpt": "Все варианты загрузки"
+  },
+  "instructionsPage": {
+    "header": {
+      "text": "Инструкции"
+    }
   }
 }

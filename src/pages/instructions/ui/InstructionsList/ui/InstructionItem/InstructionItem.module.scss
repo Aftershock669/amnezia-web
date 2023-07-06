@@ -1,0 +1,35 @@
+.root {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--black-70);
+}
+
+.link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  width: 100%;
+  color: inherit;
+  font-size: 22px;
+  &:hover {
+
+  }
+}
+
+.icon-wrapper {
+  padding-left: 30px;
+  flex-shrink: 0;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.subtext {
+  font-size: 16px;
+  color: var(--gray-20)
+}

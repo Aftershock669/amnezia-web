@@ -10,7 +10,8 @@ import { Breadcrumbs } from '@mantine/core';
 import SidebarNav from '@src/components/SidebarNav/SidebarNav';
 import { ChevronRight } from 'lucide-react';
 import SideBarLink from '@src/components/SidebarNav/ui/SideBarLink/SideBarLink';
-import styles from './Instruction.module.scss';
+import tableOfContents from '@src/pages/instructions/config/tableOfContents';
+import styles from './InstructionMd.module.scss';
 
 function RouterLink({ children, href }: any) {
   return href.match(/^\//) ? (
@@ -50,12 +51,6 @@ const Instruction1Page = () => {
     // });
   }, [location, i18n.language]);
 
-  const sideLinks = [
-    { title: 'Как запустить свой VPN с помощью Amnezia', href: '/' },
-    { title: 'Автоматическая настройка', href: '/instructions/auto-install' },
-    { title: 'Ручная настройка', href: '/instructions/manual-install' },
-  ];
-
   const items = [
     { title: 'Поддержка', href: '/support' },
     { title: 'Инструкции', href: '/instructions' },
@@ -65,7 +60,7 @@ const Instruction1Page = () => {
     <div className={styles.pageLayout}>
       <div className={styles.navCol}>
         <SidebarNav>
-          {sideLinks.map((el, i) => (
+          {tableOfContents.map((el, i) => (
             <SideBarLink key={i} text={el.title} to={el.href} />
           ))}
         </SidebarNav>

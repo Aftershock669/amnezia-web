@@ -5,7 +5,7 @@ import DownloadsPage from '@src/pages/downloads/DownloadsPage';
 import AboutPage from '@src/pages/about/AboutPage';
 import SupportPage from '@src/pages/support/SupportPage';
 import InstructionsPage from '@src/pages/instructions/InstructionsPage';
-import Instruction from '@src/pages/instructions/ui/Instruction';
+import Instruction from '@src/pages/instructions/ui/InstructionMd/InstructionMd';
 import StarterGuidePage from '@src/pages/starter-guide/StarterGuidePage';
 
 const MainRoutes: RouteObject = {

@@ -8,5 +8,10 @@
   "footer": {
     "contacts": "Contacts",
     "allDwnOpt": "All download options"
+  },
+  "instructionsPage": {
+    "header": {
+      "text": "Instructions"
+    }
   }
 }
