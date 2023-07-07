@@ -24,8 +24,9 @@ const Instruction1Page = () => {
   const [read, setRead] = useState('');
 
   useEffect(() => {
-    const instructionHref = `${i18n.resolvedLanguage}/${location.pathname}`;
-    const instructionName = location.pathname.split('/')[2];
+    const instructionHref = location.pathname;
+    const instructionName = location.pathname.split('/')[3];
+
     const gitLink = `https://raw.githubusercontent.com/Aftershock669/amnezia-open-docs/master/docs/${instructionHref}/${instructionName}.md`;
 
     const fetchData = () => {

@@ -16,7 +16,7 @@ const AppBar = ({ openDrawerAction }: PT) => {
   return (
     <div className={styles.appBar}>
       <div className={styles.logoLinkWrapper}>
-        <NavLink to="./">
+        <NavLink to="/">
           <img
             height={25}
             width={94}
