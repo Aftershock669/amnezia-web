@@ -10,7 +10,7 @@ const InstructionsPageHeader = () => {
         className={styles.linkWrapper}
         variant="light"
         text={t('navigation.support')}
-        to="/support"
+        to="../support"
       />
       <div className={styles.primaryWrapper}>{t('instructionsPage.header.text')}</div>
     </div>
