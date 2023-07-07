@@ -17,7 +17,7 @@ const HeaderAppScreen = () => {
       ) : undefined}
       <div className={styles.screenWrapper}>
         <img
-          src={`/img/${i18n.language}/app-screen.png`}
+          src={`/img/${i18n.resolvedLanguage}/app-screen.png`}
           className={styles.screenImg}
           alt="Amnezia logo"
         />

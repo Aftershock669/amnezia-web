@@ -36,7 +36,12 @@ const ContactsContainer = () => {
           variant="light"
           className={styles.link}
         />
-        <TextLink text={t('navigation.about')} to="/about" variant="light" className={styles.link} />
+        <TextLink
+          text={t('navigation.about')}
+          to="./about"
+          variant="light"
+          className={styles.link}
+        />
       </div>
     </div>
   );

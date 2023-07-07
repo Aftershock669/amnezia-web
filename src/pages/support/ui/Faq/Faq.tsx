@@ -96,7 +96,7 @@ const Faq = () => {
   return (
     <div className={styles.root}>
       <div className={styles.header}>{t('faq.header')}</div>
-      <Accordion data={i18n.language === 'ru' ? faqDataRu : faqDataEn} />
+      <Accordion data={i18n.resolvedLanguage === 'ru' ? faqDataRu : faqDataEn} />
       {/* <ReactMarkdown remarkPlugins={[remarkGfm]}>{read}</ReactMarkdown> */}
     </div>
   );

@@ -19,7 +19,7 @@ const WindowsVariants = () => {
         'https://github.com/amnezia-vpn/amnezia-client/releases/download/2.1.2/AmneziaVPN_2.1.2_x64.exe',
       label: t('dwnCard.forWin64', { ns: 'downloads-page' }),
     });
-  }, [i18n.language]);
+  }, [i18n.resolvedLanguage]);
 
   const values = [
     {

@@ -16,7 +16,7 @@ const AppBar = ({ openDrawerAction }: PT) => {
   return (
     <div className={styles.appBar}>
       <div className={styles.logoLinkWrapper}>
-        <NavLink to="/">
+        <NavLink to="./">
           <img
             height={25}
             width={94}
@@ -28,8 +28,8 @@ const AppBar = ({ openDrawerAction }: PT) => {
       </div>
 
       <nav className={styles.nav}>
-        <AppBarLink to="/support" text={t('navigation.support')} />
-        <AppBarLink to="/about" text={t('navigation.about')} />
+        <AppBarLink to="./support" text={t('navigation.support')} />
+        <AppBarLink to="./about" text={t('navigation.about')} />
       </nav>
 
       {/* <DwnVariantsDropdown /> */}

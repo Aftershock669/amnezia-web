@@ -24,7 +24,7 @@ const Instruction1Page = () => {
   const [read, setRead] = useState('');
 
   useEffect(() => {
-    const instructionHref = `${i18n.language}/${location.pathname}`;
+    const instructionHref = `${i18n.resolvedLanguage}/${location.pathname}`;
     const instructionName = location.pathname.split('/')[2];
     const gitLink = `https://raw.githubusercontent.com/Aftershock669/amnezia-open-docs/master/docs/${instructionHref}/${instructionName}.md`;
 
@@ -42,7 +42,7 @@ const Instruction1Page = () => {
     //     .then((response) => response.text())
     //     .then((text) => setRead(text));
     // });
-  }, [location, i18n.language]);
+  }, [location, i18n.resolvedLanguage]);
 
   return (
     <InstructionLayout>

@@ -41,7 +41,7 @@ const SecureSimpleFreeSection = () => {
             </section>
             <img
               className={styles.connectImage}
-              src={`/img/${i18n.language}/main-connect.png`}
+              src={`/img/${i18n.resolvedLanguage}/main-connect.png`}
               alt="audited"
             />
           </div>

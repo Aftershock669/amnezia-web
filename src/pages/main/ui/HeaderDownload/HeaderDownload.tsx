@@ -15,7 +15,7 @@ const HeaderDownload = () => {
   return (
     <div className={classNames(styles.root)}>
       <div className={styles.buttonContainer}>
-        <DownloadButtonMain text={t('download')} link="/downloads" />
+        <DownloadButtonMain text={t('download')} link="./downloads" />
         <div className={styles.iconLinks}>
           <img height="24px" width="24px" src={windowsIcon} className="logo" alt="Windows logo" />
           <img height="24px" width="24px" src={macIcon} className="logo" alt="Apple logo" />
@@ -27,7 +27,7 @@ const HeaderDownload = () => {
       </div>
       <TextLink
         text={t('headerDownload', { ns: 'main-page' })}
-        to="/instructions/starter-guide"
+        to="./instructions/starter-guide"
         variant="light"
         className={styles.textContainer}
       />

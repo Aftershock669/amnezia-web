@@ -28,7 +28,7 @@ const LocalesScreen = ({ closeDrawer, goToMainScreen }: PT) => {
           <LocaleSwitchPill
             key={el.code}
             text={el.name}
-            active={i18n.language === el.code}
+            active={i18n.resolvedLanguage === el.code}
             onClick={() => {
               i18n.changeLanguage(el.code);
               goToMainScreen();

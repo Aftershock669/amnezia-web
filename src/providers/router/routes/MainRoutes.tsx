@@ -1,4 +1,4 @@
-import { RouteObject } from 'react-router-dom';
+import { Navigate, RouteObject } from 'react-router-dom';
 import Layout from '@src/layouts/Layout/Layout';
 import MainPage from '@src/pages/main/MainPage';
 import DownloadsPage from '@src/pages/downloads/DownloadsPage';
@@ -8,36 +8,75 @@ import InstructionsPage from '@src/pages/instructions/InstructionsPage';
 import Instruction from '@src/pages/instructions/ui/AppInstructionMd/AppInstructionMd';
 import HostingInstructions from '@src/pages/instructions/ui/HostingInstructions/HostingInstructions';
 
+// const MainRoutes: RouteObject = {
+//   element: <Layout />,
+//   path: '/:lang',
+//   children: [
+//     {
+//       index: true,
+//       element: <MainPage />,
+//     },
+//     {
+//       path: 'downloads',
+//       element: <DownloadsPage />,
+//     },
+//     {
+//       path: 'support',
+//       element: <SupportPage />,
+//     },
+//     {
+//       path: 'about',
+//       element: <AboutPage />,
+//     },
+//     {
+//       path: 'instructions',
+//       element: <InstructionsPage />,
+//     },
+//     {
+//       path: 'instructions/starter-guide',
+//       element: <HostingInstructions />,
+//     },
+//     {
+//       path: 'instructions/:id',
+//       element: <Instruction />,
+//     },
+//   ],
+// };
+
 const MainRoutes: RouteObject = {
   element: <Layout />,
   path: '/',
   children: [
     {
       index: true,
+      element: <Navigate to="/en" replace />,
+    },
+    {
+      path: '/:lang',
       element: <MainPage />,
     },
     {
-      path: 'downloads',
+      path: ':lang/downloads',
       element: <DownloadsPage />,
     },
     {
-      path: 'support',
+      path: ':lang/support',
       element: <SupportPage />,
     },
     {
-      path: 'about',
+      path: ':lang/about',
       element: <AboutPage />,
     },
     {
-      path: 'instructions',
+      path: ':lang/instructions',
       element: <InstructionsPage />,
     },
     {
-      path: 'instructions/starter-guide',
+      path: ':lang/instructions/starter-guide',
       element: <HostingInstructions />,
     },
     {
-      path: 'instructions/:id',
+      path: ':lang/instructions/:id',
       element: <Instruction />,
     },
   ],

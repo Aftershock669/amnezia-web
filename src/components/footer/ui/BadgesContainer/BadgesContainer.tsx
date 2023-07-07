@@ -15,7 +15,7 @@ const BadgesContainer = () => {
         <div className={styles.linkWrapper}>
           <TextLink
             text={t('footer.allDwnOpt')}
-            to="/downloads"
+            to="./downloads"
             variant="light"
             className={styles.link}
           />

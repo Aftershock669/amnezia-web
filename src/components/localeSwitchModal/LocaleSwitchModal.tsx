@@ -6,11 +6,14 @@ import classNames from 'classnames';
 import localesList from '@src/shared/config/i18n/localesList';
 import LocaleSwitchPill from '@src/components/LocaleSwitchPill/LocaleSwitchPill';
 import { useTranslation } from 'react-i18next';
+import { useLocation, useNavigate } from 'react-router-dom';
 import styles from './LocaleSwitchModal.module.scss';
 
 const LocaleSwitchModal = () => {
   const [opened, { open, close }] = useDisclosure(false);
   const { t, i18n } = useTranslation();
+  const location = useLocation();
+  const navigate = useNavigate();
 
   return (
     <>
@@ -35,8 +38,12 @@ const LocaleSwitchModal = () => {
             <LocaleSwitchPill
               key={el.code}
               text={el.name}
-              active={i18n.language === el.code}
+              active={i18n.resolvedLanguage === el.code}
+              lang={el.code}
               onClick={() => {
+                const newUrl = location.pathname.split('/');
+                newUrl[1] = el.code;
+                navigate(newUrl.join('/'), { replace: true });
                 i18n.changeLanguage(el.code);
                 close();
               }}

@@ -4,7 +4,7 @@ import InstructionsPage from '@src/pages/instructions/InstructionsPage';
 
 const InstructionsRoutes: RouteObject = {
   element: <Layout />,
-  path: 'instructions/',
+  path: ':lang/instructions/',
   children: [
     {
       index: true,

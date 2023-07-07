@@ -21,7 +21,7 @@ const AffiliatedLogos = () => {
           <Link className={styles.logoLink} to="https://www.techradar.com/" reloadDocument>
             <TechRadarLogo />
           </Link>
-          {i18n.language === 'ru' ? (
+          {i18n.resolvedLanguage === 'ru' ? (
             <>
               <Link className={styles.logoLink} to="https://theins.ru/" reloadDocument>
                 <TheInsiderLogo />
