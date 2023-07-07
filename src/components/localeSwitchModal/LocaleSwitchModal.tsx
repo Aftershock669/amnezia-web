@@ -39,7 +39,6 @@ const LocaleSwitchModal = () => {
               key={el.code}
               text={el.name}
               active={i18n.resolvedLanguage === el.code}
-              lang={el.code}
               onClick={() => {
                 const newUrl = location.pathname.split('/');
                 newUrl[1] = el.code;

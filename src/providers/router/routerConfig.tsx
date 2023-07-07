@@ -8,7 +8,6 @@ import InstructionsPage from '@src/pages/instructions/InstructionsPage';
 import HostingInstructions from '@src/pages/instructions/ui/HostingInstructions/HostingInstructions';
 import Instruction from '@src/pages/instructions/ui/AppInstructionMd/AppInstructionMd';
 import NotFoundPage from '@src/pages/notFound/NotFoundPage';
-import LanguagePath from '@src/components/LanguagePath/LanguagePath';
 import IndexLangSwitch from '@src/components/IndexLangSwitch/IndexLangSwitch';
 
 export default createBrowserRouter([

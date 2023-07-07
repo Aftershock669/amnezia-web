@@ -4,7 +4,6 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import Backend from 'i18next-http-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
-import isSupportedLang from '@src/shared/helpers/isSupportedLang';
 
 // i18n.on('languageChanged', function (lng) {
 //   // if the language we switched to is the default language we need to remove the /en from URL
@@ -36,9 +35,9 @@ i18n
   .init({
     fallbackLng: 'en',
     supportedLngs: ['en', 'ru'],
-    whitelist: ['en', 'ru'],
+    // whitelist: ['en', 'ru'],
     // detection: {
-    //   order: ['path'],
+    //   order: ['localStorage', 'navigator', 'htmlTag'],
     //   lookupFromPathIndex: 0,
     //   checkWhitelist: true,
     // },
