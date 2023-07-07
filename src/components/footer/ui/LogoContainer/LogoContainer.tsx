@@ -5,7 +5,7 @@ import styles from './LogoContainer.module.scss';
 const LogoContainer = () => {
   return (
     <div className={classNames(styles.root)}>
-      <NavLink to="/">
+      <NavLink to=".">
         <img src="/img/logos/logo-with-a-w-glow.svg" alt="Amnezia logo" />
       </NavLink>
     </div>

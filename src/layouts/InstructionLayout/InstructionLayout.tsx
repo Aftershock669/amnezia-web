@@ -13,8 +13,8 @@ interface InstructionLayoutProps {
 
 const InstructionLayout = ({ children }: InstructionLayoutProps) => {
   const items = [
-    { title: 'Поддержка', href: '/support' },
-    { title: 'Инструкции', href: '/instructions' },
+    { title: 'Поддержка', href: '../support' },
+    { title: 'Инструкции', href: '../instructions' },
   ].map((item, index) => <TextLink text={item.title} to={item.href} key={index} variant="light" />);
 
   return (

@@ -43,7 +43,7 @@ export default function Layout() {
 
     if (!isSupportedLang(urlLang)) {
       // incorrect URL lang
-      navigate(`/${resolvedLang}/`, { replace: true });
+      navigate(`/${resolvedLang}`, { replace: true });
     } else if (resolvedLang !== urlLang) {
       // correct URL lang but unsynced
       // sync lang in URL and i18n. FIX things For browser history (back, forward)
