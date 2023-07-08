@@ -6,6 +6,7 @@ import { Breadcrumbs } from '@mantine/core';
 import { ChevronRight } from 'lucide-react';
 import { ReactNode } from 'react';
 import ContactsCard from '@src/components/ContactsCard/ContactsCard';
+import { useTranslation } from 'react-i18next';
 import styles from './InstructionLayout.module.scss';
 
 interface InstructionLayoutProps {
@@ -13,9 +14,11 @@ interface InstructionLayoutProps {
 }
 
 const InstructionLayout = ({ children }: InstructionLayoutProps) => {
+  const { t } = useTranslation();
+
   const items = [
-    { title: 'Поддержка', href: '../support' },
-    { title: 'Инструкции', href: '../instructions' },
+    { title: t('navigation.support'), href: '../support' },
+    { title: t('instructionsPage.header.text'), href: '../instructions' },
   ].map((item, index) => <TextLink text={item.title} to={item.href} key={index} variant="light" />);
 
   return (
@@ -31,6 +34,7 @@ const InstructionLayout = ({ children }: InstructionLayoutProps) => {
         <Breadcrumbs separator={<ChevronRight size={18} strokeWidth={3} color="#494B50" />} mt="xs">
           {items}
         </Breadcrumbs>
+        <div className={styles.instructionContent} />
         {children}
         <ContactsCard />
       </div>
