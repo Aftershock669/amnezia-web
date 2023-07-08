@@ -5,8 +5,8 @@ import { MinusIcon, PlusIcon } from 'lucide-react';
 import styles from './AccordionItemV2.module.scss';
 
 interface AccordionItemProps {
-  value: string;
-  label: string;
+  value: any;
+  label: any;
   children: ReactNode;
   onToggle?: any;
   active?: boolean;

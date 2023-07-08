@@ -1,0 +1,83 @@
+[
+  {
+    "recommend": true,
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/7/79/DigitalOcean_logo.png",
+    "link": "https://www.digitalocean.com/",
+    "desc": "Провайдер поддерживает автоматическую настройку сервера и генерацию простой ссылки для подключения клиента Amnezia VPN.",
+    "serversLabel": "Серверы",
+    "serversText": "США, Россия, Нидерланды, Германия, Украина, Польша, Швеция, Канада, Швейцария, Эстония, Великобритания, Сингапур, Чехия, ОАЭ, Япония, Австралия, Франция, Румыния, Гонконг, Испания, Норвегия, Болгария.",
+    "legalAddressLabel": "Юридический адрес",
+    "legalAddressText": "Великобритания",
+    "priceLabel": "Оплата",
+    "priceText": "от $5/мес",
+    "priceInfo": "Доступна оплата картами РФ, Mastercard/Visa, PayPal, Bitcoin, ЮMoney, МИР, Qiwi, RBK.money, Advcash, Связной, Beeline, Payeer, IBOX, PaySera.",
+    "steps": [
+      {
+        "image": "https://ru.amnezia.org/img/instructions/step_1/Amazon/1.png",
+        "text": "Выберите страну сервераВыберите страну сервераВыберите страну сервераВыберите страну сервераВыберите страну сервера."
+      },
+      {
+        "image": "https://ru.amnezia.org/img/instructions/step_1/Amazon/2.png",
+        "text": "Выберите страну сервераВыберите страну сервераВыберите страну сервераВыберите страну сервераВыберите страну сервера."
+      },
+      {
+        "image": "https://ru.amnezia.org/img/instructions/step_1/Amazon/3.png",
+        "text": "Выберите страну сервераВыберите страну сервераВыберите страну сервераВыберите страну сервераВыберите страну сервера."
+      }
+    ]
+  },
+  {
+    "recommend": false,
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg",
+    "link": "https://www.aws.name",
+    "desc": "Провайдер поддерживает автоматическую настройку сервера и генерацию простой ссылки для подключения клиента Amnezia VPN.",
+    "serversLabel": "Серверы",
+    "serversText": "США, Германия, Украина, Великобритания, Сингапур, Чехия, ОАЭ, Япония, Австралия, Франция, Румыния, Гонконг, Испания, Норвегия, Болгария.",
+    "legalAddressLabel": "Юридический адрес",
+    "legalAddressText": "США",
+    "priceLabel": "Оплата",
+    "priceText": "от $20/мес",
+    "priceInfo": "Доступна оплата картами РФ, Mastercard/Visa, PayPal, Bitcoin, ЮMoney, МИР, Qiwi, RBK.money, Advcash, Связной, Beeline, Payeer, IBOX, PaySera.",
+    "steps": [
+      {
+        "image": "https://ru.amnezia.org/img/instructions/step_1/Amazon/1.png",
+        "text": "Выберите страну сервераВыберите страну сервераВыберите страну сервераВыберите страну сервераВыберите страну сервера."
+      },
+      {
+        "image": "https://ru.amnezia.org/img/instructions/step_1/Amazon/2.png",
+        "text": "Выберите страну сервераВыберите страну сервераВыберите страну сервераВыберите страну сервераВыберите страну сервера."
+      },
+      {
+        "image": "https://ru.amnezia.org/img/instructions/step_1/Amazon/3.png",
+        "text": "Выберите страну сервераВыберите страну сервераВыберите страну сервераВыберите страну сервераВыберите страну сервера."
+      }
+    ]
+  },
+  {
+    "recommend": false,
+    "logo": "https://www.cinfu.com/images/logo.png",
+    "link": "https://www.a12311ws.name",
+    "desc": "Провайдер поддерживает автоматическую настройку сервера и генерацию простой ссылки для подключения клиента Amnezia VPN.",
+    "serversLabel": "Серверы",
+    "serversText": "Швейцария, Эстония, Великобритания, Сингапур, Чехия, ОАЭ, Япония, Австралия, Франция, Румыния",
+    "legalAddressLabel": "Юридический адрес",
+    "legalAddressText": "США",
+    "priceLabel": "Оплата",
+    "priceText": "от $20/мес",
+    "priceInfo": "Доступна оплата картами РФ, Mastercard/Visa, PayPal, Bitcoin, ЮMoney, МИР, Qiwi, RBK.money, Advcash, Связной, Beeline, Payeer, IBOX, PaySera.",
+    "steps": [
+      {
+        "image": "https://ru.amnezia.org/img/instructions/step_1/Amazon/1.png",
+        "text": "Выберите страну сервераВыберите страну сервераВыберите страну сервераВыберите страну сервераВыберите страну сервера."
+      },
+      {
+        "image": "https://ru.amnezia.org/img/instructions/step_1/Amazon/2.png",
+        "text": "Выберите страну сервераВыберите страну сервераВыберите страну сервераВыберите страну сервераВыберите страну сервера."
+      },
+      {
+        "image": "https://ru.amnezia.org/img/instructions/step_1/Amazon/3.png",
+        "text": "Выберите страну сервераВыберите страну сервераВыберите страну сервераВыберите страну сервераВыберите страну сервера."
+      }
+    ]
+  }
+]

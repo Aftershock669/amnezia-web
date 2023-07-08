@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import styles from './TextLink.module.scss';
 
 interface TextLinkProps {
-  text: string;
+  text: any;
   to: string;
   reloadDocument?: boolean;
   variant?: 'light' | 'dark' | 'underline';

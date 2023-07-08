@@ -5,6 +5,7 @@ import SideBarLink from '@src/components/SidebarNav/ui/SideBarLink/SideBarLink';
 import { Breadcrumbs } from '@mantine/core';
 import { ChevronRight } from 'lucide-react';
 import { ReactNode } from 'react';
+import ContactsCard from '@src/components/ContactsCard/ContactsCard';
 import styles from './InstructionLayout.module.scss';
 
 interface InstructionLayoutProps {
@@ -31,6 +32,7 @@ const InstructionLayout = ({ children }: InstructionLayoutProps) => {
           {items}
         </Breadcrumbs>
         {children}
+        <ContactsCard />
       </div>
     </div>
   );
