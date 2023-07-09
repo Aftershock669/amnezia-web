@@ -19,8 +19,8 @@ const MainScreen = ({ closeDrawer, goToLocalesScreen }: PT) => {
         </button>
       </div>
       <div className={styles.list}>
-        <DrawerNavLink text={t('navigation.support')} to="/support" />
-        <DrawerNavLink text={t('navigation.about')} to="/about" />
+        <DrawerNavLink text={t('navigation.support')} to="./support" />
+        <DrawerNavLink text={t('navigation.about')} to="./about" />
       </div>
       <div className={styles.langSwitchButtonContainer}>
         <button type="button" className={styles.langSwitchButton} onClick={goToLocalesScreen}>

@@ -1,9 +1,9 @@
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { Carousel, Embla } from '@mantine/carousel';
+import { Carousel, Embla, useAnimationOffsetEffect } from '@mantine/carousel';
 import { useMediaQuery } from '@mantine/hooks';
 import { Image } from '@mantine/core';
 import { StepItem } from '@src/pages/instructions/ui/HostingInstructions/ui/SingleHostingInstruction/SingleHostingInstruction';
-import { useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import styles from './HostingSlider.module.scss';
 
 interface HostingSliderProps {
@@ -11,12 +11,27 @@ interface HostingSliderProps {
 }
 
 const HostingSlider = ({ steps }: HostingSliderProps) => {
-  const isMobile = useMediaQuery('(max-width: 767.98px)');
+  const [embla, setEmbla] = useState<Embla | null>(null);
+  const [currentSlideIndex, setCurrentSlideIndex] = useState<number>(0);
 
-  // const [embla, setEmbla] = useState<Embla | null>(null);
+  // useAnimationOffsetEffect(embla, 0);
+  const isMobileQuery = useMediaQuery('(max-width: 767.98px)');
+
+  const handleScroll = useCallback(() => {
+    if (!embla) return;
+    setCurrentSlideIndex(embla.selectedScrollSnap());
+  }, [embla]);
+
+  useEffect(() => {
+    if (embla) {
+      embla.on('select', handleScroll);
+      setCurrentSlideIndex(embla.selectedScrollSnap());
+    }
+  }, [embla]);
 
   const slides = steps.map((step) => (
     <Carousel.Slide key={step.image}>
+      {/* <HostingSlide imageUrl={step.image} text={step.text} /> */}
       <Image radius="16px" src={step.image} />
     </Carousel.Slide>
   ));
@@ -25,21 +40,17 @@ const HostingSlider = ({ steps }: HostingSliderProps) => {
     <div className={styles.root}>
       <Carousel
         mt={30}
-        withControls={!isMobile}
+        withControls={!isMobileQuery}
         controlsOffset={34}
         controlSize={50}
-        slideSize={isMobile ? '100%' : '90%'}
+        slideSize="90%"
+        breakpoints={[{ maxWidth: 'sm', slideSize: '100%', slideGap: 2 }]}
         slideGap={20}
         withIndicators
         nextControlIcon={<ChevronRight size={36} />}
         previousControlIcon={<ChevronLeft size={36} />}
-        // getEmblaApi={setEmbla}
+        getEmblaApi={setEmbla}
         styles={{
-          // container: {
-          //   '& > :first-child, & > :last-child': {
-          //     opacity: 0.3,
-          //   },
-          // },
           control: {
             borderRadius: '16px',
             '&[data-inactive]': {
@@ -63,6 +74,7 @@ const HostingSlider = ({ steps }: HostingSliderProps) => {
       >
         {slides}
       </Carousel>
+      <div className={styles.imageCaption}>{steps[currentSlideIndex].text}</div>
     </div>
   );
 };
