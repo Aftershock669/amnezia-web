@@ -15,9 +15,10 @@ const DecoratedPageLayout = ({ bg, children }: DecoratedPageLayoutProps) => {
         [styles.bgDarker]: bg === 'darker',
       })}
     >
-      <div className={styles.glowContainer}>
-        <div className={styles.glow} />
-      </div>
+      {/* <div className={styles.gradientContainer} /> */}
+      {/* <div className={styles.glowContainer}> */}
+      {/*  <div className={styles.glow} /> */}
+      {/* </div> */}
 
       <div className={styles.content}>{children}</div>
     </div>

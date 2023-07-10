@@ -22,7 +22,6 @@
 .decor {
   overflow: hidden;
   position: relative;
-  transition: background-color .3s;
 }
 
 .glow-container {
@@ -42,10 +41,23 @@
   box-shadow: 0 0 100px 0 var(--gray-20);
 }
 
+.gradient-container {
+  background: radial-gradient(48.30% 61.49% at 50.00% 0.00%, #24262A 0%, #090B10 100%);
+  height: 300px;
+}
+
 .bg-dark {
+  background: radial-gradient(48.30% 61.49% at 50.00% 0.00%, #24262A 0%, #111217 100%);
   background-color: #111217;
+  background-repeat: no-repeat;
+  background-size: 1920px 580px;
+  background-position: top center;
 }
 
 .bg-darker {
+  background: radial-gradient(48.30% 61.49% at 50.00% 0.00%, #24262A 0%, #090B10 100%);
   background-color: #090B10;
+  background-repeat: no-repeat;
+  background-size: 1920px 580px;
+  background-position: top center;
 }
