@@ -14,12 +14,12 @@ interface HostingSliderProps {
 const HostingSlider = ({ steps }: HostingSliderProps) => {
   const [embla, setEmbla] = useState<Embla | null>(null);
   const [currentSlideIndex, setCurrentSlideIndex] = useState<number>(0);
-  const [tweenValues, setTweenValues] = useState<number[]>([]);
+  // const [tweenValues, setTweenValues] = useState<number[]>([]);
 
-  const TWEEN_FACTOR = 1;
+  // const TWEEN_FACTOR = 1;
 
-  const numberWithinRange = (number: number, min: number, max: number): number =>
-    Math.min(Math.max(number, min), max);
+  // const numberWithinRange = (number: number, min: number, max: number): number =>
+  //   Math.min(Math.max(number, min), max);
 
   // useAnimationOffsetEffect(embla, 0);
 
@@ -30,40 +30,40 @@ const HostingSlider = ({ steps }: HostingSliderProps) => {
     setCurrentSlideIndex(embla.selectedScrollSnap());
   }, [embla]);
 
-  const onScroll = useCallback(() => {
-    if (!embla) return;
+  // const onScroll = useCallback(() => {
+  //   if (!embla) return;
+  //
+  //   const engine = embla.internalEngine();
+  //   const scrollProgress = embla.scrollProgress();
+  //
+  //   const tweenStyles = embla.scrollSnapList().map((scrollSnap, index) => {
+  //     let diffToTarget = scrollSnap - scrollProgress;
+  //
+  //     if (engine.options.loop) {
+  //       engine.slideLooper.loopPoints.forEach((loopItem) => {
+  //         const target = loopItem.target();
+  //         if (index === loopItem.index && target !== 0) {
+  //           const sign = Math.sign(target);
+  //           if (sign === -1) diffToTarget = scrollSnap - (1 + scrollProgress);
+  //           if (sign === 1) diffToTarget = scrollSnap + (1 - scrollProgress);
+  //         }
+  //       });
+  //     }
+  //     const tweenValue = 1 - Math.abs(diffToTarget * TWEEN_FACTOR);
+  //     return numberWithinRange(tweenValue, 0, 1);
+  //   });
+  //   setTweenValues(tweenStyles);
+  // }, [embla, setTweenValues]);
 
-    const engine = embla.internalEngine();
-    const scrollProgress = embla.scrollProgress();
-
-    const tweenStyles = embla.scrollSnapList().map((scrollSnap, index) => {
-      let diffToTarget = scrollSnap - scrollProgress;
-
-      if (engine.options.loop) {
-        engine.slideLooper.loopPoints.forEach((loopItem) => {
-          const target = loopItem.target();
-          if (index === loopItem.index && target !== 0) {
-            const sign = Math.sign(target);
-            if (sign === -1) diffToTarget = scrollSnap - (1 + scrollProgress);
-            if (sign === 1) diffToTarget = scrollSnap + (1 - scrollProgress);
-          }
-        });
-      }
-      const tweenValue = 1 - Math.abs(diffToTarget * TWEEN_FACTOR);
-      return numberWithinRange(tweenValue, 0, 1);
-    });
-    setTweenValues(tweenStyles);
-  }, [embla, setTweenValues]);
-
-  useEffect(() => {
-    if (!embla) return;
-
-    onScroll();
-    embla.on('scroll', () => {
-      flushSync(() => onScroll());
-    });
-    embla.on('reInit', onScroll);
-  }, [embla, onScroll]);
+  // useEffect(() => {
+  //   if (!embla) return;
+  //
+  //   onScroll();
+  //   embla.on('scroll', () => {
+  //     flushSync(() => onScroll());
+  //   });
+  //   embla.on('reInit', onScroll);
+  // }, [embla, onScroll]);
 
   useEffect(() => {
     if (embla) {
@@ -97,10 +97,10 @@ const HostingSlider = ({ steps }: HostingSliderProps) => {
           {/* {slides} */}
           {steps.map((step, stepIndex) => (
             <Carousel.Slide
-              key={step.image}
-              style={{
-                ...(tweenValues.length && { opacity: tweenValues[stepIndex] }),
-              }}
+              key={stepIndex}
+              // style={{
+              //   ...(tweenValues.length && { opacity: tweenValues[stepIndex] }),
+              // }}
             >
               <Image radius="16px" src={step.image} />
             </Carousel.Slide>
