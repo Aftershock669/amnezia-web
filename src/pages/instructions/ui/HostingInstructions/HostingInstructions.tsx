@@ -5,10 +5,12 @@ import SingleHostingInstruction from '@src/pages/instructions/ui/HostingInstruct
 import AccordionItemV2 from '@src/shared/ui/AccordeonV2/ui/AccordionItemV2/AccordionItemV2';
 import AccordionV2 from '@src/shared/ui/AccordeonV2/AccordionV2';
 import Card from '@src/shared/ui/Card/Card';
+import usePageDecoration from '@src/shared/hooks/usePageDecoration/usePageDecoration';
 import styles from './HostingInstructions.module.scss';
 import hostingDataRu from '../../config/hostingDataRu.json';
 
 const HostingInstructions = () => {
+  usePageDecoration('dark');
   const { i18n } = useTranslation();
 
   return (

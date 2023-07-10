@@ -7,6 +7,7 @@ import remarkGfm from 'remark-gfm';
 import MdStyledContainer from '@src/components/MdStyledContainer/MdStyledContainer';
 import TextLink from '@src/shared/ui/TextLink/TextLink';
 import InstructionLayout from '@src/layouts/InstructionLayout/InstructionLayout';
+import usePageDecoration from '@src/shared/hooks/usePageDecoration/usePageDecoration';
 
 function RouterLink({ children, href }: any) {
   return href.match(/^\//) ? (
@@ -18,6 +19,7 @@ function RouterLink({ children, href }: any) {
 }
 
 const Instruction1Page = () => {
+  usePageDecoration('dark');
   const location = useLocation();
   const { i18n } = useTranslation();
 
