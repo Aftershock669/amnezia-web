@@ -38,6 +38,7 @@ const HostingInstructions = () => {
               gap: '10px',
             },
             tab: {
+              minWidth: '140px',
               cursor: 'pointer',
               display: 'flex',
               justifyContent: 'center',
@@ -46,7 +47,7 @@ const HostingInstructions = () => {
               padding: '0 20px',
               border: '1px solid transparent',
               borderRadius: '16px',
-              backgroundColor: 'transparent',
+              backgroundColor: '#1c1c1e',
               '&[data-active]': {
                 backgroundColor: '#1c1c1e',
                 borderColor: '#FBB26A',
@@ -54,19 +55,19 @@ const HostingInstructions = () => {
             },
           }}
         >
-          <Card className={styles.card}>
-            <Tabs.List>
-              {hostingDataRu.hostings.map((hosting, i) => (
-                <Tabs.Tab
-                  key={i}
-                  value={hosting.link}
-                  // icon={<IconPhoto size="0.8rem" />}
-                >
-                  <img src={hosting.logo} height="26px" />
-                </Tabs.Tab>
-              ))}
-            </Tabs.List>
-          </Card>
+          {/* <Card className={styles.card}> */}
+          <Tabs.List>
+            {hostingDataRu.hostings.map((hosting, i) => (
+              <Tabs.Tab
+                key={i}
+                value={hosting.link}
+                // icon={<IconPhoto size="0.8rem" />}
+              >
+                <img src={hosting.logo} height="26px" />
+              </Tabs.Tab>
+            ))}
+          </Tabs.List>
+          {/* </Card> */}
 
           {hostingDataRu.hostings.map((hosting, i) => (
             <Tabs.Panel key={i} value={hosting.link} pt="xs">

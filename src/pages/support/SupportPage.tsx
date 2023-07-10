@@ -3,8 +3,11 @@ import SupportHeaderText from '@src/pages/support/ui/SupportHeaderText/SupportHe
 import SupportCards from '@src/pages/support/ui/SupportCards/SupportCards';
 import ContactsCard from '@src/components/ContactsCard/ContactsCard';
 import Faq from '@src/pages/support/ui/Faq/Faq';
+import usePageDecoration from '@src/shared/hooks/usePageDecoration/usePageDecoration';
 
 const SupportPage = () => {
+  usePageDecoration('dark');
+
   return (
     <>
       <SupportHeaderText />

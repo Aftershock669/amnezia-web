@@ -8,8 +8,10 @@ import SecureSimpleFreeSection from '@src/pages/main/ui/SecureEasyFreeSection/Se
 import PrivacyTextSection from '@src/pages/main/ui/PrivacyTextSection/PrivacyTextSection';
 import LogsEncryptSection from '@src/pages/main/ui/LogsEncryptSection/LogsEncryptSection';
 import MoreFeaturesSection from '@src/pages/main/ui/MoreFeaturesSection/MoreFeaturesSection';
+import usePageDecoration from '@src/shared/hooks/usePageDecoration/usePageDecoration';
 
 const MainPage = () => {
+  usePageDecoration('darker');
   return (
     <div>
       <HeaderText />
