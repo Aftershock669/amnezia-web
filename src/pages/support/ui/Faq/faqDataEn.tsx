@@ -2,17 +2,17 @@ import TextLink from '@src/shared/ui/TextLink/TextLink';
 
 const faqDataRu = [
   {
-    label: 'Is Amnezia a VPN? service?',
+    label: 'Is Amnezia a VPN service?',
     content:
-      "No Amnezia is not a VPN service, it's a VPN client with which you can set up and use your own VPN.\n",
+      "No Amnezia is not a VPN-service, it's a VPN-client with which you can set up and use your own VPN.",
   },
   {
-    label: 'Is Amnezia free?',
+    label: 'Is Amnezia a free service?',
     content:
-      'Yes, Amnezia is completely free software. You do not connect to our servers or pay us anything. However, to create your own VPN, you will need to purchase any VPS from any provider or use an existing one.',
+      "Yes, Amnezia is completely free software. You don't connect to our servers and you don't pay anything to us. However, to create your own VPN, you will need to purchase any VPS from any provider or use an existing one.",
   },
   {
-    label: 'Which devices and operating systems does Amnezia work on?',
+    label: 'Which devices and operating systems does Amnezia support?',
     content: 'Currently, there are versions available for Windows, macOS, Android, iOS, and Linux.',
   },
   {
@@ -20,15 +20,15 @@ const faqDataRu = [
     content: (
       <>
         Amnezia does not collect or transmit any statistics, logs, analytics, or other user
-        information. The only data requested by the client is connection data. These data are also
-        not collected or transmitted, which can be verified thanks to the
+        information. The only data requested by the client is connection data. This data is also not
+        collected or transmitted, which can be verified due to the
         <TextLink
           to="https://github.com/amnezia-vpn"
           variant="light"
           text=" open-source "
           openInNewTab
         />
-        nature of both the server and client software.
+        of both the server and client software.
       </>
     ),
   },
@@ -38,9 +38,9 @@ const faqDataRu = [
       'You provide the IP address, login, and password of your server. The application connects to the server via SSH, installs Docker, and launches Amnezia server containers. Separate containers are created for each connection protocol, and keys and root certificates are generated. Once the server is configured, you can connect to it via VPN.',
   },
   {
-    label: 'Why is Amnezia more resistant to blocking than other VPN?',
+    label: 'Why Amnezia is more resistant to blocking than other VPNs?',
     content:
-      'The larger and more popular a commercial VPN service is, the higher the likelihood of it coming under the scrutiny of surveillance agencies, which in turn increases the chances of access to its servers and protocols being blocked. With Amnezia, you can create your own VPN based on any VPS for your personal use only. By using your own VPS in conjunction with encrypted VPN protocols, the likelihood of blocking is significantly reduced. This is confirmed by our users in countries with high levels of censorship.',
+      'The larger and more popular a commercial VPN service is, the more likely it is to attract attention of the surveillance agencies and authorities, which increases the chances of access to its servers and protocols is being blocked. With Amnezia, you can create your own VPN based on any VPS for your personal use only. By using your own VPS in conjunction with encrypted VPN protocols, the chance of blocking is significantly reduced. This is confirmed by our users in countries with high levels of censorship.',
   },
   {
     label:
@@ -59,8 +59,8 @@ const faqDataRu = [
         </p>
         <p>
           <strong>Bypass restrictions</strong> - many sites know the IP addresses of popular VPN
-          servers and blacklist them. By purchasing a separate VPS, your IP address is only known to
-          you and the people with whom you have shared the connection details.
+          servers and blacklist them. When you buy a separate VPS, your IP address is known only to
+          you and the people you have shared your connection data with.
         </p>
         <p>
           <strong>Mobility</strong> - the ability to use your configured VPN not only with the
@@ -97,12 +97,12 @@ const faqDataRu = [
       <>
         <p>
           <strong>IMPORTANT!</strong> If your country has a very high level of control, blocked
-          access to many sites, do not work any commercial and free VPN and VPN protocols, we
+          access to many sites, do not use any commercial and free VPN and VPN protocols, we
           recommend using OpenVPN over Cloak from the first connection. If you use unmasked
           protocols, the ip of your VPS can be blocked.
         </p>
         <p>
-          <strong>OpenVPN</strong>, over UDP, WireGuard and IKv2 unmasked protocols over UDP are
+          <strong>OpenVPN</strong>, over UDP, WireGuard and IKEv2 unmasked protocols over UDP are
           easily detected by firewalls and some sites. Sites may show a warning: "disable VPN before
           visiting site".
         </p>
@@ -114,20 +114,20 @@ const faqDataRu = [
       </>
     ),
   },
+  // {
+  //   label: 'What is Kill Switch?',
+  //   content: (
+  //     <>
+  //       <strong>Kill switch!</strong> — is an emergency internet disconnect feature integrated into
+  //       the VPN app. In case of an unexpected disconnection of your VPN-connection, the
+  //       <strong> kill switch </strong>feature will automatically disconnect you from the Internet.
+  //     </>
+  //   ),
+  // },
   {
-    label: 'What is Kill Switch?',
-    content: (
-      <>
-        <strong>Kill switch!</strong> — is an emergency internet disconnect feature integrated into
-        the VPN app. In the event of an unexpected disconnection of your VPN connection, the VPN
-        <strong>kill switch </strong>feature will automatically disconnect you from the Internet.
-      </>
-    ),
-  },
-  {
-    label: 'I want to use a VPN, but not for all sites. What can be done?',
+    label: 'I want to use a VPN, but not for all sites. What are the options?',
     content:
-      'Amnezia has a feature with which you can add exclusion sites to the list in order to visit them from your IP address, it is available on the main screen when connected.',
+      'Amnezia has a feature that allows to add sites-exclusions to the list in order to visit them from your IP address, it is available on the main screen of the client when it is connected.',
   },
   {
     label: 'Can I use key authentication for Amnezia?',
@@ -142,7 +142,7 @@ const faqDataRu = [
   {
     label: 'Purpose of the "Clear client cached profile" feature.',
     content:
-      'By default, Amnezia caches data (certificates and keys) from a configured VPN server to quickly connect directly to the server. This button resets this cache, as a result, new certificates with keys will be generated, which will be placed on the server via an SSH connection, and only then will the connection occur. It must be used when changing the server (if installed on several VPS), when updating the client or server. May be required when changing container settings.',
+      'By default, Amnezia caches data (certificates and keys) from a configured VPN server to quickly connect directly to the server. This button resets this cache, as a result, new certificates with keys will be generated, which will be placed on the server via an SSH connection, and only then the connection will start. It must be used when changing the server (if installed on several VPS), when updating the client or server. May be required when changing container settings.',
   },
   {
     label: 'Amnezia throws an error. What to do?',

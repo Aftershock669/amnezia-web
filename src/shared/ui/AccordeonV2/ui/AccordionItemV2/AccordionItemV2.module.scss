@@ -39,9 +39,8 @@
 }
 
 .content-wrapper {
-  height: 0;
-  overflow: hidden;
-  transition: height ease .2s;
+  //height: 0;
+  //overflow: hidden;
 }
 
 .content {
@@ -49,5 +48,5 @@
 }
 
 .open {
-  height: auto;
+  //height: auto;
 }

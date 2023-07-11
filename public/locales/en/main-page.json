@@ -8,9 +8,9 @@
     "theyWriteAboutAmneziaVPN": "They write about Amzezia VPN"
   },
   "protocolsCard": {
-    "header": "Supports modern protocols to bypass blocking",
+    "header": " Supports modern blocking bypass protocols",
     "mainText": {
-      "part1": "To work even in places where other VPNs don't work - China, Iran, and Turkmenistan.",
+      "part1": "It works even where other VPNs don't work - in China, Iran, and Turkmenistan.",
       "part2": "For countries with low internet censorship, Amnezia supports WireGuard and OpenVPN."
     },
     "link": "List of supported protocols by platform"
@@ -72,7 +72,7 @@
       "text": "To prevent the ISP from seeing your site accesses"
     },
     "stash": {
-      "header": "Secure storage\nfiles",
+      "header": "Secure storage files",
       "text": "SFTP server for secure and reliable file transfer over a secure connection"
     }
   }

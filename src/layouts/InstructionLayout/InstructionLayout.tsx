@@ -1,10 +1,9 @@
 import TextLink from '@src/shared/ui/TextLink/TextLink';
 import SidebarNav from '@src/components/SidebarNav/SidebarNav';
-import tableOfContents from '@src/pages/instructions/config/tableOfContents';
 import SideBarLink from '@src/components/SidebarNav/ui/SideBarLink/SideBarLink';
 import { Breadcrumbs } from '@mantine/core';
 import { ChevronRight } from 'lucide-react';
-import { ReactNode } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 import ContactsCard from '@src/components/ContactsCard/ContactsCard';
 import { useTranslation } from 'react-i18next';
 import styles from './InstructionLayout.module.scss';
@@ -14,7 +13,22 @@ interface InstructionLayoutProps {
 }
 
 const InstructionLayout = ({ children }: InstructionLayoutProps) => {
-  const { t } = useTranslation();
+  const [tableOfContents, setTableOfContents] = useState<any[]>([]);
+  const { i18n, t } = useTranslation();
+
+  useEffect(() => {
+    const gitLink = `https://raw.githubusercontent.com/Aftershock669/amnezia-open-docs/master/docs/${i18n.resolvedLanguage}/instructions/tableOfContents.json`;
+
+    const fetchData = () => {
+      return fetch(gitLink)
+        .then((response) => response.json())
+        .then((data) => {
+          setTableOfContents(data);
+        });
+    };
+
+    fetchData();
+  }, []);
 
   const items = [
     { title: t('navigation.support'), href: '../support' },
@@ -36,7 +50,9 @@ const InstructionLayout = ({ children }: InstructionLayoutProps) => {
         </Breadcrumbs>
         <div className={styles.instructionContent} />
         {children}
-        <ContactsCard />
+        <div className={styles.contactsCardWrapper}>
+          <ContactsCard />
+        </div>
       </div>
     </div>
   );

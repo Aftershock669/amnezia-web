@@ -4,6 +4,7 @@ import SupportCards from '@src/pages/support/ui/SupportCards/SupportCards';
 import ContactsCard from '@src/components/ContactsCard/ContactsCard';
 import Faq from '@src/pages/support/ui/Faq/Faq';
 import usePageDecoration from '@src/shared/hooks/usePageDecoration/usePageDecoration';
+import styles from './SupportPage.module.scss';
 
 const SupportPage = () => {
   usePageDecoration('dark');
@@ -13,7 +14,9 @@ const SupportPage = () => {
       <SupportHeaderText />
       <SupportCards />
       <Faq />
-      <ContactsCard />
+      <div className={styles.contactsCardWrapper}>
+        <ContactsCard />
+      </div>
     </>
   );
 };

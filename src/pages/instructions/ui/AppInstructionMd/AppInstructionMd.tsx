@@ -18,7 +18,7 @@ function RouterLink({ children, href }: any) {
   // return <TextLink variant="underline" text={children} to={href} openInNewTab />;
 }
 
-const Instruction1Page = () => {
+const AppInstructionMd = () => {
   usePageDecoration('dark');
   const location = useLocation();
   const { i18n } = useTranslation();
@@ -58,4 +58,4 @@ const Instruction1Page = () => {
   );
 };
 
-export default Instruction1Page;
+export default AppInstructionMd;

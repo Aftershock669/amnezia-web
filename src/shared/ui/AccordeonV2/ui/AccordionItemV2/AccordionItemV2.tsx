@@ -19,6 +19,27 @@ const AccordionItemV2 = ({
   active = false,
   children,
 }: AccordionItemProps) => {
+  // animated (non-responsive, because it doesn't know its height)
+
+  // const contentElRef = useRef() as React.MutableRefObject<HTMLDivElement>;
+  // return (
+  //   <li className={classNames(styles.item, { [styles.active]: active })}>
+  //     <button className={styles.button} onClick={onToggle}>
+  //       {label}
+  //       <span className={styles.control}>
+  //         {active ? <MinusIcon size={26} /> : <PlusIcon size={26} />}{' '}
+  //       </span>
+  //     </button>
+  //     <div
+  //       ref={contentElRef}
+  //       className={classNames(styles.contentWrapper, { [styles.open]: active })}
+  //       style={active ? { height: contentElRef.current.scrollHeight } : { height: '0px' }}
+  //     >
+  //       <div className={styles.content}>{children}</div>
+  //     </div>
+  //   </li>
+  // );
+
   const contentElRef = useRef() as React.MutableRefObject<HTMLDivElement>;
   return (
     <li className={classNames(styles.item, { [styles.active]: active })}>
@@ -28,13 +49,11 @@ const AccordionItemV2 = ({
           {active ? <MinusIcon size={26} /> : <PlusIcon size={26} />}{' '}
         </span>
       </button>
-      <div
-        ref={contentElRef}
-        className={classNames(styles.contentWrapper, { [styles.open]: active })}
-        style={active ? { height: contentElRef.current.scrollHeight } : { height: '0px' }}
-      >
-        <div className={styles.content}>{children}</div>
-      </div>
+      {active ? (
+        <div className={classNames(styles.contentWrapper, { [styles.open]: active })}>
+          <div className={styles.content}>{children}</div>
+        </div>
+      ) : undefined}
     </li>
   );
 };

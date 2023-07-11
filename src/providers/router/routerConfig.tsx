@@ -6,7 +6,7 @@ import SupportPage from '@src/pages/support/SupportPage';
 import AboutPage from '@src/pages/about/AboutPage';
 import InstructionsPage from '@src/pages/instructions/InstructionsPage';
 import HostingInstructions from '@src/pages/instructions/ui/HostingInstructions/HostingInstructions';
-import Instruction from '@src/pages/instructions/ui/AppInstructionMd/AppInstructionMd';
+import AppInstructionMd from '@src/pages/instructions/ui/AppInstructionMd/AppInstructionMd';
 import NotFoundPage from '@src/pages/notFound/NotFoundPage';
 import IndexLangSwitch from '@src/components/IndexLangSwitch/IndexLangSwitch';
 
@@ -45,7 +45,7 @@ export default createBrowserRouter([
       },
       {
         path: 'instructions/:id',
-        element: <Instruction />,
+        element: <AppInstructionMd />,
       },
     ],
   },
