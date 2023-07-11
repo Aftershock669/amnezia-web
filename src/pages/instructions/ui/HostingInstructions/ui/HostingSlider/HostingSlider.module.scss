@@ -1,3 +1,7 @@
+.root {
+  margin-top: 60px;
+}
+
 .carousel-wrapper {
   @media (screen and max-width: 767.98px) {
     margin-left: -15px;
@@ -17,15 +21,23 @@
   font-weight: 400;
   line-height: 150%;
   text-align: start;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .crsl-controls {
   margin-left: -27px;
   margin-right: -27px;
+  & > button:first-child > svg {
+    margin-right: 2px;
+  }
+  & > button:last-child > svg {
+    margin-left: 2px;
+  }
 }
 
 .crsl-control {
+  border: none;
+  box-shadow: none;
   opacity: 1;
   border-radius: 14px;
   &[data-inactive] {
@@ -34,11 +46,11 @@
   }
 }
 
-.crsl-indicators {
-  & {
-    bottom: -26px;
-  }
-}
+//.crsl-indicators {
+//  & {
+//    bottom: -26px;
+//  }
+//}
 
 .crsl-indicator {
   height: 10px;
@@ -48,4 +60,8 @@
   &[data-active] {
     background-color: #FBB26A;
   }
+}
+
+.image-root {
+  transition: opacity 0.2s;
 }
