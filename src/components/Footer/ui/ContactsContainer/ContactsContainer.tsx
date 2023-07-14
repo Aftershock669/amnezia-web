@@ -7,7 +7,7 @@ const ContactsContainer = () => {
   const { t } = useTranslation();
   return (
     <div className={styles.root}>
-      <div className={styles.label}>{t('Footer.contacts')}</div>
+      <div className={styles.label}>{t('footer.contacts')}</div>
       <div className={styles.linksContainer}>
         <TextLink
           text="Telegram"
