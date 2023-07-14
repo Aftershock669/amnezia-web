@@ -15,21 +15,46 @@ const AffiliatedLogos = () => {
       <div className={styles.text}>{t('affiliatedLinks.theyWriteAboutAmneziaVPN')}</div>
       <div className={styles.logoContainerWrapper}>
         <div className={styles.logoContainer}>
-          <Link className={styles.logoLink} to="https://www.wired.com/" reloadDocument>
+          <Link
+            className={styles.logoLink}
+            to="https://www.wired.com/"
+            reloadDocument
+            aria-label="Go to the wired website"
+          >
             <WiredLogo />
           </Link>
-          <Link className={styles.logoLink} to="https://www.techradar.com/" reloadDocument>
+          <Link
+            className={styles.logoLink}
+            to="https://www.techradar.com/"
+            reloadDocument
+            aria-label="Go to techradar website"
+          >
             <TechRadarLogo />
           </Link>
           {i18n.resolvedLanguage === 'ru' ? (
             <>
-              <Link className={styles.logoLink} to="https://theins.ru/" reloadDocument>
+              <Link
+                className={styles.logoLink}
+                to="https://theins.ru/"
+                reloadDocument
+                aria-label="Go to the insider website"
+              >
                 <TheInsiderLogo />
               </Link>
-              <Link className={styles.logoLink} to="https://meduza.io/" reloadDocument>
+              <Link
+                className={styles.logoLink}
+                to="https://meduza.io/"
+                reloadDocument
+                aria-label="Go to meduza website"
+              >
                 <MeduzaLogo />
               </Link>
-              <Link className={styles.logoLink} to="https://roskomsvoboda.org/" reloadDocument>
+              <Link
+                className={styles.logoLink}
+                to="https://roskomsvoboda.org/"
+                reloadDocument
+                aria-label="Go to roskomsvoboda website"
+              >
                 <RoscomLogo />
               </Link>
             </>

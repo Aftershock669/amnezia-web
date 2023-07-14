@@ -1,9 +1,11 @@
 {
+  "metaTitle": "Amnezia - Создай свой персональный VPN",
+  "metaContent": "sdfsf",
   "header": {
     "mainText": "Создай свой персональный VPN",
-    "subtext": "Amnezia VPN — простое и бесплатное приложение для запуска self-hosted VPN с высокими требованиями к приватности"
+    "subtext": "Amnezia VPN — простое и бесплатное приложение для запуска self-hosted VPN с высокими требованиями к приватности"
   },
-  "headerDownload": "Как запустить свой VPN с помощью Amnezia",
+  "headerDownload": "Как запустить свой VPN с помощью Amnezia",
   "affiliatedLinks": {
     "theyWriteAboutAmneziaVPN": "Об Amnezia VPN пишут"
   },

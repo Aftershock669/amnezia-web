@@ -1,5 +1,4 @@
 import TextLink from '@src/shared/ui/TextLink/TextLink';
-import classNames from 'classnames';
 import HostingSlider from '@src/pages/instructions/ui/HostingInstructions/ui/HostingSlider/HostingSlider';
 import styles from './SingleHostingInstruction.module.scss';
 

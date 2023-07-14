@@ -1,4 +1,3 @@
-import { AccItem } from '@src/shared/ui/Accordeon/Accordion';
 import classNames from 'classnames';
 import { ReactNode, useRef } from 'react';
 import { MinusIcon, PlusIcon } from 'lucide-react';

@@ -1,6 +1,4 @@
 import React, { ReactNode, useRef, useState } from 'react';
-import classNames from 'classnames';
-import { MinusIcon, PlusIcon } from 'lucide-react';
 import styles from './AccordionV2.module.scss';
 
 export interface AccordionProps {

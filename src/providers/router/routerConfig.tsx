@@ -9,6 +9,7 @@ import HostingInstructions from '@src/pages/instructions/ui/HostingInstructions/
 import AppInstructionMd from '@src/pages/instructions/ui/AppInstructionMd/AppInstructionMd';
 import NotFoundPage from '@src/pages/notFound/NotFoundPage';
 import IndexLangSwitch from '@src/components/IndexLangSwitch/IndexLangSwitch';
+import InstructionLayout from '@src/layouts/InstructionLayout/InstructionLayout';
 
 export default createBrowserRouter([
   {
@@ -40,13 +41,17 @@ export default createBrowserRouter([
         element: <InstructionsPage />,
       },
       {
-        path: 'instructions/starter-guide',
-        element: <HostingInstructions />,
+        path: 'instructions/:instructionId',
+        element: <InstructionLayout />,
       },
-      {
-        path: 'instructions/:id',
-        element: <AppInstructionMd />,
-      },
+      // {
+      //   path: 'instructions/starter-guide',
+      //   element: <HostingInstructions />,
+      // },
+      // {
+      //   path: 'instructions/:id',
+      //   element: <AppInstructionMd />,
+      // },
     ],
   },
   {

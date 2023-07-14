@@ -2,7 +2,6 @@
 import { Modal } from '@mantine/core';
 import { Languages, ChevronDown } from 'lucide-react';
 import { useDisclosure } from '@mantine/hooks';
-import classNames from 'classnames';
 import localesList from '@src/shared/config/i18n/localesList';
 import LocaleSwitchPill from '@src/components/LocaleSwitchPill/LocaleSwitchPill';
 import { useTranslation } from 'react-i18next';
@@ -11,7 +10,7 @@ import styles from './LocaleSwitchModal.module.scss';
 
 const LocaleSwitchModal = () => {
   const [opened, { open, close }] = useDisclosure(false);
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -50,7 +49,12 @@ const LocaleSwitchModal = () => {
           ))}
         </ul>
       </Modal>
-      <button type="button" className={styles.button} onClick={open}>
+      <button
+        type="button"
+        className={styles.button}
+        onClick={open}
+        aria-label="Language change button"
+      >
         <Languages />
         <span className={styles.iconButton}>
           <ChevronDown />

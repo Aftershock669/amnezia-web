@@ -1,7 +1,9 @@
 {
+  "metaTitle": "Amnezia - Support",
+  "metaContent": "sdfsf",
   "header": {
     "mainText": "Support",
-    "subText": "Helphelp helphelp help helphelphelp helphelp help help helphelphelp help helphelp help"
+    "subText": "Here are all the answers to the questions and instructions to make it easier for you to set up your VPN"
   },
   "howToCard": {
     "header": "How to start your VPN",
@@ -9,7 +11,7 @@
   },
   "instructionsCard": {
     "header": "Instructions",
-    "text": "Setting up the application, working with SSH keys, etc etc"
+    "text": "Setting up the application, working with SSH keys, protocol selection, VPN split tunneling and much more"
   },
   "contactsCardLabel": "Contact the chat for help if something does not work",
   "faq": {

@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import DwnVariantsDropdown from '@src/pages/downloads/ui/DwnCard/ui/DwnVariantsList/ui/DwnVariantsDropdown/DwnVariantsDropdown';
 import WindowsVariants from '@src/pages/downloads/ui/DwnCard/ui/DwnVariantsList/ui/WindowsVariants/WindowsVariants';
 import { useOs } from '@mantine/hooks';
-import DownloadBadge from '@src/components/downloadBadge/DownloadBadge';
+import DownloadBadge from '@src/components/DownloadBadge/DownloadBadge';
 import DownloadButtonDwnPage from '@src/components/DownloadButtonDwnPage/DownloadButtonDwnPage';
 import { useTranslation } from 'react-i18next';
 import styles from './DwnVariantsList.module.scss';

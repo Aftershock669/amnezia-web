@@ -1,4 +1,3 @@
-import TextLink from '@src/shared/ui/TextLink/TextLink';
 import { ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import styles from './InstructionItem.module.scss';

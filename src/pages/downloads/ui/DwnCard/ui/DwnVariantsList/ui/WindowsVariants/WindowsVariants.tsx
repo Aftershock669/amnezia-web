@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import DwnVariantsDropdown from '@src/pages/downloads/ui/DwnCard/ui/DwnVariantsList/ui/DwnVariantsDropdown/DwnVariantsDropdown';
-import DownloadButtonMain from '@src/components/DownloadButtonMain/DownloadButtonMain';
 import DownloadButtonDwnPage from '@src/components/DownloadButtonDwnPage/DownloadButtonDwnPage';
 import { useTranslation } from 'react-i18next';
 import styles from './WindowsVariants.module.scss';

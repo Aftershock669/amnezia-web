@@ -3,18 +3,18 @@ import SidebarNav from '@src/components/SidebarNav/SidebarNav';
 import SideBarLink from '@src/components/SidebarNav/ui/SideBarLink/SideBarLink';
 import { Breadcrumbs } from '@mantine/core';
 import { ChevronRight } from 'lucide-react';
-import { ReactNode, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import ContactsCard from '@src/components/ContactsCard/ContactsCard';
 import { useTranslation } from 'react-i18next';
+import { useParams } from 'react-router-dom';
+import HostingInstructions from '@src/pages/instructions/ui/HostingInstructions/HostingInstructions';
+import AppInstructionMd from '@src/pages/instructions/ui/AppInstructionMd/AppInstructionMd';
 import styles from './InstructionLayout.module.scss';
 
-interface InstructionLayoutProps {
-  children?: ReactNode;
-}
-
-const InstructionLayout = ({ children }: InstructionLayoutProps) => {
+const InstructionLayout = () => {
   const [tableOfContents, setTableOfContents] = useState<any[]>([]);
   const { i18n, t } = useTranslation();
+  const { instructionId } = useParams();
 
   useEffect(() => {
     const gitLink = `https://raw.githubusercontent.com/Aftershock669/amnezia-open-docs/master/docs/${i18n.resolvedLanguage}/instructions/tableOfContents.json`;
@@ -35,6 +35,11 @@ const InstructionLayout = ({ children }: InstructionLayoutProps) => {
     { title: t('instructionsPage.header.text'), href: '../instructions' },
   ].map((item, index) => <TextLink text={item.title} to={item.href} key={index} variant="light" />);
 
+  const switchInstructionsRoute = () => {
+    if (instructionId === 'starter-guide') return <HostingInstructions />;
+    return <AppInstructionMd instructionId={instructionId} />;
+  };
+
   return (
     <div className={styles.pageLayout}>
       <div className={styles.navCol}>
@@ -49,7 +54,7 @@ const InstructionLayout = ({ children }: InstructionLayoutProps) => {
           {items}
         </Breadcrumbs>
         <div className={styles.instructionContent} />
-        {children}
+        {switchInstructionsRoute()}
         <div className={styles.contactsCardWrapper}>
           <ContactsCard />
         </div>

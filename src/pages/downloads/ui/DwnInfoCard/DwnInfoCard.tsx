@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import Card from '@src/shared/ui/Card/Card';
-import { ArrowRight, ChevronRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import styles from './DwnInfoCard.module.scss';
@@ -11,7 +11,7 @@ const DwnInfoCard = () => {
     <Link to="/instructions" className={styles.rootLinkWrapper}>
       <Card className={styles.root}>
         <div>
-          <h2 className={styles.headerText}>{t('dwnInfoCard.header')}</h2>
+          <h2>{t('dwnInfoCard.header')}</h2>
           <div className={classNames(styles.mainText, 'main-text', 'dimmed')}>
             {t('dwnInfoCard.text')}
           </div>

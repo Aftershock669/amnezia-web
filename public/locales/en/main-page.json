@@ -1,9 +1,11 @@
 {
+  "metaTitle": "Amnezia - Create your personal VPN",
+  "metaContent": "sdfsf",
   "header": {
-    "mainText": "Create your personal VPN",
-    "subtext": "Amnezia VPN — simple and free app to run a self-hosted VPN with high privacy requirements"
+    "mainText": "Create your personal VPN",
+    "subtext": "Amnezia VPN — simple and free app to run a self-hosted VPN with high privacy requirements"
   },
-  "headerDownload": "How to run your VPN with Amnezia",
+  "headerDownload": "How to run your VPN with Amnezia",
   "affiliatedLinks": {
     "theyWriteAboutAmneziaVPN": "They write about Amzezia VPN"
   },

@@ -12,7 +12,13 @@ const SecureSimpleFreeSection = () => {
       <div className={styles.gridSecure}>
         <Card>
           <div className={classNames(styles.secureCard, styles.cardContent)}>
-            <img className={styles.auditedImage} src={auditedImage} alt="audited" />
+            <img
+              height="273px"
+              width="272px"
+              className={styles.auditedImage}
+              src={auditedImage}
+              alt="audited"
+            />
             <section className="main-text dimmed">
               <h2>{t('secureSimpleFreeSection.secure.header')}</h2>
               <div>{t('secureSimpleFreeSection.secure.text.part1')}</div>
@@ -40,6 +46,8 @@ const SecureSimpleFreeSection = () => {
               </div>
             </section>
             <img
+              height="297px"
+              width="401px"
               className={styles.connectImage}
               src={`/img/${i18n.resolvedLanguage}/main-connect.png`}
               alt="audited"

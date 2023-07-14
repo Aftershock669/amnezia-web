@@ -9,11 +9,26 @@ import PrivacyTextSection from '@src/pages/main/ui/PrivacyTextSection/PrivacyTex
 import LogsEncryptSection from '@src/pages/main/ui/LogsEncryptSection/LogsEncryptSection';
 import MoreFeaturesSection from '@src/pages/main/ui/MoreFeaturesSection/MoreFeaturesSection';
 import usePageDecoration from '@src/shared/hooks/usePageDecoration/usePageDecoration';
+import { Helmet } from 'react-helmet';
+import { useTranslation } from 'react-i18next';
+import { useParams } from 'react-router-dom';
 
 const MainPage = () => {
   usePageDecoration('darker');
+  const { t } = useTranslation('main-page');
+  const { lang } = useParams();
   return (
     <div>
+      <Helmet defer={false}>
+        <title>{t('metaTitle')}</title>
+        <meta name="description" content={t('metaContent')} />
+        <meta property="og:url" content={window.location.href} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Amnezia. Создай свой персональный VPN" />
+        <meta property="og:description" content={t('header.subtext')} />
+        <meta property="og:image" content="/full-logo-vpn.svg" />
+        <meta property="og:image:alt" content="Amnezia logo" />
+      </Helmet>
       <HeaderText />
       <HeaderDownload />
       <HeaderAppScreen />

@@ -1,10 +1,9 @@
 import classNames from 'classnames';
 import Card from '@src/shared/ui/Card/Card';
-import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import TextLink from '@src/shared/ui/TextLink/TextLink';
 import styles from './ProtocolsCard.module.scss';
 import { ReactComponent as ProtocolsImage } from './assets/protocols-main.svg';
-import TextLink from '@src/shared/ui/TextLink/TextLink';
 
 const ProtocolsCard = () => {
   const { t } = useTranslation('main-page');

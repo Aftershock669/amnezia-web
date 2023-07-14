@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { Menu, Button, Select, rem } from '@mantine/core';
+import { Menu } from '@mantine/core';
 import { ChevronDown } from 'lucide-react';
 import { useState } from 'react';
 import classNames from 'classnames';

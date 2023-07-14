@@ -1,14 +1,14 @@
 import { Outlet, useLocation, useNavigate } from 'react-router-dom';
-import AppBar from '@src/components/appBar/AppBar';
-import Footer from '@src/components/footer/Footer';
+import AppBar from '@src/components/AppBar/AppBar';
+import Footer from '@src/components/Footer/Footer';
 import { useDisclosure } from '@mantine/hooks';
 import { useEffect, useState } from 'react';
-import MenuDrawer from '@src/components/menuDrawer/MenuDrawer';
+import MenuDrawer from '@src/components/MenuDrawer/MenuDrawer';
 // import AppContainer from '@src/components/AppContainer/AppContainer';
 import ScrollToTop from '@src/components/ScrollToTop/ScrollToTop';
 import i18n from 'i18next';
 import isSupportedLang from '@src/shared/helpers/isSupportedLang';
-import DecoratedPageLayout from '@src/layouts/DecoratedPaageLayout/DecoratedPageLayout';
+import DecoratedPageLayout from '@src/layouts/DecoratedPageLayout/DecoratedPageLayout';
 import styles from './Layout.module.scss';
 
 export default function Layout() {

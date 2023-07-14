@@ -17,4 +17,13 @@ export default defineConfig({
       // localsConvention: 'camelCase', //  доступ к свойствам css через styles.fooBar и styles['foo-bar']
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: (id) => {
+          if (id.includes('node_modules')) return 'vendor'
+        },
+      },
+    },
+  }
 });

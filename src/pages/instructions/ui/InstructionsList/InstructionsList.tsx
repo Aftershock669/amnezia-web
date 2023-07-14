@@ -11,6 +11,7 @@ const InstructionsList = () => {
     const gitLink = `https://raw.githubusercontent.com/Aftershock669/amnezia-open-docs/master/docs/${i18n.resolvedLanguage}/instructions/tableOfContents.json`;
 
     const fetchData = () => {
+      setTableOfContents([]);
       return fetch(gitLink)
         .then((response) => response.json())
         .then((data) => {
@@ -19,7 +20,7 @@ const InstructionsList = () => {
     };
 
     fetchData();
-  }, []);
+  }, [i18n.resolvedLanguage]);
 
   return (
     <div className={styles.root}>
