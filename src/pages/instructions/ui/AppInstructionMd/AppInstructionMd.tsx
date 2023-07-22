@@ -9,6 +9,7 @@ import TextLink from '@src/shared/ui/TextLink/TextLink';
 import usePageDecoration from '@src/shared/hooks/usePageDecoration/usePageDecoration';
 import InstructionSkeleton from '@src/components/InstructionSkeleton/InstructionSkeleton';
 import { Helmet } from 'react-helmet';
+import NotFoundWIdget from '@src/components/NotFoundWidget/NotFoundWIdget';
 
 function RouterLink({ children, href }: any) {
   return href.match(/^\//) ? (
@@ -29,7 +30,8 @@ const AppInstructionMd = ({ instructionId = '' }: AppInstructionMdProps) => {
   const { i18n } = useTranslation();
 
   const [read, setRead] = useState('');
-  const [isLoading, setIsLoading] = useState(true);
+  const [status, setStatus] = useState<string>('loading'); // loading | ok | error
+  // const [isLoading, setIsLoading] = useState(true);
   const [instrTitle, setInstrTitle] = useState('');
 
   const handleTitle = (title: string) => {
@@ -37,25 +39,43 @@ const AppInstructionMd = ({ instructionId = '' }: AppInstructionMdProps) => {
   };
 
   useEffect(() => {
-    setIsLoading(true);
-
     // const instructionHref = location.pathname;
     // const instructionUrlName = location.pathname.split('/')[3];
 
     // const gitLink = `https://raw.githubusercontent.com/Aftershock669/amnezia-open-docs/master/docs/${instructionHref}/${instructionUrlName}.md`;
     const gitLink = `https://raw.githubusercontent.com/Aftershock669/amnezia-open-docs/master/docs/${i18n.resolvedLanguage}/instructions/${instructionId}/${instructionId}.md`;
 
-    const fetchData = () => {
-      return fetch(gitLink)
-        .then((response) => response.text())
-        .then((text) => {
-          setRead(text);
-          const reg = text.match(/^(\S+)\s(.*)/);
-          if (reg) handleTitle(reg.slice(1)[1]);
-          setTimeout(() => {
-            setIsLoading(false);
-          }, 400);
-        });
+    const fetchData = async () => {
+      setStatus('loading');
+
+      const rawRes = await fetch(gitLink);
+
+      if (rawRes.status !== 200) {
+        setTimeout(() => {
+          setStatus('error');
+        }, 400);
+      } else {
+        const text = await rawRes.text();
+
+        setRead(text);
+        const reg = text.match(/^(\S+)\s(.*)/);
+        if (reg) handleTitle(reg.slice(1)[1]);
+
+        setTimeout(() => {
+          setStatus('ok');
+        }, 400);
+      }
+
+      // return fetch(gitLink)
+      //   .then((response) => response.text())
+      //   .then((text) => {
+      //     setRead(text);
+      //     const reg = text.match(/^(\S+)\s(.*)/);
+      //     if (reg) handleTitle(reg.slice(1)[1]);
+      //     setTimeout(() => {
+      //       setStatus('ok');
+      //     }, 400);
+      //   });
     };
 
     fetchData();
@@ -74,9 +94,9 @@ const AppInstructionMd = ({ instructionId = '' }: AppInstructionMdProps) => {
         <title>{instrTitle}</title>
         <meta name="description" content="234" />
       </Helmet>
-      {isLoading ? (
-        <InstructionSkeleton />
-      ) : (
+      {status === 'loading' && <InstructionSkeleton />}
+      {status === 'error' && <NotFoundWIdget />}
+      {status === 'ok' && (
         <MdStyledContainer>
           <ReactMarkdown components={{ a: RouterLink }} remarkPlugins={[remarkGfm]}>
             {read}

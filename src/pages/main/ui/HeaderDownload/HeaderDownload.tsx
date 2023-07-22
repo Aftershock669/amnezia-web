@@ -11,7 +11,7 @@ import TextLink from '@src/shared/ui/TextLink/TextLink';
 import styles from './HeaderDownload.module.scss';
 
 const HeaderDownload = () => {
-  const { t } = useTranslation(['translation', 'main-page']);
+  const { t, i18n } = useTranslation(['translation', 'main-page']);
   return (
     <div className={classNames(styles.root)}>
       <div className={styles.buttonContainer}>
@@ -27,9 +27,11 @@ const HeaderDownload = () => {
       </div>
       <TextLink
         text={t('headerDownload', { ns: 'main-page' })}
-        to="./instructions/starter-guide"
         variant="light"
         className={styles.textContainer}
+        // to="./instructions/starter-guide"
+        // TODO Временная заглушка
+        to={`https://${i18n.resolvedLanguage}-docs.amnezia.org`}
       />
       {/* <a href="/" className={styles.textContainer}> */}
       {/*  {t('headerDownload', { ns: 'main-page' })} */}

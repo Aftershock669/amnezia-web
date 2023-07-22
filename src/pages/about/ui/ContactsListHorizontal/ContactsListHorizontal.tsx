@@ -3,14 +3,18 @@ import { useTranslation } from 'react-i18next';
 import styles from './ContactsListHorizontal.module.scss';
 
 const ContactsListHorizontal = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   return (
     <div className={styles.root}>
-      <div className={styles.label}>{t('Footer.contacts')}</div>
+      <div className={styles.label}>{t('footer.contacts')}</div>
       <div className={styles.linksContainer}>
         <TextLink
           text="Telegram"
-          to="https://t.me/amnezia_vpn"
+          to={
+            i18n.resolvedLanguage === 'ru'
+              ? 'https://t.me/amnezia_vpn'
+              : 'https://t.me/amnezia_vpn_en'
+          }
           openInNewTab
           variant="light"
           className={styles.link}

@@ -20,6 +20,8 @@ interface InstructionItem {
   priceText: string;
   priceInfo: string;
   steps: StepItem[];
+  setImageModalData: any;
+  openImageModal: any;
 }
 
 interface SingleHostingInstructionProps {

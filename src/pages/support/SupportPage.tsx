@@ -11,7 +11,7 @@ const SupportPage = () => {
   usePageDecoration('dark');
   const { t } = useTranslation('support-page');
   return (
-    <>
+    <div>
       <Helmet defer={false}>
         <title>{t('metaTitle')}</title>
         <meta name="description" content={t('metaContent')} />
@@ -22,7 +22,7 @@ const SupportPage = () => {
       <div className={styles.contactsCardWrapper}>
         <ContactsCard />
       </div>
-    </>
+    </div>
   );
 };
 

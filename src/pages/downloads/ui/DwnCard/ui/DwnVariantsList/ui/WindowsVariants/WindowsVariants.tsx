@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import DwnVariantsDropdown from '@src/pages/downloads/ui/DwnCard/ui/DwnVariantsList/ui/DwnVariantsDropdown/DwnVariantsDropdown';
-import DownloadButtonDwnPage from '@src/components/DownloadButtonDwnPage/DownloadButtonDwnPage';
+import PrimaryLinkButton from '@src/components/PrimaryLinkButton/PrimaryLinkButton';
 import { useTranslation } from 'react-i18next';
 import styles from './WindowsVariants.module.scss';
 
@@ -40,7 +40,7 @@ const WindowsVariants = () => {
         selectedValue={selectedValue}
         setSelectedValue={setSelectedValue}
       />
-      <DownloadButtonDwnPage text={t('download')} link={selectedValue.value} />
+      <PrimaryLinkButton text={t('download')} link={selectedValue.value} />
     </div>
   );
 };

@@ -1,5 +1,7 @@
+import NotFoundWIdget from '@src/components/NotFoundWidget/NotFoundWIdget';
+
 const NotFoundPage = () => {
-  return <>Not found 404</>;
+  return <NotFoundWIdget />;
 };
 
 export default NotFoundPage;

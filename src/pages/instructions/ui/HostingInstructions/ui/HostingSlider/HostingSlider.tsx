@@ -1,10 +1,11 @@
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Carousel, Embla } from '@mantine/carousel';
-import { useMediaQuery } from '@mantine/hooks';
+import { useDisclosure, useMediaQuery } from '@mantine/hooks';
 import { Image } from '@mantine/core';
 import { StepItem } from '@src/pages/instructions/ui/HostingInstructions/ui/SingleHostingInstruction/SingleHostingInstruction';
 import { useCallback, useState } from 'react';
 import SliderExternalControlDots from '@src/pages/instructions/ui/HostingInstructions/ui/HostingSlider/ui/SliderExternalControlDots/SliderExternalControlDots';
+import ImageModal from '@src/components/ImageModal/ImageModal';
 import styles from './HostingSlider.module.scss';
 
 interface HostingSliderProps {
@@ -19,8 +20,17 @@ const HostingSlider = ({ steps }: HostingSliderProps) => {
 
   const scrollTo = useCallback((index: number) => emblaApi && emblaApi.scrollTo(index), [emblaApi]);
 
+  const [opened, { open, close }] = useDisclosure(false);
+  const [imageUrl, setImageUrl] = useState('');
+
+  const handleSlideClick = (e) => {
+    setImageUrl(e.target.getAttribute('src'));
+    open();
+  };
+
   return (
     <div className={styles.root}>
+      <ImageModal opened={opened} close={close} imageUrl={imageUrl} />
       <div className={styles.carouselWrapper}>
         <Carousel
           mt={30}
@@ -47,6 +57,7 @@ const HostingSlider = ({ steps }: HostingSliderProps) => {
           {steps.map((step, stepIndex) => (
             <Carousel.Slide key={stepIndex}>
               <Image
+                onClick={currentSlideIndex === stepIndex ? handleSlideClick : undefined}
                 opacity={currentSlideIndex === stepIndex ? 1 : 0.3}
                 classNames={{
                   root: styles.imageRoot,

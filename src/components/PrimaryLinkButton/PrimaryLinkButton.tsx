@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
-import styles from './DownloadButtonDwnPage.module.scss';
+import styles from './PrimaryLinkButton.module.scss';
 
 interface DownloadButtonProps {
   text: string;
@@ -9,12 +9,7 @@ interface DownloadButtonProps {
   openInNewTab?: boolean;
 }
 
-const DownloadButtonDwnPage = ({
-  text,
-  link,
-  reloadDocument,
-  openInNewTab,
-}: DownloadButtonProps) => {
+const PrimaryLinkButton = ({ text, link, reloadDocument, openInNewTab }: DownloadButtonProps) => {
   return (
     <Link
       to={link}
@@ -28,4 +23,4 @@ const DownloadButtonDwnPage = ({
   );
 };
 
-export default DownloadButtonDwnPage;
+export default PrimaryLinkButton;

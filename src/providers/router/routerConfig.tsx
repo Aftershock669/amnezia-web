@@ -44,6 +44,10 @@ export default createBrowserRouter([
         path: 'instructions/:instructionId',
         element: <InstructionLayout />,
       },
+      {
+        path: '*',
+        element: <NotFoundPage />,
+      },
       // {
       //   path: 'instructions/starter-guide',
       //   element: <HostingInstructions />,
@@ -54,14 +58,14 @@ export default createBrowserRouter([
       // },
     ],
   },
-  {
-    element: <Outlet />,
-    path: '/',
-    children: [
-      {
-        path: '*',
-        element: <NotFoundPage />,
-      },
-    ],
-  },
+  // {
+  //   element: <Outlet />,
+  //   path: '/',
+  //   children: [
+  //     {
+  //       path: '*',
+  //       element: <NotFoundPage />,
+  //     },
+  //   ],
+  // },
 ]);

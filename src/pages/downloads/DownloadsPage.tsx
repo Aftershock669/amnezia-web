@@ -10,17 +10,15 @@ const DownloadsPage = () => {
   usePageDecoration('darker');
   const { t } = useTranslation('downloads-page');
   return (
-    <>
+    <div className={styles.pageContainer}>
       <Helmet defer={false}>
         <title>{t('metaTitle')}</title>
         <meta name="description" content={t('metaContent')} />
       </Helmet>
-      <div className={styles.pageContainer}>
-        <DwnHeader />
-        <DwnCard />
-        <DwnInfoCard />
-      </div>
-    </>
+      <DwnHeader />
+      <DwnCard />
+      <DwnInfoCard />
+    </div>
   );
 };
 

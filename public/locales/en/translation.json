@@ -15,5 +15,10 @@
     "header": {
       "text": "Instructions"
     }
+  },
+  "notFoundPage": {
+    "header": "Page not found",
+    "text": "It has been moved or never existed. Try to find what you are looking for in the «Support» section.",
+    "button":"Go to «Support»"
   }
 }

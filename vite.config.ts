@@ -15,6 +15,14 @@ export default defineConfig({
     modules: {
       localsConvention: 'camelCaseOnly', // доступ к свойствам css только через styles.fooBar
       // localsConvention: 'camelCase', //  доступ к свойствам css через styles.fooBar и styles['foo-bar']
+      // generateScopedName: "[name]_[local]_[hash:base64:5]",
+      // generateScopedName: (
+      //   localName: string,
+      //   resourcePath: string
+      // ) => {
+      //   const componentName = resourcePath.split('/').slice(-2, -1);
+      //   return componentName + '_' + localName;
+      // },
     },
   },
   build: {

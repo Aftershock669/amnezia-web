@@ -19,16 +19,23 @@ const InstructionLayout = () => {
   useEffect(() => {
     const gitLink = `https://raw.githubusercontent.com/Aftershock669/amnezia-open-docs/master/docs/${i18n.resolvedLanguage}/instructions/tableOfContents.json`;
 
-    const fetchData = () => {
-      return fetch(gitLink)
-        .then((response) => response.json())
-        .then((data) => {
-          setTableOfContents(data);
-        });
+    const fetchData = async () => {
+      const res = await fetch(gitLink);
+
+      if (res.status === 200) {
+        const data = await res.json();
+        setTableOfContents(data);
+      }
+
+      // return fetch(gitLink)
+      //   .then((response) => response.json())
+      //   .then((data) => {
+      //     setTableOfContents(data);
+      //   });
     };
 
     fetchData();
-  }, []);
+  }, [i18n.resolvedLanguage]);
 
   const items = [
     { title: t('navigation.support'), href: '../support' },
@@ -37,6 +44,7 @@ const InstructionLayout = () => {
 
   const switchInstructionsRoute = () => {
     if (instructionId === 'starter-guide') return <HostingInstructions />;
+    // if (instructionId === 'protocols') return <ProtocolsInstruction />; TODO
     return <AppInstructionMd instructionId={instructionId} />;
   };
 
