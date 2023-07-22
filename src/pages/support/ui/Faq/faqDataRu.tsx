@@ -77,7 +77,12 @@ const faqDataRu = [
       <>
         После скачивания приложения вам необходимо ввести данные VPS. Вы можете использовать уже
         имеющийся у вас VPS, или купить новый. В качестве примера
-        <TextLink to="https://github.com/amnezia-vpn" variant="light" text=" здесь " openInNewTab />
+        <TextLink
+          to="https://ru-docs.amnezia.org/guides/setup-wizard-v2/"
+          variant="light"
+          text=" здесь "
+          openInNewTab
+        />
         приведены инструкции для покупки VPS на нескольких популярных хостингах. серверной и
         клиентской части ПО.
       </>

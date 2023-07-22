@@ -76,7 +76,12 @@ const faqDataRu = [
       <>
         Once you have downloaded the app, you need to enter your VPS details. You can use your
         existing VPS or buy a new one. As an example,
-        <TextLink to="https://github.com/amnezia-vpn" variant="light" text=" here " openInNewTab />
+        <TextLink
+          to="https://en-docs.amnezia.org/guides/setup-wizard-v2/"
+          variant="light"
+          text=" here "
+          openInNewTab
+        />
         are the instructions for buying a VPS on several popular hostings.
       </>
     ),
@@ -155,8 +160,8 @@ const faqDataRu = [
             to="mailto:support@amnezia.org"
             variant="light"
           />{' '}
-          or in the <TextLink text="Telegram" to="https://t.me/amnezia_vpn" variant="light" /> chat
-          and provide the logs of the program.
+          or in the <TextLink text="Telegram" to="https://t.me/amnezia_vpn_en" variant="light" />{' '}
+          chat and provide the logs of the program.
         </p>
         <p>You can get the logs in the following ways:</p>
         <strong>On Windows:</strong>
