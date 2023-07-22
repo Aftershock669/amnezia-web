@@ -23,7 +23,7 @@ const HostingSlider = ({ steps }: HostingSliderProps) => {
   const [opened, { open, close }] = useDisclosure(false);
   const [imageUrl, setImageUrl] = useState('');
 
-  const handleSlideClick = (e) => {
+  const handleSlideClick = (e: any) => {
     setImageUrl(e.target.getAttribute('src'));
     open();
   };
