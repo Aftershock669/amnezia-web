@@ -77,7 +77,7 @@ const faqDataRu = [
         Once you have downloaded the app, you need to enter your VPS details. You can use your
         existing VPS or buy a new one. As an example,
         <TextLink
-          to="https://en-docs.amnezia.org/guides/setup-wizard-v2/"
+          to="https://en-docs.amnezia.org/guides/hosting-instructions/"
           variant="light"
           text=" here "
           openInNewTab

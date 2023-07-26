@@ -78,7 +78,7 @@ const faqDataRu = [
         После скачивания приложения вам необходимо ввести данные VPS. Вы можете использовать уже
         имеющийся у вас VPS, или купить новый. В качестве примера
         <TextLink
-          to="https://ru-docs.amnezia.org/guides/setup-wizard-v2/"
+          to="https://ru-docs.amnezia.org/guides/hosting-instructions/"
           variant="light"
           text=" здесь "
           openInNewTab
