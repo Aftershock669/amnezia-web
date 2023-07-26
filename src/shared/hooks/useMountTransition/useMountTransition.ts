@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 
-const useMountTransition = (isMounted, unmountDelay) => {
+const useMountTransition = (isMounted: boolean, unmountDelay: number) => {
   const [hasTransitionedIn, setHasTransitionedIn] = useState(false);
 
   useEffect(() => {
-    let timeoutId;
+    let timeoutId: number;
 
     if (isMounted && !hasTransitionedIn) {
       setHasTransitionedIn(true);
