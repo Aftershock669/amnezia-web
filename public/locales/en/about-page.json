@@ -27,7 +27,7 @@
       "text": "Maximum Flexibility Amnezia does not require to use the client. You can run VPN from the Amnezia app, create a configured connection file and use it with other original clients like OpenVPN, Wireguard and more..."
     }
   },
-  "p3": "Our main goal is to make a self-hosted client that is not functionally different from the top commercial VPNs. That's why we already have kill-switch, separate tunneling of sites and applications. We also make possible to create a corporate VPN network and share unlimited VPN connections with other users.",
+  "p3": "Our main goal is to make a self-hosted client that is not functionally different from the top commercial VPNs.",
   "p4": "Amnezia is not only a VPN. Using the client, you can create your own DNS server, secure file storage and deploy a WordPress site on the Tor network in two clicks. We make the best secureand reliable free self-hosted VPN in the world and we want everyone who needs a free internet to know about it.",
   "donate": "If you want to support the project, you can send a donation or take part in the development.",
   "downloadLogo": "Download Amnezia logo"

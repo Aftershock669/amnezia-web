@@ -24,10 +24,6 @@
   }
 }
 
-.active {
-
-}
-
 .control {
   cursor: pointer;
   display: flex;
@@ -38,15 +34,29 @@
   border-radius: 8px;
 }
 
-.content-wrapper {
-  //height: 0;
-  //overflow: hidden;
-}
+// mount option (no animation)
 
 .content {
   padding-bottom: 30px;
 }
 
-.open {
-  //height: auto;
-}
+// grid option (with animation)
+
+//.content-wrapper {
+//  display: grid;
+//  grid-template-rows: 0fr;
+//  transition: grid-template-rows 0.25s;
+//}
+//
+//.content {
+//  overflow: hidden;
+//}
+//
+//.content-inner {
+//  padding-bottom: 30px;
+//}
+//
+//
+//.open {
+//  grid-template-rows: 1fr;
+//}

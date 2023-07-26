@@ -6,7 +6,7 @@ import styles from './ProtocolsCard.module.scss';
 import { ReactComponent as ProtocolsImage } from './assets/protocols-main.svg';
 
 const ProtocolsCard = () => {
-  const { t } = useTranslation('main-page');
+  const { i18n, t } = useTranslation('main-page');
   return (
     <div className={classNames(styles.root)}>
       <Card>
@@ -20,7 +20,15 @@ const ProtocolsCard = () => {
               {t('protocolsCard.mainText.part2')}
             </div>
             <div className={classNames(styles.link)}>
-              <TextLink text={t('protocolsCard.link')} variant="light" to="/" />
+              <TextLink
+                text={t('protocolsCard.link')}
+                variant="light"
+                to={
+                  i18n.resolvedLanguage === 'ru'
+                    ? 'https://ru-docs.amnezia.org/guides/protocols-table-v2/'
+                    : 'https://en-docs.amnezia.org/guides/protocols-table-v2/'
+                }
+              />
             </div>
           </div>
           <ProtocolsImage className={styles.image} />
