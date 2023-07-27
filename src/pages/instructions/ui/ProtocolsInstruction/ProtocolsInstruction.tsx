@@ -11,32 +11,19 @@ const ProtocolsInstruction = () => {
   usePageDecoration('dark');
   const { i18n } = useTranslation();
 
-  // useEffect(() => {
-  //   const gitLink = `https://raw.githubusercontent.com/Aftershock669/amnezia-open-docs/master/docs/${i18n.resolvedLanguage}/instructions/protocols/protocols.json`;
-  //
-  //   const fetchData = async () => {
-  //     const res = await fetch(gitLink);
-  //
-  //     if (res.status === 200) {
-  //       const data = await res.json();
-  //       setTableOfContents(data);
-  //     }
-  //   };
-  //
-  //   fetchData();
-  // }, [i18n.resolvedLanguage]);
+  const gitLink = `https://raw.githubusercontent.com/Aftershock669/amnezia-open-docs/master/docs/${i18n.resolvedLanguage}/instructions/protocols/img/protocols.png`;
 
   return (
-    <>sad</>
-    // <>
-    //   <Helmet defer={false}>
-    //     <title />
-    //     {/* <meta name="description" content={hostingDataRu.h1} /> */}
-    //   </Helmet>
-    //   <div className={styles.root}>
-    //     <img src={gitLink} />
-    //   </div>
-    // </>
+    <>
+      <Helmet defer={false}>
+        <title />
+        {/* <meta name="description" content={hostingDataRu.h1} /> */}
+      </Helmet>
+      <div className={styles.root}>
+        <h1>Поддерживаемые протоколы</h1>
+        <img height="auto" width="100%" src={gitLink} />
+      </div>
+    </>
   );
 };
 

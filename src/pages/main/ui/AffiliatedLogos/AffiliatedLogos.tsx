@@ -17,7 +17,7 @@ const AffiliatedLogos = () => {
         <div className={styles.logoContainer}>
           <Link
             className={styles.logoLink}
-            to="https://www.wired.com/"
+            to="https://www.wired.com/story/amnezia-vpn-russia-censorship/"
             reloadDocument
             aria-label="Go to the wired website"
           >
@@ -25,7 +25,7 @@ const AffiliatedLogos = () => {
           </Link>
           <Link
             className={styles.logoLink}
-            to="https://www.techradar.com/"
+            to="https://www.techradar.com/news/i-built-my-own-vpn-server-and-this-is-what-i-learned"
             reloadDocument
             aria-label="Go to techradar website"
           >
@@ -35,7 +35,7 @@ const AffiliatedLogos = () => {
             <>
               <Link
                 className={styles.logoLink}
-                to="https://theins.ru/"
+                to="https://theins.ru/search?q=amnezia"
                 reloadDocument
                 aria-label="Go to the insider website"
               >
@@ -43,7 +43,7 @@ const AffiliatedLogos = () => {
               </Link>
               <Link
                 className={styles.logoLink}
-                to="https://meduza.io/"
+                to="https://meduza.io/feature/2022/07/29/kakie-vpn-samye-nadezhnye-kak-ponyat-chto-servis-sotrudnichaet-so-spetssluzhbami-mogut-li-rossiyu-voobsche-otklyuchit-ot-normalnogo-interneta"
                 reloadDocument
                 aria-label="Go to meduza website"
               >
@@ -51,7 +51,7 @@ const AffiliatedLogos = () => {
               </Link>
               <Link
                 className={styles.logoLink}
-                to="https://roskomsvoboda.org/"
+                to="https://roskomsvoboda.org/search/?query=amnezia"
                 reloadDocument
                 aria-label="Go to roskomsvoboda website"
               >

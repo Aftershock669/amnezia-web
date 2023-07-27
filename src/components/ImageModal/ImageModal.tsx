@@ -10,6 +10,7 @@ interface ImageModalProps {
 const ImageModal = ({ opened, close, imageUrl }: ImageModalProps) => {
   return (
     <Modal
+      centered
       withCloseButton={false}
       classNames={{
         content: styles.content,

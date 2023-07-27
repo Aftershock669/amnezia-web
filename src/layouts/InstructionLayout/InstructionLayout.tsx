@@ -9,6 +9,7 @@ import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
 import HostingInstructions from '@src/pages/instructions/ui/HostingInstructions/HostingInstructions';
 import AppInstructionMd from '@src/pages/instructions/ui/AppInstructionMd/AppInstructionMd';
+import ProtocolsInstruction from '@src/pages/instructions/ui/ProtocolsInstruction/ProtocolsInstruction';
 import styles from './InstructionLayout.module.scss';
 
 const InstructionLayout = () => {
@@ -44,7 +45,7 @@ const InstructionLayout = () => {
 
   const switchInstructionsRoute = () => {
     if (instructionId === 'starter-guide') return <HostingInstructions />;
-    // if (instructionId === 'protocols') return <ProtocolsInstruction />; TODO
+    // if (instructionId === 'protocols') return <ProtocolsInstruction />;
     return <AppInstructionMd instructionId={instructionId} />;
   };
 

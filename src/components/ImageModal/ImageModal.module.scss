@@ -1,5 +1,6 @@
 .content {
-  background-color: var(--black-90);
+  //background-color: var(--black-90);
+  background-color: transparent;
   box-shadow: none;
   border-radius: 0;
 }
@@ -7,17 +8,20 @@
 .body {
   padding: 0;
   & img {
-    //height: 85vh;
+    max-height: 80vh;
   }
 }
 
 .inner {
-  top: 0;
-  padding: 15vh 0 0;
-  @media (min-width: 680px) {
-    padding-top: 15vh;
-    top: 0
-  }
+  //top: 0;
+  //padding: 15vh 0 0;
+  //@media (min-width: 680px) {
+  //  padding-top: 15vh;
+  //  top: 0
+  //}
+
+  padding: 0;
+
 }
 
 .overlay::before {
