@@ -10,6 +10,7 @@ import AppInstructionMd from '@src/pages/instructions/ui/AppInstructionMd/AppIns
 import NotFoundPage from '@src/pages/notFound/NotFoundPage';
 import IndexLangSwitch from '@src/components/IndexLangSwitch/IndexLangSwitch';
 import InstructionLayout from '@src/layouts/InstructionLayout/InstructionLayout';
+import LangSwitchRedirect from '@src/components/LangSwitchRedirect/LangSwitchRedirect';
 
 export default createBrowserRouter([
   {
@@ -17,7 +18,11 @@ export default createBrowserRouter([
     path: '/',
   },
   {
-    element: <Layout />,
+    element: (
+      <LangSwitchRedirect>
+        <Layout />
+      </LangSwitchRedirect>
+    ),
     path: '/:lang',
     children: [
       {
@@ -48,14 +53,6 @@ export default createBrowserRouter([
         path: '*',
         element: <NotFoundPage />,
       },
-      // {
-      //   path: 'instructions/starter-guide',
-      //   element: <HostingInstructions />,
-      // },
-      // {
-      //   path: 'instructions/:id',
-      //   element: <AppInstructionMd />,
-      // },
     ],
   },
   // {

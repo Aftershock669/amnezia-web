@@ -15,26 +15,26 @@ export default function Layout() {
   const [opened, { open, close }] = useDisclosure(false);
   const [bg, setBg] = useState('darker');
 
-  const location = useLocation();
-  const navigate = useNavigate();
+  // const location = useLocation();
+  // const navigate = useNavigate();
 
   // close mobile drawer on route change
   const { pathname } = useLocation();
 
-  useEffect(() => {
-    const resolvedLang = i18n.resolvedLanguage;
-
-    const urlLang = location.pathname.split('/')[1];
-
-    if (!isSupportedLang(urlLang)) {
-      // incorrect URL lang
-      navigate(`/${resolvedLang}`, { replace: true });
-    } else if (resolvedLang !== urlLang) {
-      // correct URL lang but unsynced
-      // sync lang in URL and i18n. FIX things For browser history (back, forward)
-      i18n.changeLanguage(urlLang);
-    }
-  });
+  // useEffect(() => {
+  //   const resolvedLang = i18n.resolvedLanguage;
+  //   const urlLang = location.pathname.split('/')[1];
+  //   const remainingUrl = location.pathname;
+  //
+  //   if (!isSupportedLang(urlLang)) {
+  //     // incorrect URL lang
+  //     navigate(`/${resolvedLang}${remainingUrl}`, { replace: true });
+  //   } else if (resolvedLang !== urlLang) {
+  //     // correct URL lang but unsynced
+  //     // sync lang in URL and i18n. FIX things For browser history (back, forward)
+  //     i18n.changeLanguage(urlLang);
+  //   }
+  // },[]);
 
   useEffect(() => {
     close();

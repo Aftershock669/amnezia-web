@@ -1,5 +1,5 @@
 // import reactLogo from '@assets/react.svg';
-import { createContext, Suspense } from 'react';
+import { Suspense } from 'react';
 import { RouterProvider } from 'react-router-dom';
 import routerConfig from '@src/providers/router/routerConfig';
 import '@src/styles/index.scss';

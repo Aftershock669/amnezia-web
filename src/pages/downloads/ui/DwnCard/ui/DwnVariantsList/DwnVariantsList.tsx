@@ -13,6 +13,7 @@ import { ReactComponent as AndroidLogo } from './assets/android.svg';
 import { ReactComponent as LinuxLogo } from './assets/linux.svg';
 // import { ReactComponent as RouterLogo } from './assets/router.svg';
 import { ReactComponent as GithubLogo } from './assets/github.svg';
+import TextLink from "@src/shared/ui/TextLink/TextLink";
 
 const DwnVariantsList = () => {
   const { t } = useTranslation(['translation', 'downloads-page']);
@@ -101,11 +102,17 @@ const DwnVariantsList = () => {
 
         <Tabs.Panel value="android">
           <div className={styles.downloadBtnContainer}>
-            <PrimaryLinkButton
-              text={t('dwnCard.downloadFromSite', { ns: 'downloads-page' })}
-              link="https://github.com/amnezia-vpn/amnezia-client/releases/download/2.1.2/AmneziaVPN_2.1.2.1.apk"
-            />
             <DownloadBadge variant="googlePlay" />
+            {/*<PrimaryLinkButton*/}
+            {/*  text={t('dwnCard.downloadFromSite', { ns: 'downloads-page' })}*/}
+            {/*  link="https://github.com/amnezia-vpn/amnezia-client/releases/download/2.1.2/AmneziaVPN_2.1.2.1.apk"*/}
+            {/*/>*/}
+            <TextLink
+              variant="light"
+              text={t('dwnCard.downloadFromSite', { ns: 'downloads-page' })}
+              to="https://github.com/amnezia-vpn/amnezia-client/releases/download/2.1.2/AmneziaVPN_2.1.2.1.apk"
+              className={styles.link}
+            />
           </div>
         </Tabs.Panel>
 

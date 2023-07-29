@@ -1,14 +1,14 @@
 {
   "metaTitle": "Amnezia - About us",
-  "metaContent": "sdfsf",
+  "metaContent": "Project information. Our contacts",
   "about": "About us",
   "p1": "The idea for AmneziaVPN appeared in 2020 during the first Demhack hackathon, and then it was further developed with ",
-  "p2": "We wanted users with any technical skills level to be able to create their own VPN, as for simple blocking circumvention and also to ensure privacy and protection of their data. It was important for us to create a free, open-source application so that no user data was collected and there was not even the hypothetical possibility of data leakage.",
+  "p2": "We desired to empower users of all technical skill levels to create their own VPN, for simple blocking circumvention and also to ensure privacy and protection of their data. It was important for us to create a free, open-source application to ensure no user data was collected and there was not even the hypothetical possibility of data leakage.",
   "principles": {
     "header": "We adhere to five principles throughout the development of the project:",
     "principle1": {
       "header": "1. Maximum transparency",
-      "text": "Therefore, our application and website are open source, both for the client side and for the server side. We do not collect or store any data, including logs and analytics."
+      "text": "Therefore, our application and website are open source, on both client-side and server-side. We do not collect or store any data, including logs and analytics."
     },
     "principle2": {
       "header": "2. Maximum security",
@@ -23,12 +23,12 @@
       "text": "Our solution supports all modern popular protocols, as well as traffic masking to bypass the most severe blocking. This is especially true for countries with the highest level of censorship, where all VPN protocols and almost all commercial and non-commercial VPNs are blocked."
     },
     "principle5": {
-      "header": "5. Maximum Flexibility",
-      "text": "Maximum Flexibility Amnezia does not require to use the client. You can run VPN from the Amnezia app, create a configured connection file and use it with other original clients like OpenVPN, Wireguard and more..."
+      "header": "5. Maximum flexibility",
+      "text": "Amnezia does not require to use the client. You can run VPN from the Amnezia app, create a configured connection file and use it with other original clients like OpenVPN, Wireguard and more..."
     }
   },
   "p3": "Our main goal is to make a self-hosted client that is not functionally different from the top commercial VPNs.",
-  "p4": "Amnezia is not only a VPN. Using the client, you can create your own DNS server, secure file storage and deploy a WordPress site on the Tor network in two clicks. We make the best secureand reliable free self-hosted VPN in the world and we want everyone who needs a free internet to know about it.",
+  "p4": "Amnezia is not only a VPN. Using the client, you can create your own DNS server, secure file storage and deploy a WordPress site on the Tor network in two clicks. We make the best secure and reliable free self-hosted VPN in the world and we want everyone who needs a free internet to know about it.",
   "donate": "If you want to support the project, you can send a donation or take part in the development.",
   "downloadLogo": "Download Amnezia logo"
 }

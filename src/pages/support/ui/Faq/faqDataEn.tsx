@@ -9,7 +9,7 @@ const faqDataRu = [
   {
     label: 'Is Amnezia a free service?',
     content:
-      "Yes, Amnezia is completely free software. You don't connect to our servers and you don't pay anything to us. However, to create your own VPN, you will need to purchase any VPS from any provider or use an existing one.",
+      "Yes, Amnezia is completely free software. You don't need to connect to our servers, and you don't have to pay anything to us. However, in order to create your own VPN, you will need to purchase a VPS from any provider or use an existing one.\n",
   },
   {
     label: 'Which devices and operating systems does Amnezia support?',
@@ -20,7 +20,7 @@ const faqDataRu = [
     content: (
       <>
         Amnezia does not collect or transmit any statistics, logs, analytics, or other user
-        information. The only data requested by the client is connection data. This data is also not
+        information. The only data the client requests is connection data. This data is also not
         collected or transmitted, which can be verified due to the
         <TextLink
           to="https://github.com/amnezia-vpn"
@@ -40,7 +40,7 @@ const faqDataRu = [
   {
     label: 'Why Amnezia is more resistant to blocking than other VPNs?',
     content:
-      'The larger and more popular a commercial VPN service is, the more likely it is to attract attention of the surveillance agencies and authorities, which increases the chances of access to its servers and protocols is being blocked. With Amnezia, you can create your own VPN based on any VPS for your personal use only. By using your own VPS in conjunction with encrypted VPN protocols, the chance of blocking is significantly reduced. This is confirmed by our users in countries with high levels of censorship.',
+      'The larger and more popular a commercial VPN service becomes, the more likely it is to attract attention from surveillance agencies and authorities, increasing the chances of its servers and protocols being blocked.',
   },
   {
     label:
@@ -60,12 +60,11 @@ const faqDataRu = [
         <p>
           <strong>Bypass restrictions</strong> - many sites know the IP addresses of popular VPN
           servers and blacklist them. When you buy a separate VPS, your IP address is known only to
-          you and the people you have shared your connection data with.
+          you and those with whom you have shared your connection data.
         </p>
         <p>
-          <strong>Mobility</strong> - the ability to use your configured VPN not only with the
-          Amnezia client but also with other self-hosted applications that support selected VPN
-          protocols.
+          <strong>Mobility</strong> - you can use your configured VPN not only with the Amnezia
+          client but also with other self-hosted applications that support selected VPN protocols.
         </p>
       </>
     ),
@@ -101,19 +100,18 @@ const faqDataRu = [
     content: (
       <>
         <p>
-          <strong>IMPORTANT!</strong> If your country has a very high level of control, blocked
-          access to many sites, do not use any commercial and free VPN and VPN protocols, we
+          <strong>IMPORTANT!</strong> If your country has a very high level of control and blocked
+          access to many sites, do not work any commercial and free VPN and VPN protocols, we
           recommend using OpenVPN over Cloak from the first connection. If you use unmasked
           protocols, the ip of your VPS can be blocked.
         </p>
         <p>
-          <strong>OpenVPN</strong>, over UDP, WireGuard and IKEv2 unmasked protocols over UDP are
-          easily detected by firewalls and some sites. Sites may show a warning: "disable VPN before
-          visiting site".
+          Unmasked protocols OpenVPN over UDP, WireGuard and IKEv2 over UDP are easily detected by
+          firewalls and some websites. Sites may show a warning: "disable VPN before visiting site".
         </p>
         <p>
-          To avoid this, use OpenVPN with TCP protocol, OpenVPN over ShadowSocks and OpenVPN over
-          Cloak.
+          To avoid this issue, use OpenVPN with the TCP protocol, OpenVPN over ShadowSocks, or
+          OpenVPN over Cloak.
         </p>
         <p>In all other cases, the difference between the protocols is minimal.</p>
       </>
@@ -132,7 +130,7 @@ const faqDataRu = [
   {
     label: 'I want to use a VPN, but not for all sites. What are the options?',
     content:
-      'Amnezia has a feature that allows to add sites-exclusions to the list in order to visit them from your IP address, it is available on the main screen of the client when it is connected.',
+      'Amnezia has a feature that allows you to add site exclusions to the list, enabling you to visit them from your IP address. This feature is available on the main screen of the client when it is connected.',
   },
   {
     label: 'Can I use key authentication for Amnezia?',
@@ -147,7 +145,7 @@ const faqDataRu = [
   {
     label: 'Purpose of the "Clear client cached profile" feature.',
     content:
-      'By default, Amnezia caches data (certificates and keys) from a configured VPN server to quickly connect directly to the server. This button resets this cache, as a result, new certificates with keys will be generated, which will be placed on the server via an SSH connection, and only then the connection will start. It must be used when changing the server (if installed on several VPS), when updating the client or server. May be required when changing container settings.',
+      'By default,Amnezia caches data (certificates and keys) from the configured VPN server by default to enable quick connections. The reset button generates new certificates with keys and places them on the server via an SSH connection before establishing a connection. Use this option when changing the server (if installed on multiple VPS), updating the client or server, or when changing container settings.',
   },
   {
     label: 'Amnezia throws an error. What to do?',
@@ -186,7 +184,7 @@ const faqDataRu = [
   {
     label: "Why can't you use VPS from public sources?",
     content:
-      'Connection data may have been made public for the purpose of intercepting your traffic and personal data. For a secure connection, we advise you to use a VPS purchased from a trusted VPS provider, or data that was transferred to you by a person you trust.',
+      'Connection data may be vulnerable to interception, potentially compromising your traffic and personal data. For a secure connection, use a VPS purchased from a trusted provider or data shared with you by a trusted source',
   },
 ];
 
