@@ -16,9 +16,9 @@ const Faq = () => {
   const [usageMd, setUsageMd] = useState('');
   const [status, setStatus] = useState('loading');
 
-  const HeaderAnchor = ({ children }: any) => {
-    return <h3 id={`${MD5(children[0]).toString()}`}>{children}</h3>;
-  };
+  // const HeaderAnchor = ({ children }: any) => {
+  //   return <h3 id={`${MD5(children[0]).toString()}`}>{children}</h3>;
+  // };
 
   useEffect(() => {
     const gitLinkAbout = `https://raw.githubusercontent.com/Aftershock669/amnezia-open-docs/master/docs/${i18n.resolvedLanguage}/faq/about.md`;

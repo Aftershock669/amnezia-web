@@ -62,8 +62,7 @@ const InstructionLayout = () => {
         <Breadcrumbs separator={<ChevronRight size={18} strokeWidth={3} color="#494B50" />} mt="xs">
           {items}
         </Breadcrumbs>
-        <div className={styles.instructionContent} />
-        {switchInstructionsRoute()}
+        <div className={styles.instructionContent}>{switchInstructionsRoute()}</div>
         <div className={styles.contactsCardWrapper}>
           <ContactsCard />
         </div>

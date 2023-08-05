@@ -14,13 +14,22 @@ interface FaqHeaderProps {
 }
 
 const FaqHeader = ({ aboutDataMd, usageDataMd, troubleshootingDataMd }: FaqHeaderProps) => {
-  const RouterLink = ({ children }: any) => {
+  const RouterLinkAbout = ({ children }: any) => {
     return (
       <div>
-        {/* <TextLink variant="menu" text={children} to={`#${MD5(children[0]).toString()}`} /> */}
-        <a className={styles.link} href={`#${MD5(children[0]).toString()}`}>
-          {children}
-        </a>
+        {/*<TextLink variant="menu" text={children} to={`#${MD5(children[0]).toString()}`} />*/}
+        {/*<a className={styles.link} href={`#${MD5(children[0]).toString()}`}>*/}
+        {/*  {children}*/}
+        {/*</a>*/}
+        <TextLink variant="menu" text={children} to="/faq/general-questions" />
+      </div>
+    );
+  };
+
+  const RouterLinkUsage = ({ children }: any) => {
+    return (
+      <div>
+        <TextLink variant="menu" text={children} to="/faq/app-usage" />
       </div>
     );
   };
@@ -29,13 +38,13 @@ const FaqHeader = ({ aboutDataMd, usageDataMd, troubleshootingDataMd }: FaqHeade
     <div className={styles.root}>
       <Card bg="gradGray" className={classNames(styles.card, styles.gridAbout)}>
         <div className={styles.cardHeader}>
-          <div className={styles.headerText}>Об Amnezia</div>
+          <div className={styles.headerText}>Общие вопросы</div>
           <Info color="#5CAEE7" />
         </div>
         <div className={styles.content}>
           <ReactMarkdown
             components={{
-              h3: RouterLink,
+              h3: RouterLinkAbout,
               p: () => null,
               ul: () => null,
               li: () => null,
@@ -51,14 +60,14 @@ const FaqHeader = ({ aboutDataMd, usageDataMd, troubleshootingDataMd }: FaqHeade
       </Card>
       <Card bg="gradGray" className={classNames(styles.card, styles.gridTshoot)}>
         <div className={styles.cardHeader}>
-          <div className={styles.headerText}>Использование</div>
+          <div className={styles.headerText}>Работа приложения</div>
           <Settings2 color="#A87BE2" />
           {/*<Hammer color="#EB5757" />*/}
         </div>
         <div className={styles.content}>
           <ReactMarkdown
             components={{
-              h3: RouterLink,
+              h3: RouterLinkUsage,
               p: () => null,
               ul: () => null,
               li: () => null,
