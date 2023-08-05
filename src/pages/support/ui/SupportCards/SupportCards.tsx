@@ -22,6 +22,11 @@ const SupportCards = () => {
         // TODO Временная заглушка
         to={`https://${i18n.resolvedLanguage}-docs.amnezia.org`}
       />
+      <SupportCard
+        header="Решение проблем"
+        text="Помогите, не работает ааа!!!"
+        to="../troubleshooting"
+      />
     </div>
   );
 };

@@ -51,8 +51,9 @@ const FaqHeader = ({ aboutDataMd, usageDataMd, troubleshootingDataMd }: FaqHeade
       </Card>
       <Card bg="gradGray" className={classNames(styles.card, styles.gridTshoot)}>
         <div className={styles.cardHeader}>
-          <div className={styles.headerText}>Решение проблем</div>
-          <Hammer color="#EB5757" />
+          <div className={styles.headerText}>Использование</div>
+          <Settings2 color="#A87BE2" />
+          {/*<Hammer color="#EB5757" />*/}
         </div>
         <div className={styles.content}>
           <ReactMarkdown
@@ -71,28 +72,28 @@ const FaqHeader = ({ aboutDataMd, usageDataMd, troubleshootingDataMd }: FaqHeade
           </ReactMarkdown>
         </div>
       </Card>
-      <Card bg="gradGray" className={classNames(styles.card, styles.gridUsage)}>
-        <div className={styles.cardHeader}>
-          <div className={styles.headerText}>Использование</div>
-          <Settings2 color="#A87BE2" />
-        </div>
-        <div className={classNames(styles.content, styles.usageContent)}>
-          <ReactMarkdown
-            components={{
-              h3: RouterLink,
-              p: () => null,
-              ul: () => null,
-              li: () => null,
-              hr: () => null,
-              blockquote: () => null,
-              a: () => null,
-            }}
-            remarkPlugins={[remarkGfm]}
-          >
-            {aboutDataMd}
-          </ReactMarkdown>
-        </div>
-      </Card>
+      {/*<Card bg="gradGray" className={classNames(styles.card, styles.gridUsage)}>*/}
+      {/*  <div className={styles.cardHeader}>*/}
+      {/*    <div className={styles.headerText}>Использование</div>*/}
+      {/*    <Settings2 color="#A87BE2" />*/}
+      {/*  </div>*/}
+      {/*  <div className={classNames(styles.content, styles.usageContent)}>*/}
+      {/*    <ReactMarkdown*/}
+      {/*      components={{*/}
+      {/*        h3: RouterLink,*/}
+      {/*        p: () => null,*/}
+      {/*        ul: () => null,*/}
+      {/*        li: () => null,*/}
+      {/*        hr: () => null,*/}
+      {/*        blockquote: () => null,*/}
+      {/*        a: () => null,*/}
+      {/*      }}*/}
+      {/*      remarkPlugins={[remarkGfm]}*/}
+      {/*    >*/}
+      {/*      {aboutDataMd}*/}
+      {/*    </ReactMarkdown>*/}
+      {/*  </div>*/}
+      {/*</Card>*/}
       {/* <ReactMarkdown remarkPlugins={[remarkGfm]}>{dataMd}</ReactMarkdown> */}
     </div>
   );

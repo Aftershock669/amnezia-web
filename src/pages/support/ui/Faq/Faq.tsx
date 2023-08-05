@@ -55,22 +55,22 @@ const Faq = () => {
       <GoToTopButton />
       <div className={styles.header}>{t('faq.header')}</div>
       <FaqHeader aboutDataMd={aboutMd} usageDataMd={usageMd} troubleshootingDataMd={tShootMd} />
-      <div className={styles.faqMdContainer}>
-        <MdStyledContainer>
-          <div className={styles.sectionHeader}>Об Amnezia</div>
-          <ReactMarkdown components={{ h3: HeaderAnchor }} remarkPlugins={[remarkGfm]}>
-            {aboutMd}
-          </ReactMarkdown>
-          <div className={styles.sectionHeader}>Решение проблем</div>
-          <ReactMarkdown components={{ h3: HeaderAnchor }} remarkPlugins={[remarkGfm]}>
-            {aboutMd}
-          </ReactMarkdown>
-          <div className={styles.sectionHeader}>Использование</div>
-          <ReactMarkdown components={{ h3: HeaderAnchor }} remarkPlugins={[remarkGfm]}>
-            {aboutMd}
-          </ReactMarkdown>
-        </MdStyledContainer>
-      </div>
+      {/*<div className={styles.faqMdContainer}>*/}
+      {/*  <MdStyledContainer>*/}
+      {/*    <div className={styles.sectionHeader}>Об Amnezia</div>*/}
+      {/*    <ReactMarkdown components={{ h3: HeaderAnchor }} remarkPlugins={[remarkGfm]}>*/}
+      {/*      {aboutMd}*/}
+      {/*    </ReactMarkdown>*/}
+      {/*    <div className={styles.sectionHeader}>Решение проблем</div>*/}
+      {/*    <ReactMarkdown components={{ h3: HeaderAnchor }} remarkPlugins={[remarkGfm]}>*/}
+      {/*      {aboutMd}*/}
+      {/*    </ReactMarkdown>*/}
+      {/*    <div className={styles.sectionHeader}>Использование</div>*/}
+      {/*    <ReactMarkdown components={{ h3: HeaderAnchor }} remarkPlugins={[remarkGfm]}>*/}
+      {/*      {aboutMd}*/}
+      {/*    </ReactMarkdown>*/}
+      {/*  </MdStyledContainer>*/}
+      {/*</div>*/}
     </div>
   );
 };

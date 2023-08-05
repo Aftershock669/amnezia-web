@@ -7,10 +7,11 @@ import Layout from '@src/layouts/Layout/Layout';
 // import AboutPage from '@src/pages/about/AboutPage';
 // import InstructionsPage from '@src/pages/instructions/InstructionsPage';
 // import NotFoundPage from '@src/pages/notFound/NotFoundPage';
-// import InstructionLayout from '@src/layouts/InstructionLayout/InstructionLayout';
+// import TroubleshootingLayout from '@src/layouts/TroubleshootingLayout/TroubleshootingLayout';
 
 import IndexLangSwitch from '@src/components/IndexLangSwitch/IndexLangSwitch';
 import LangSwitchRedirect from '@src/components/LangSwitchRedirect/LangSwitchRedirect';
+import TroubleshootingLayout from "@src/layouts/TroubleshootingLayout/TroubleshootingLayout";
 
 const MainPage = lazy(() => import('@src/pages/main/MainPage'));
 const DownloadsPage = lazy(() => import('@src/pages/downloads/DownloadsPage'));
@@ -49,14 +50,18 @@ export default createBrowserRouter([
         path: 'about',
         element: <AboutPage />,
       },
-      // {
-      //   path: 'instructions',
-      //   element: <InstructionsPage />,
-      // },
-      // {
-      //   path: 'instructions/:instructionId',
-      //   element: <InstructionLayout />,
-      // },
+      {
+        path: 'instructions',
+        element: <InstructionsPage />,
+      },
+      {
+        path: 'instructions/:instructionId',
+        element: <InstructionLayout />,
+      },
+      {
+        path: 'troubleshooting',
+        element: <TroubleshootingLayout />,
+      },
       {
         path: '*',
         element: <NotFoundPage />,
