@@ -20,7 +20,7 @@
   "featuresCard": {
     "feature1": {
       "header": "Share your VPN connection to a VPN with anyone",
-      "text": "In a few clicks and no restrictions"
+      "text": "In a few clicks and with no restrictions"
     },
     "feature2": {
       "header": "Choose which sites will be opened via VPN and which will not",
@@ -67,11 +67,11 @@
     "header": "Besides VPN in Amnezia you can create a lot of interesting things",
     "tor": {
       "header": "Site on the Tor Network",
-      "text": "Allows you to deploy your own site on WordPress on Tor in two clicks"
+      "text": "Allows to deploy your own WordPress website on the Tor platform in two clicks of the mouse"
     },
     "dns": {
       "header": "Own DNS server",
-      "text": "To prevent the ISP from seeing your site accesses"
+      "text": "To prevent your ISP from knowing your website requests"
     },
     "stash": {
       "header": "Secure storage files",

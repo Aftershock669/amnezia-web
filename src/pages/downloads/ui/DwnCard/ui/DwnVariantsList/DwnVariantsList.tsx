@@ -89,7 +89,7 @@ const DwnVariantsList = () => {
           <div className={styles.downloadBtnContainer}>
             <PrimaryLinkButton
               text={t('download')}
-              link="https://github.com/amnezia-vpn/amnezia-client/releases/download/2.1.2/AmneziaVPN_2.1.2.3.dmg"
+              link="https://github.com/amnezia-vpn/amnezia-client/releases/download/3.0.8/AmneziaVPN_3.0.8.dmg"
             />
           </div>
         </Tabs.Panel>
@@ -120,7 +120,7 @@ const DwnVariantsList = () => {
           <div className={styles.downloadBtnContainer}>
             <PrimaryLinkButton
               text={t('download')}
-              link="https://github.com/amnezia-vpn/amnezia-client/releases/download/2.1.2/AmneziaVPN_2.1.2_Linux_Installer"
+              link="https://github.com/amnezia-vpn/amnezia-client/releases/download/3.0.8/AmneziaVPN_3.0.8_Linux_Installer"
             />
           </div>
         </Tabs.Panel>

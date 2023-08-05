@@ -4,20 +4,16 @@ import AccordionItemV2 from '@src/shared/ui/AccordeonV2/ui/AccordionItemV2/Accor
 import AccordionV2 from '@src/shared/ui/AccordeonV2/AccordionV2';
 import usePageDecoration from '@src/shared/hooks/usePageDecoration/usePageDecoration';
 import { Helmet } from 'react-helmet';
+import SeoUpdater from '@src/components/SeoUpdater/SeoUpdater';
 import styles from './HostingInstructions.module.scss';
 import hostingDataRu from '../../config/hostingDataRu.json';
 
 const HostingInstructions = () => {
   usePageDecoration('dark');
-  const { i18n } = useTranslation();
 
   return (
     <>
-      <Helmet defer={false}>
-        <title>Amnezia - {hostingDataRu.h1}</title>
-        <meta name="description" content={hostingDataRu.h1} />
-      </Helmet>
-
+      <SeoUpdater title={`Amnezia - ${hostingDataRu.h1}`} metaDesc={hostingDataRu.h1} />
       <div className={styles.root}>
         <h1>{hostingDataRu.h1}</h1>
         <h2>{hostingDataRu.h2}</h2>

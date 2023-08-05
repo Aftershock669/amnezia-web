@@ -3,6 +3,7 @@ import InstructionsList from '@src/pages/instructions/ui/InstructionsList/Instru
 import usePageDecoration from '@src/shared/hooks/usePageDecoration/usePageDecoration';
 import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
+import SeoUpdater from '@src/components/SeoUpdater/SeoUpdater';
 
 const InstructionsPage = () => {
   usePageDecoration('dark');
@@ -10,10 +11,10 @@ const InstructionsPage = () => {
   const { t } = useTranslation();
   return (
     <div>
-      <Helmet defer={false}>
-        <title>{t('instructionsPage.metaTitle')}</title>
-        <meta name="description" content={t('instructionsPage.metaContent')} />
-      </Helmet>
+      <SeoUpdater
+        title={t('instructionsPage.metaTitle')}
+        metaDesc={t('instructionsPage.metaContent')}
+      />
       <InstructionsPageHeader />
       <InstructionsList />
     </div>

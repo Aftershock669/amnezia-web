@@ -1,6 +1,6 @@
 import TextLink from '@src/shared/ui/TextLink/TextLink';
 
-const faqDataRu = [
+const faqOldDataRu = [
   {
     label: 'Amnezia это VPN сервис?',
     content:
@@ -197,4 +197,4 @@ const faqDataRu = [
   },
 ];
 
-export default faqDataRu;
+export default faqOldDataRu;

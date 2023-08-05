@@ -6,9 +6,16 @@ import { Link } from 'react-router-dom';
 import styles from './DwnInfoCard.module.scss';
 
 const DwnInfoCard = () => {
-  const { t } = useTranslation('downloads-page');
+  const { i18n, t } = useTranslation('downloads-page');
   return (
-    <Link to="/instructions" className={styles.rootLinkWrapper}>
+    <Link
+      to={
+        i18n.resolvedLanguage === 'ru'
+          ? 'https://ru-docs.amnezia.org/guides/hosting-instructions/'
+          : 'https://en-docs.amnezia.org/guides/hosting-instructions/'
+      }
+      className={styles.rootLinkWrapper}
+    >
       <Card className={styles.root}>
         <div>
           <h2>{t('dwnInfoCard.header')}</h2>

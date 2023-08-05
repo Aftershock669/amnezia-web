@@ -46,8 +46,8 @@ const SecureSimpleFreeSection = () => {
               </div>
             </section>
             <img
-              height="297px"
-              width="401px"
+              height="296px"
+              width="400px"
               className={styles.connectImage}
               src={`/img/${i18n.resolvedLanguage}/main-connect.png`}
               alt="audited"

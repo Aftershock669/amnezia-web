@@ -9,19 +9,15 @@ import PrivacyTextSection from '@src/pages/main/ui/PrivacyTextSection/PrivacyTex
 import LogsEncryptSection from '@src/pages/main/ui/LogsEncryptSection/LogsEncryptSection';
 import MoreFeaturesSection from '@src/pages/main/ui/MoreFeaturesSection/MoreFeaturesSection';
 import usePageDecoration from '@src/shared/hooks/usePageDecoration/usePageDecoration';
-import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
-import { useParams } from 'react-router-dom';
+import SeoUpdater from '@src/components/SeoUpdater/SeoUpdater';
 
 const MainPage = () => {
   usePageDecoration('darker');
   const { t } = useTranslation('main-page');
   return (
     <div>
-      <Helmet defer={false}>
-        <title>{t('metaTitle')}</title>
-        <meta name="description" content={t('metaContent')} />
-      </Helmet>
+      <SeoUpdater title={t('metaTitle')} metaDesc={t('metaContent')} />
       <HeaderText />
       <HeaderDownload />
       <HeaderAppScreen />

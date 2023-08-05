@@ -10,6 +10,8 @@ import usePageDecoration from '@src/shared/hooks/usePageDecoration/usePageDecora
 import InstructionSkeleton from '@src/components/InstructionSkeleton/InstructionSkeleton';
 import { Helmet } from 'react-helmet';
 import NotFoundWIdget from '@src/components/NotFoundWidget/NotFoundWIdget';
+import hostingDataRu from "@src/pages/instructions/config/hostingDataRu.json";
+import SeoUpdater from "@src/components/SeoUpdater/SeoUpdater";
 
 function RouterLink({ children, href }: any) {
   return href.match(/^\//) ? (
@@ -90,9 +92,9 @@ const AppInstructionMd = ({ instructionId = '' }: AppInstructionMdProps) => {
 
   return (
     <>
+      <SeoUpdater title={instrTitle} />
       <Helmet defer={false}>
         <title>{instrTitle}</title>
-        <meta name="description" content="234" />
       </Helmet>
       {status === 'loading' && <InstructionSkeleton />}
       {status === 'error' && <NotFoundWIdget />}

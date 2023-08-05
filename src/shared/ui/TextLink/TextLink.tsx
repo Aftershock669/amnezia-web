@@ -6,7 +6,7 @@ interface TextLinkProps {
   text: any;
   to: string;
   reloadDocument?: boolean;
-  variant?: 'light' | 'dark' | 'underline';
+  variant?: 'light' | 'dark' | 'underline' | 'menu';
   className?: string;
   openInNewTab?: boolean;
 }
@@ -29,6 +29,7 @@ const TextLink = ({
         { [styles.linkLight]: variant === 'light' },
         { [styles.linkDark]: variant === 'dark' },
         { [styles.linkUnderline]: variant === 'underline' },
+        { [styles.linkMenu]: variant === 'menu' },
         className
       )}
     >

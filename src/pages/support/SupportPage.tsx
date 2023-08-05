@@ -1,10 +1,11 @@
 import SupportHeaderText from '@src/pages/support/ui/SupportHeaderText/SupportHeaderText';
 import SupportCards from '@src/pages/support/ui/SupportCards/SupportCards';
 import ContactsCard from '@src/components/ContactsCard/ContactsCard';
-import Faq from '@src/pages/support/ui/Faq/Faq';
+import FaqOld from '@src/pages/support/ui/FaqOld/FaqOld';
 import usePageDecoration from '@src/shared/hooks/usePageDecoration/usePageDecoration';
-import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
+import Faq from '@src/pages/support/ui/Faq/Faq';
+import SeoUpdater from '@src/components/SeoUpdater/SeoUpdater';
 import styles from './SupportPage.module.scss';
 
 const SupportPage = () => {
@@ -12,12 +13,10 @@ const SupportPage = () => {
   const { t } = useTranslation('support-page');
   return (
     <div>
-      <Helmet defer={false}>
-        <title>{t('metaTitle')}</title>
-        <meta name="description" content={t('metaContent')} />
-      </Helmet>
+      <SeoUpdater title={t('metaTitle')} metaDesc={t('metaContent')} />
       <SupportHeaderText />
       <SupportCards />
+      {/*<FaqOld />*/}
       <Faq />
       <div className={styles.contactsCardWrapper}>
         <ContactsCard />
