@@ -1,14 +1,14 @@
 import { ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import styles from './InstructionItem.module.scss';
+import styles from './DocsListItem.module.scss';
 
-export interface InstructionItemProps {
+export interface DocsListItemProps {
   text: string;
   to: string;
   subtext?: string;
 }
 
-const InstructionItem = ({ text, subtext = '', to }: InstructionItemProps) => {
+const DocsListItem = ({ text, subtext = '', to }: DocsListItemProps) => {
   return (
     <div className={styles.root}>
       <Link className={styles.link} to={to}>
@@ -24,4 +24,4 @@ const InstructionItem = ({ text, subtext = '', to }: InstructionItemProps) => {
   );
 };
 
-export default InstructionItem;
+export default DocsListItem;

@@ -6,12 +6,7 @@ const LogoContainer = () => {
   return (
     <div className={classNames(styles.root)}>
       <NavLink to=".">
-        <img
-          height="230px"
-          width="167px"
-          src="/img/logos/logo-with-a-w-glow.svg"
-          alt="Amnezia logo"
-        />
+        <img height="230px" width="167px" src="/img/logos/logo-with-a-w-glow.svg" alt="" />
       </NavLink>
     </div>
   );

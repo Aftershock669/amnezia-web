@@ -39,7 +39,7 @@ const DownloadBadge = ({ variant }: DownloadBadgeProps) => {
   return (
     <div className={styles.root}>
       <a target="_blank" href={switchBadge().link} rel="noreferrer">
-        <img height="60px" width="180px" src={switchBadge().img} alt="google play badge" />
+        <img height="60px" width="180px" src={switchBadge().img} alt="" />
       </a>
     </div>
   );

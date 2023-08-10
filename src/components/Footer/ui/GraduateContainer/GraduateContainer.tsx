@@ -8,10 +8,7 @@ const GraduateContainer = () => {
   return (
     <div className={classNames(styles.root)}>
       <a target="_blank" href="https://privacyaccelerator.org/" rel="noreferrer">
-        <img
-          src={`/img/${getFallbackLangForRuEnOnlyContent(i18n.language)}/graduate.png`}
-          alt="google play badge"
-        />
+        <img src={`/img/${getFallbackLangForRuEnOnlyContent(i18n.language)}/graduate.png`} alt="" />
       </a>
     </div>
   );

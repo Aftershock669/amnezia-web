@@ -17,7 +17,7 @@ const SecureSimpleFreeSection = () => {
               width="272px"
               className={styles.auditedImage}
               src={auditedImage}
-              alt="audited"
+              alt=""
             />
             <section className="main-text dimmed">
               <h2>{t('secureSimpleFreeSection.secure.header')}</h2>
@@ -50,7 +50,7 @@ const SecureSimpleFreeSection = () => {
               width="400px"
               className={styles.connectImage}
               src={`/img/${i18n.resolvedLanguage}/main-connect.png`}
-              alt="audited"
+              alt=""
             />
           </div>
         </Card>

@@ -7,18 +7,19 @@ import { useEffect, useState } from 'react';
 import ContactsCard from '@src/components/ContactsCard/ContactsCard';
 import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
+import MdStyledContainer from '@src/components/MdStyledContainer/MdStyledContainer';
 import usePageDecoration from '@src/shared/hooks/usePageDecoration/usePageDecoration';
 import DocsArticleMd from '@src/components/DocsArticleMd/DocsArticleMd';
-import styles from './TroubleshootingLayout.module.scss';
+import styles from './ErrorCodesLayout.module.scss';
 
-const TroubleshootingLayout = () => {
+const ErrorCodesLayout = () => {
   usePageDecoration('dark');
   const [tableOfContents, setTableOfContents] = useState<any[]>([]);
   const { i18n, t } = useTranslation();
-  const { articleId } = useParams();
+  const { errCode } = useParams();
 
   useEffect(() => {
-    const gitLink = `https://raw.githubusercontent.com/Aftershock669/amnezia-open-docs/master/docs/${i18n.resolvedLanguage}/troubleshooting/tableOfContents.json`;
+    const gitLink = `https://raw.githubusercontent.com/Aftershock669/amnezia-open-docs/master/docs/${i18n.resolvedLanguage}/troubleshooting/error-codes/tableOfContents.json`;
 
     const fetchData = async () => {
       const res = await fetch(gitLink);
@@ -35,6 +36,7 @@ const TroubleshootingLayout = () => {
   const items = [
     { title: t('navigation.support'), href: '../support' },
     { title: t('troubleshootingPage.header.text'), href: '../troubleshooting' },
+    { title: t('errorCodesPage.header.text'), href: '../troubleshooting/error-codes' },
   ].map((item, index) => <TextLink text={item.title} to={item.href} key={index} variant="light" />);
 
   return (
@@ -52,7 +54,7 @@ const TroubleshootingLayout = () => {
         </Breadcrumbs>
         <div className={styles.instructionContent}>
           <DocsArticleMd
-            docUrl={`https://raw.githubusercontent.com/Aftershock669/amnezia-open-docs/master/docs/${i18n.resolvedLanguage}/troubleshooting/${articleId}/${articleId}.md`}
+            docUrl={`https://raw.githubusercontent.com/Aftershock669/amnezia-open-docs/master/docs/${i18n.resolvedLanguage}/troubleshooting/error-codes/${errCode}/${errCode}.md`}
           />
         </div>
         <div className={styles.contactsCardWrapper}>
@@ -63,4 +65,4 @@ const TroubleshootingLayout = () => {
   );
 };
 
-export default TroubleshootingLayout;
+export default ErrorCodesLayout;

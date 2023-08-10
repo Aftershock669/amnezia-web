@@ -7,7 +7,7 @@ import Layout from '@src/layouts/Layout/Layout';
 // import AboutPage from '@src/pages/about/AboutPage';
 // import InstructionsPage from '@src/pages/instructions/InstructionsPage';
 // import NotFoundPage from '@src/pages/notFound/NotFoundPage';
-// import TroubleshootingLayout from '@src/layouts/TroubleshootingLayout/TroubleshootingLayout';
+// import ErrorCodesLayout from '@src/layouts/ErrorCodesLayout/ErrorCodesLayout';
 
 import IndexLangSwitch from '@src/components/IndexLangSwitch/IndexLangSwitch';
 import LangSwitchRedirect from '@src/components/LangSwitchRedirect/LangSwitchRedirect';
@@ -18,9 +18,14 @@ const SupportPage = lazy(() => import('@src/pages/support/SupportPage'));
 const AboutPage = lazy(() => import('@src/pages/about/AboutPage'));
 const InstructionsPage = lazy(() => import('@src/pages/instructions/InstructionsPage'));
 const FaqPage = lazy(() => import('@src/pages/faq/FaqPage'));
-const TroubleshootingLayout = lazy(() => import('@src/layouts/TroubleshootingLayout/TroubleshootingLayout'));
+const TroubleshootingPage = lazy(() => import('@src/pages/troubleshooting/TroubleshootingPage'));
+const TroubleshootingLayout = lazy(
+  () => import('@src/layouts/TroubleshootingLayout/TroubleshootingLayout')
+);
 const NotFoundPage = lazy(() => import('@src/pages/notFound/NotFoundPage'));
 const InstructionLayout = lazy(() => import('@src/layouts/InstructionLayout/InstructionLayout'));
+const ErrorCodesPage = lazy(() => import('@src/pages/errorCodes/ErrorCodesPage'));
+const ErrorCodesLayout = lazy(() => import('@src/layouts/ErrorCodesLayout/ErrorCodesLayout'));
 
 export default createBrowserRouter([
   {
@@ -61,10 +66,22 @@ export default createBrowserRouter([
       },
       {
         path: 'troubleshooting',
+        element: <TroubleshootingPage />,
+      },
+      {
+        path: 'troubleshooting/error-codes',
+        element: <ErrorCodesPage />,
+      },
+      {
+        path: 'troubleshooting/error-codes/:errCode',
+        element: <ErrorCodesLayout />,
+      },
+      {
+        path: 'troubleshooting/:articleId',
         element: <TroubleshootingLayout />,
       },
       {
-        path: 'faq/:faqSection',
+        path: 'faq',
         element: <FaqPage />,
       },
       {

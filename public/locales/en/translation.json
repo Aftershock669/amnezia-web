@@ -16,6 +16,20 @@
       "text": "Instructions"
     }
   },
+  "troubleshootingPage": {
+    "metaTitle": "Amnezia - Troubleshooting",
+    "metaContent": "Troubleshooting",
+    "header": {
+      "text": "Troubleshooting"
+    }
+  },
+  "errorCodesPage": {
+    "metaTitle": "Amnezia - Error codes",
+    "metaContent": "Error codes",
+    "header": {
+      "text": "Error codes"
+    }
+  },
   "notFoundPage": {
     "header": "Page not found",
     "text": "It has been moved or never existed. Try to find what you are looking for in the «Support» section.",

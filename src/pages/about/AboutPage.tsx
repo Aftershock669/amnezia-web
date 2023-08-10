@@ -16,7 +16,7 @@ const AboutPage = () => {
     <div className={styles.pageContainer}>
       <SeoUpdater title={t('metaTitle')} metaDesc={t('metaContent')} />
       <div className={styles.logoContainer}>
-        <img src="/img/logos/logo-with-a-w-glow.svg" alt="Amnezia logo" />
+        <img src="/img/logos/logo-with-a-w-glow.svg" alt="" />
       </div>
       <div className={classNames('h-70', styles.header)}>{t('about')}</div>
       <p className="fz24 text-indent-bottom">

@@ -12,7 +12,7 @@ const DwnLogoItem = ({ imgLink, fileLink }: DwnLogoItemProps) => {
   return (
     <div className={styles.dwnLogoWrapper}>
       <div className={styles.dwnLogo}>
-        <img src={imgLink} alt="downloadable logo" />
+        <img src={imgLink} alt="" />
       </div>
       <a
         className={classNames('link', styles.dwnLogoLink)}

@@ -1,4 +1,4 @@
-import React, { ReactNode, useRef, useState } from 'react';
+import React, { ReactNode, useState } from 'react';
 import styles from './AccordionV2.module.scss';
 
 export interface AccordionProps {

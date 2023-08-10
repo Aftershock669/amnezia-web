@@ -1,4 +1,4 @@
-.root {
+.root-primary {
   margin-top: 60px;
   display: flex;
   text-align: center;
@@ -23,8 +23,17 @@
   }
 }
 
+.secondary-wrapper {
+  margin-top: 30px;
+}
+
 .link-wrapper {
   text-align: center;
   font-size: 16px;
   font-weight: 500;
+}
+
+.root-secondary {
+  display: flex;
+  flex-direction: column;
 }

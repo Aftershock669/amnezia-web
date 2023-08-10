@@ -17,12 +17,12 @@ const HeaderDownload = () => {
       <div className={styles.buttonContainer}>
         <DownloadButtonMain text={t('download')} link="./downloads" />
         <div className={styles.iconLinks}>
-          <img height="24px" width="24px" src={windowsIcon} className="logo" alt="Windows logo" />
-          <img height="24px" width="24px" src={macIcon} className="logo" alt="Apple logo" />
-          <img height="24px" width="24px" src={iosIcon} className="logo" alt="Ios logo" />
-          <img height="24px" width="24px" src={androidIcon} className="logo" alt="Android logo" />
-          <img height="24px" width="24px" src={linuxIcon} className="logo" alt="Linux logo" />
-          <img height="24px" width="24px" src={githubIcon} className="logo" alt="Github logo" />
+          <img height="24px" width="24px" src={windowsIcon} className="logo" alt="| Windows " />
+          <img height="24px" width="24px" src={macIcon} className="logo" alt="| macOS " />
+          <img height="24px" width="24px" src={iosIcon} className="logo" alt="| iOS " />
+          <img height="24px" width="24px" src={androidIcon} className="logo" alt="| Android " />
+          <img height="24px" width="24px" src={linuxIcon} className="logo" alt="| Linux " />
+          <img height="24px" width="24px" src={githubIcon} className="logo" alt="| Github " />
         </div>
       </div>
       <TextLink

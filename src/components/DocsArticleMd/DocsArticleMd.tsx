@@ -10,8 +10,8 @@ import usePageDecoration from '@src/shared/hooks/usePageDecoration/usePageDecora
 import InstructionSkeleton from '@src/components/InstructionSkeleton/InstructionSkeleton';
 import { Helmet } from 'react-helmet';
 import NotFoundWIdget from '@src/components/NotFoundWidget/NotFoundWIdget';
-import hostingDataRu from "@src/pages/instructions/config/hostingDataRu.json";
-import SeoUpdater from "@src/components/SeoUpdater/SeoUpdater";
+import hostingDataRu from '@src/pages/instructions/config/hostingDataRu.json';
+import SeoUpdater from '@src/components/SeoUpdater/SeoUpdater';
 
 function RouterLink({ children, href }: any) {
   return href.match(/^\//) ? (
@@ -23,10 +23,10 @@ function RouterLink({ children, href }: any) {
 }
 
 interface AppInstructionMdProps {
-  instructionId: string | undefined;
+  docUrl: string;
 }
 
-const AppInstructionMd = ({ instructionId = '' }: AppInstructionMdProps) => {
+const DocsArticleMd = ({ docUrl = '' }: AppInstructionMdProps) => {
   usePageDecoration('dark');
   const location = useLocation();
   const { i18n } = useTranslation();
@@ -41,16 +41,10 @@ const AppInstructionMd = ({ instructionId = '' }: AppInstructionMdProps) => {
   };
 
   useEffect(() => {
-    // const instructionHref = location.pathname;
-    // const instructionUrlName = location.pathname.split('/')[3];
-
-    // const gitLink = `https://raw.githubusercontent.com/Aftershock669/amnezia-open-docs/master/docs/${instructionHref}/${instructionUrlName}.md`;
-    const gitLink = `https://raw.githubusercontent.com/Aftershock669/amnezia-open-docs/master/docs/${i18n.resolvedLanguage}/instructions/${instructionId}/${instructionId}.md`;
-
     const fetchData = async () => {
       setStatus('loading');
 
-      const rawRes = await fetch(gitLink);
+      const rawRes = await fetch(docUrl);
 
       if (rawRes.status !== 200) {
         setTimeout(() => {
@@ -67,28 +61,28 @@ const AppInstructionMd = ({ instructionId = '' }: AppInstructionMdProps) => {
           setStatus('ok');
         }, 400);
       }
-
-      // return fetch(gitLink)
-      //   .then((response) => response.text())
-      //   .then((text) => {
-      //     setRead(text);
-      //     const reg = text.match(/^(\S+)\s(.*)/);
-      //     if (reg) handleTitle(reg.slice(1)[1]);
-      //     setTimeout(() => {
-      //       setStatus('ok');
-      //     }, 400);
-      //   });
     };
 
     fetchData();
 
-    // FETCH FROM FS
-    // import('/docs/en/manual-install/manual-install.md').then((res) => {
+    // FETCH FROM DYNAMIC IMPORT FS
+    // import('/src/docs/ru/instructions/auto-install/auto-install.md').then((res) => {
     //   fetch(res.default)
     //     .then((response) => response.text())
-    //     .then((text) => setRead(text));
+    //     .then((text) => {
+    //       setRead(text);
+    //       setStatus('ok');
+    //     });
     // });
-  }, [location, i18n.resolvedLanguage]);
+
+    // FETCH FROM PUBLIC
+    // fetch(docUrl)
+    //   .then((response) => response.text())
+    //   .then((text) => {
+    //     setRead(text);
+    //     setStatus('ok');
+    //   });
+  }, [location.pathname, i18n.resolvedLanguage]);
 
   return (
     <>
@@ -109,4 +103,4 @@ const AppInstructionMd = ({ instructionId = '' }: AppInstructionMdProps) => {
   );
 };
 
-export default AppInstructionMd;
+export default DocsArticleMd;

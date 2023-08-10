@@ -20,7 +20,7 @@ const HeaderAppScreen = () => {
         <img
           src={`/img/${i18n.resolvedLanguage}/app-screen.png`}
           className={styles.screenImg}
-          alt="Amnezia logo"
+          alt=""
         />
         {/*<div className={styles.glow} />*/}
       </div>

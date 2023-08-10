@@ -9,24 +9,24 @@ const SupportCards = () => {
       <SupportCard
         header={t('howToCard.header')}
         text={t('howToCard.text')}
-        // to="../instructions/starter-guide"
+        to="../instructions/starter-guide"
 
         // TODO Временная заглушка
-        to={`https://${i18n.resolvedLanguage}-docs.amnezia.org/guides/hosting-instructions`}
+        // to={`https://${i18n.resolvedLanguage}-docs.amnezia.org/guides/hosting-instructions`}
       />
       <SupportCard
         header={t('instructionsCard.header')}
         text={t('instructionsCard.text')}
-        // to="../instructions"
-
+        to="../instructions"
         // TODO Временная заглушка
-        to={`https://${i18n.resolvedLanguage}-docs.amnezia.org`}
+        // to={`https://${i18n.resolvedLanguage}-docs.amnezia.org`}
       />
       <SupportCard
         header="Решение проблем"
         text="Помогите, не работает ааа!!!"
         to="../troubleshooting"
       />
+      <SupportCard header="FAQ" text="Часто задаваемые вопросы" to="../faq" />
     </div>
   );
 };

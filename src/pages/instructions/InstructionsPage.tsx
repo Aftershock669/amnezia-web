@@ -1,22 +1,26 @@
-import InstructionsPageHeader from '@src/pages/instructions/ui/InstructionsHeaderText/InstructionsPageHeader';
-import InstructionsList from '@src/pages/instructions/ui/InstructionsList/InstructionsList';
+import DocsHeader from '@src/components/DocsHeader/DocsHeader';
+import DocsList from '@src/components/DocsList/DocsList';
 import usePageDecoration from '@src/shared/hooks/usePageDecoration/usePageDecoration';
-import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
 import SeoUpdater from '@src/components/SeoUpdater/SeoUpdater';
 
 const InstructionsPage = () => {
   usePageDecoration('dark');
 
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   return (
     <div>
       <SeoUpdater
         title={t('instructionsPage.metaTitle')}
         metaDesc={t('instructionsPage.metaContent')}
       />
-      <InstructionsPageHeader />
-      <InstructionsList />
+      <DocsHeader
+        text={t('instructionsPage.header.text')}
+        breadcrumbs={[{ title: t('navigation.support'), href: '../support' }]}
+      />
+      <DocsList
+        dataLink={`https://raw.githubusercontent.com/Aftershock669/amnezia-open-docs/master/docs/${i18n.resolvedLanguage}/instructions/tableOfContents.json`}
+      />
     </div>
   );
 };

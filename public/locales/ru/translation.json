@@ -16,6 +16,20 @@
       "text": "Инструкции"
     }
   },
+  "troubleshootingPage": {
+    "metaTitle": "Amnezia - Решение проблем",
+    "metaContent": "Решение проблем",
+    "header": {
+      "text": "Решение проблем"
+    }
+  },
+  "errorCodesPage": {
+    "metaTitle": "Amnezia - Коды ошибок",
+    "metaContent": "Коды ошибок",
+    "header": {
+      "text": "Коды ошибок"
+    }
+  },
   "notFoundPage": {
     "header": "Страница не найдена",
     "text": "Она была перемещена или никогда не существовала. Попробуйте найти, что искали, в разделе «Поддержка».",

@@ -1,7 +1,7 @@
 import { Skeleton } from '@mantine/core';
-import styles from './InstructionsListSkeleton.module.scss';
+import styles from './DocsListSkeleton.module.scss';
 
-const InstructionsListSkeleton = () => {
+const DocsListSkeleton = () => {
   return (
     <div className={styles.root}>
       {Array(8)
@@ -15,4 +15,4 @@ const InstructionsListSkeleton = () => {
   );
 };
 
-export default InstructionsListSkeleton;
+export default DocsListSkeleton;

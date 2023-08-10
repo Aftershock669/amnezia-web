@@ -9,7 +9,7 @@ const NotFoundWIdget = () => {
     <>
       <SeoUpdater title={`404 - ${t('notFoundPage.header')}`} hrefLang={false} />
       <div className={styles.root}>
-        <img src="/img/404.png" width="270" height="230" alt="not found image" />
+        <img src="/img/404.png" width="270" height="230" alt="" />
         <h1 className={styles.header}>{t('notFoundPage.header')}</h1>
         <div className={styles.text}>{t('notFoundPage.text')}</div>
         <PrimaryLinkButton text={t('notFoundPage.button')} link="../support" />

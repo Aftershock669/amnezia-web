@@ -20,7 +20,7 @@ const AppBar = ({ openDrawerAction }: PT) => {
             height={25}
             width={94}
             src="/img/logos/logo-text-colorfull@2x.png"
-            alt="Amnezia logo"
+            alt=""
           />
         </NavLink>
       </div>

@@ -1,10 +1,10 @@
 import classNames from 'classnames';
-import { ReactNode, useRef } from 'react';
+import { FC, ReactNode, useRef } from 'react';
 import { MinusIcon, PlusIcon } from 'lucide-react';
 import styles from './AccordionItemV2.module.scss';
 
 interface AccordionItemProps {
-  value: any;
+  value?: any;
   label: any;
   children: ReactNode;
   onToggle?: any;
