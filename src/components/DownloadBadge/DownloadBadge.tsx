@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import styles from '@src/components/Footer/ui/BadgesContainer/BadgesContainer.module.scss';
 import getFallbackLangForRuEnOnlyContent from '@src/shared/helpers/getFallbackLangForRuEnOnlyContent';
+import downloadLinks from '@src/shared/config/downloadLinks';
 
 interface DownloadBadgeProps {
   variant: 'appStore' | 'googlePlay' | 'appGallery';
@@ -15,12 +16,12 @@ const DownloadBadge = ({ variant }: DownloadBadgeProps) => {
     switch (variant) {
       case 'appStore':
         return {
-          link: 'https://apps.apple.com/us/app/amneziavpn/id1600529900',
+          link: downloadLinks.appStore,
           img: `/img/${lang}/dwn-app-store.png`,
         };
       case 'googlePlay':
         return {
-          link: 'https://play.google.com/store/apps/details?id=org.amnezia.vpn',
+          link: downloadLinks.googlePlay,
           img: `/img/${lang}/dwn-play.png`,
         };
       case 'appGallery':

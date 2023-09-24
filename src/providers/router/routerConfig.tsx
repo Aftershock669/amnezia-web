@@ -80,10 +80,10 @@ export default createBrowserRouter([
         path: 'troubleshooting/:articleId',
         element: <TroubleshootingLayout />,
       },
-      {
-        path: 'faq',
-        element: <FaqPage />,
-      },
+      // {
+      //   path: 'faq',
+      //   element: <FaqPage />,
+      // },
       {
         path: '*',
         element: <NotFoundPage />,

@@ -1,12 +1,12 @@
 {
-  "metaTitle": "Amnezia - Support",
+  "metaTitle": "Support - Amnezia",
   "metaContent": "Support. Here are all the answers to the questions and instructions to make it easier for you to set up your VPN",
   "header": {
     "mainText": "Support",
     "subText": "Here are all the answers to the questions and instructions to make it easier for you to set up your VPN"
   },
   "howToCard": {
-    "header": "How to start your VPN",
+    "header": "How to start your",
     "text": "Where to get a server if you don't have one and how to connect it to the application"
   },
   "instructionsCard": {

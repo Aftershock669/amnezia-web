@@ -10,7 +10,6 @@ const SupportCards = () => {
         header={t('howToCard.header')}
         text={t('howToCard.text')}
         to="../instructions/starter-guide"
-
         // TODO Временная заглушка
         // to={`https://${i18n.resolvedLanguage}-docs.amnezia.org/guides/hosting-instructions`}
       />
@@ -21,12 +20,12 @@ const SupportCards = () => {
         // TODO Временная заглушка
         // to={`https://${i18n.resolvedLanguage}-docs.amnezia.org`}
       />
-      <SupportCard
-        header="Решение проблем"
-        text="Помогите, не работает ааа!!!"
-        to="../troubleshooting"
-      />
-      <SupportCard header="FAQ" text="Часто задаваемые вопросы" to="../faq" />
+      {/* <SupportCard */}
+      {/*  header="Решение проблем" */}
+      {/*  text="Помогите, не работает ааа!!!" */}
+      {/*  to="../troubleshooting" */}
+      {/* /> */}
+      {/* <SupportCard header="FAQ" text="Часто задаваемые вопросы" to="../faq" /> */}
     </div>
   );
 };

@@ -5,6 +5,8 @@ import { useOs } from '@mantine/hooks';
 import DownloadBadge from '@src/components/DownloadBadge/DownloadBadge';
 import PrimaryLinkButton from '@src/components/PrimaryLinkButton/PrimaryLinkButton';
 import { useTranslation } from 'react-i18next';
+import TextLink from '@src/shared/ui/TextLink/TextLink';
+import downloadLinks from '@src/shared/config/downloadLinks';
 import styles from './DwnVariantsList.module.scss';
 import { ReactComponent as WindowsLogo } from './assets/windows.svg';
 import { ReactComponent as MacLogo } from './assets/mac-os.svg';
@@ -13,7 +15,6 @@ import { ReactComponent as AndroidLogo } from './assets/android.svg';
 import { ReactComponent as LinuxLogo } from './assets/linux.svg';
 // import { ReactComponent as RouterLogo } from './assets/router.svg';
 import { ReactComponent as GithubLogo } from './assets/github.svg';
-import TextLink from "@src/shared/ui/TextLink/TextLink";
 
 const DwnVariantsList = () => {
   const { t } = useTranslation(['translation', 'downloads-page']);
@@ -87,10 +88,7 @@ const DwnVariantsList = () => {
 
         <Tabs.Panel value="mac">
           <div className={styles.downloadBtnContainer}>
-            <PrimaryLinkButton
-              text={t('download')}
-              link="https://github.com/amnezia-vpn/amnezia-client/releases/download/3.0.8/AmneziaVPN_3.0.8.dmg"
-            />
+            <PrimaryLinkButton text={t('download')} link={downloadLinks.mac} />
           </div>
         </Tabs.Panel>
 
@@ -103,14 +101,11 @@ const DwnVariantsList = () => {
         <Tabs.Panel value="android">
           <div className={styles.downloadBtnContainer}>
             <DownloadBadge variant="googlePlay" />
-            {/*<PrimaryLinkButton*/}
-            {/*  text={t('dwnCard.downloadFromSite', { ns: 'downloads-page' })}*/}
-            {/*  link="https://github.com/amnezia-vpn/amnezia-client/releases/download/2.1.2/AmneziaVPN_2.1.2.1.apk"*/}
-            {/*/>*/}
             <TextLink
               variant="light"
+              openInNewTab
               text={t('dwnCard.downloadFromSite', { ns: 'downloads-page' })}
-              to="https://github.com/amnezia-vpn/amnezia-client/releases/download/2.1.2/AmneziaVPN_2.1.2.1.apk"
+              to={downloadLinks.android}
               className={styles.link}
             />
           </div>
@@ -118,10 +113,7 @@ const DwnVariantsList = () => {
 
         <Tabs.Panel value="linux">
           <div className={styles.downloadBtnContainer}>
-            <PrimaryLinkButton
-              text={t('download')}
-              link="https://github.com/amnezia-vpn/amnezia-client/releases/download/3.0.8/AmneziaVPN_3.0.8_Linux_Installer"
-            />
+            <PrimaryLinkButton text={t('download')} link={downloadLinks.linux} />
           </div>
         </Tabs.Panel>
 
@@ -129,7 +121,7 @@ const DwnVariantsList = () => {
           <div className={styles.downloadBtnContainer}>
             <PrimaryLinkButton
               text={t('dwnCard.downloadFromGithub', { ns: 'downloads-page' })}
-              link="https://github.com/amnezia-vpn/amnezia-client/releases"
+              link={downloadLinks.githubLatest}
               openInNewTab
             />
           </div>

@@ -4,7 +4,7 @@ import ContactsCard from '@src/components/ContactsCard/ContactsCard';
 import usePageDecoration from '@src/shared/hooks/usePageDecoration/usePageDecoration';
 import { useTranslation } from 'react-i18next';
 import SeoUpdater from '@src/components/SeoUpdater/SeoUpdater';
-import FaqOld from '@src/pages/support/ui/FaqOld/FaqOld';
+import Faq from '@src/components/Faq/Faq';
 import styles from './SupportPage.module.scss';
 
 const SupportPage = () => {
@@ -15,8 +15,7 @@ const SupportPage = () => {
       <SeoUpdater title={t('metaTitle')} metaDesc={t('metaContent')} />
       <SupportHeaderText />
       <SupportCards />
-      {/*<FaqOld />*/}
-      {/* <Faq /> */}
+      <Faq />
       <div className={styles.contactsCardWrapper}>
         <ContactsCard />
       </div>

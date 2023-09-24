@@ -186,6 +186,11 @@ const faqDataRu = [
     content:
       'Connection data may be vulnerable to interception, potentially compromising your traffic and personal data. For a secure connection, use a VPS purchased from a trusted provider or data shared with you by a trusted source',
   },
+  {
+    label: "OpenVPN over Cloak don't work",
+    content:
+      'OpenVPN over Cloak installed on Amnezia 2.0.2 version is not compatible with client versions 3.0.0 and above. To ensure proper functionality, it is necessary to reinstall the protocol.',
+  },
 ];
 
 export default faqDataRu;

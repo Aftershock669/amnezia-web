@@ -2,33 +2,30 @@ import { useEffect, useState } from 'react';
 import DwnVariantsDropdown from '@src/pages/downloads/ui/DwnCard/ui/DwnVariantsList/ui/DwnVariantsDropdown/DwnVariantsDropdown';
 import PrimaryLinkButton from '@src/components/PrimaryLinkButton/PrimaryLinkButton';
 import { useTranslation } from 'react-i18next';
+import downloadLinks from '@src/shared/config/downloadLinks';
 import styles from './WindowsVariants.module.scss';
 
 const WindowsVariants = () => {
   const { t, i18n } = useTranslation(['translation', 'downloads-page']);
   const [selectedValue, setSelectedValue] = useState({
-    value:
-      'https://github.com/amnezia-vpn/amnezia-client/releases/download/2.1.2/AmneziaVPN_2.1.2_x64.exe',
+    value: downloadLinks.win64,
     label: t('dwnCard.forWin64', { ns: 'downloads-page' }),
   });
 
   useEffect(() => {
     setSelectedValue({
-      value:
-        'https://github.com/amnezia-vpn/amnezia-client/releases/download/2.1.2/AmneziaVPN_2.1.2_x64.exe',
+      value: downloadLinks.win64,
       label: t('dwnCard.forWin64', { ns: 'downloads-page' }),
     });
   }, [i18n.resolvedLanguage]);
 
   const values = [
     {
-      value:
-        'https://github.com/amnezia-vpn/amnezia-client/releases/download/2.1.2/AmneziaVPN_2.1.2_x64.exe',
+      value: downloadLinks.win64,
       label: t('dwnCard.forWin64', { ns: 'downloads-page' }),
     },
     {
-      value:
-        'https://github.com/amnezia-vpn/amnezia-client/releases/download/2.1.2/AmneziaVPN_2.1.2_x32.exe',
+      value: downloadLinks.win32,
       label: t('dwnCard.forWin32', { ns: 'downloads-page' }),
     },
   ];

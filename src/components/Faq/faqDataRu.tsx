@@ -1,6 +1,6 @@
 import TextLink from '@src/shared/ui/TextLink/TextLink';
 
-const faqOldDataRu = [
+const faqDataRu = [
   {
     label: 'Amnezia это VPN сервис?',
     content:
@@ -195,6 +195,11 @@ const faqOldDataRu = [
     content:
       'Данные соединения могут быть уязвимы для перехвата, что может поставить под угрозу ваш трафик и персональные данные. Для обеспечения безопасного соединения используйте VPS, приобретенный у надежного провайдера, или данные, переданные вам надежным источником".',
   },
+  {
+    label: 'Что делать если не работает OpenVPN over Cloak?',
+    content:
+      'OpenVPN over Cloak установленный на версии Amnezia 2.0.2 не совместим с версией клиента 3.0.0 и выше. Для корректной работы переустановите протокол.',
+  },
 ];
 
-export default faqOldDataRu;
+export default faqDataRu;

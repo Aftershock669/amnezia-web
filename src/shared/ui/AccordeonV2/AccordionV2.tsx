@@ -16,7 +16,7 @@ const AccordionV2 = ({ children }: AccordionProps) => {
   return (
     <div className={styles.root}>
       <ul className={styles.accordion}>
-        {React.Children.map(children, (child: any) => {
+        {React.Children.map(children, (child: any, index) => {
           if (React.isValidElement<any>(child)) {
             return React.cloneElement<any>(child, {
               active: clicked === child.props.value,

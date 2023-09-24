@@ -10,29 +10,33 @@
     "allDwnOpt": "All download options"
   },
   "instructionsPage": {
-    "metaTitle": "Amnezia - Instructions",
+    "metaTitle": "Instructions - Amnezia",
     "metaContent": "Instructions",
     "header": {
       "text": "Instructions"
     }
   },
   "troubleshootingPage": {
-    "metaTitle": "Amnezia - Troubleshooting",
+    "metaTitle": "Troubleshooting - Amnezia",
     "metaContent": "Troubleshooting",
     "header": {
       "text": "Troubleshooting"
     }
   },
   "errorCodesPage": {
-    "metaTitle": "Amnezia - Error codes",
+    "metaTitle": "Error codes - Amnezia",
     "metaContent": "Error codes",
     "header": {
       "text": "Error codes"
     }
   },
   "notFoundPage": {
-    "header": "Page not found",
+    "header": "Page not found - Amnezia",
     "text": "It has been moved or never existed. Try to find what you are looking for in the «Support» section.",
     "button":"Go to «Support»"
+  },
+  "faqPage": {
+    "metaTitle": "FAQ - Amnezia",
+    "metaContent": "Answers to frequently asked questions"
   }
 }

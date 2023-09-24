@@ -44,7 +44,7 @@ const InstructionLayout = () => {
   ].map((item, index) => <TextLink text={item.title} to={item.href} key={index} variant="light" />);
 
   const switchInstructionsRoute = () => {
-    if (instructionId === 'starter-guide') return <HostingInstructions />;
+    if (instructionId === '0_starter-guide') return <HostingInstructions />;
     // if (instructionId === 'protocols') return <ProtocolsInstruction />;
     return (
       <DocsArticleMd

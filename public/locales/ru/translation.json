@@ -10,29 +10,33 @@
     "allDwnOpt": "Все варианты загрузки"
   },
   "instructionsPage": {
-    "metaTitle": "Amnezia - Инструкции",
+    "metaTitle": "Инструкции - Amnezia",
     "metaContent": "Инструкции",
     "header": {
       "text": "Инструкции"
     }
   },
   "troubleshootingPage": {
-    "metaTitle": "Amnezia - Решение проблем",
+    "metaTitle": "Решение проблем - Amnezia",
     "metaContent": "Решение проблем",
     "header": {
       "text": "Решение проблем"
     }
   },
   "errorCodesPage": {
-    "metaTitle": "Amnezia - Коды ошибок",
+    "metaTitle": "Коды ошибок - Amnezia",
     "metaContent": "Коды ошибок",
     "header": {
       "text": "Коды ошибок"
     }
   },
   "notFoundPage": {
-    "header": "Страница не найдена",
+    "header": "Страница не найдена - Amnezia",
     "text": "Она была перемещена или никогда не существовала. Попробуйте найти, что искали, в разделе «Поддержка».",
     "button":"Перейти к «Поддержке»"
+  },
+  "faqPage": {
+    "metaTitle": "FAQ - Amnezia",
+    "metaContent": "Ответы на часто задаваемы вопросы"
   }
 }
