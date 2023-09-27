@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import { ScrollArea } from '@mantine/core';
 import styles from './SidebarNav.module.scss';
 
 interface SidebarNavProps {
@@ -6,7 +7,36 @@ interface SidebarNavProps {
 }
 
 const SidebarNav = ({ children }: SidebarNavProps) => {
-  return <div className={styles.root}>{children}</div>;
+  return (
+    <div className={styles.root}>
+      <ScrollArea.Autosize
+        type="always"
+        mah="87vh"
+        // h="100vh"
+        scrollbarSize={14}
+        offsetScrollbars
+        styles={(theme) => ({
+          scrollbar: {
+            '&, &:hover': {
+              '.mantine-ScrollArea-thumb': {
+                backgroundColor: '#2C2D30',
+              },
+              background: 'transparent',
+            },
+            '&[data-orientation="horizontal"]': {
+              display: 'none',
+            },
+          },
+
+          corner: {
+            background: 'transparent',
+          },
+        })}
+      >
+        <div className={styles.linksContainer}>{children}</div>
+      </ScrollArea.Autosize>
+    </div>
+  );
 };
 
 export default SidebarNav;

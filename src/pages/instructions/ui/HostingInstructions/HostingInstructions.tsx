@@ -5,37 +5,76 @@ import AccordionV2 from '@src/shared/ui/AccordeonV2/AccordionV2';
 import usePageDecoration from '@src/shared/hooks/usePageDecoration/usePageDecoration';
 import { Helmet } from 'react-helmet';
 import SeoUpdater from '@src/components/SeoUpdater/SeoUpdater';
+import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
+import InstructionSkeleton from '@src/components/InstructionSkeleton/InstructionSkeleton';
+import NotFoundWIdget from '@src/components/NotFoundWidget/NotFoundWIdget';
 import styles from './HostingInstructions.module.scss';
 import hostingDataRu from '../../config/hostingDataRu.json';
 
 const HostingInstructions = () => {
   usePageDecoration('dark');
+  const location = useLocation();
+  const { i18n } = useTranslation();
+  const [data, setData] = useState<any>(null);
+  const [status, setStatus] = useState<string>('loading'); // loading | ok | error
+  const gitLink = `https://raw.githubusercontent.com/Aftershock669/amnezia-open-docs/master/docs/${i18n.resolvedLanguage}/instructions/0_starter-guide/0_starter-guide.json`;
+
+  useEffect(() => {
+    const fetchData = async () => {
+      setStatus('loading');
+
+      const rawRes = await fetch(gitLink);
+
+      if (rawRes.status !== 200) {
+        setTimeout(() => {
+          setStatus('error');
+        }, 400);
+      } else {
+        const fetchedData = await rawRes.json();
+
+        setData(fetchedData);
+
+        setTimeout(() => {
+          setStatus('ok');
+        }, 400);
+      }
+    };
+
+    fetchData();
+  }, [location.pathname, i18n.resolvedLanguage]);
 
   return (
     <>
-      <SeoUpdater title={`Amnezia - ${hostingDataRu.h1}`} metaDesc={hostingDataRu.h1} />
-      <div className={styles.root}>
-        <h1>{hostingDataRu.h1}</h1>
-        <h2>{hostingDataRu.h2}</h2>
-        <p>{hostingDataRu.p1}</p>
-        <blockquote>
-          <p>{hostingDataRu.cardText}</p>
-        </blockquote>
-        <p>{hostingDataRu.p2}</p>
-        <div className={styles.accordionWrapper}>
-          <AccordionV2>
-            {hostingDataRu.hostings.map((hosting, i) => (
-              <AccordionItemV2
-                key={hosting.link}
-                value={hosting.link}
-                label={<img src={hosting.logo} height="40px" width="auto" />}
-              >
-                <SingleHostingInstruction data={hosting} />
-              </AccordionItemV2>
-            ))}
-          </AccordionV2>
-        </div>
-      </div>
+      {status === 'loading' && <InstructionSkeleton />}
+      {status === 'error' && <NotFoundWIdget />}
+      {status === 'ok' && (
+        <>
+          <SeoUpdater title={`Amnezia - ${data.h1}`} metaDesc={data.h1} />
+          <div className={styles.root}>
+            <h1>{data.h1}</h1>
+            <h2>{data.h2}</h2>
+            <p>{data.p1}</p>
+            <blockquote>
+              <p>{data.cardText}</p>
+            </blockquote>
+            <p>{data.p2}</p>
+            <div className={styles.accordionWrapper}>
+              <AccordionV2>
+                {data.hostings.map((hosting: any, i: number) => (
+                  <AccordionItemV2
+                    key={hosting.link}
+                    value={hosting.link}
+                    label={<img src={hosting.logo} height="40px" width="auto" />}
+                  >
+                    <SingleHostingInstruction data={hosting} />
+                  </AccordionItemV2>
+                ))}
+              </AccordionV2>
+            </div>
+          </div>
+        </>
+      )}
     </>
   );
 };
