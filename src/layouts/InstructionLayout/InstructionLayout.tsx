@@ -18,7 +18,7 @@ const InstructionLayout = () => {
   const { instructionId } = useParams();
 
   useEffect(() => {
-    const gitLink = `https://raw.githubusercontent.com/Aftershock669/amnezia-open-docs/master/docs/${i18n.resolvedLanguage}/instructions/tableOfContents.json`;
+    const gitLink = `https://raw.githubusercontent.com/amnezia-vpn/amnezia.org-content/master/docs/${i18n.resolvedLanguage}/instructions/tableOfContents.json`;
 
     const fetchData = async () => {
       const res = await fetch(gitLink);
@@ -49,7 +49,7 @@ const InstructionLayout = () => {
     return (
       <DocsArticleMd
         // FETCH FROM GITHUB
-        docUrl={`https://raw.githubusercontent.com/Aftershock669/amnezia-open-docs/master/docs/${i18n.resolvedLanguage}/instructions/${instructionId}/${instructionId}.md`}
+        docUrl={`https://raw.githubusercontent.com/amnezia-vpn/amnezia.org-content/master/docs/${i18n.resolvedLanguage}/instructions/${instructionId}/${instructionId}.md`}
 
         // FETCH FROM PUBLIC
         // docUrl={`/docs/${i18n.resolvedLanguage}/instructions/${instructionId}/${instructionId}.md`}

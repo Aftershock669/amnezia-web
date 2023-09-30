@@ -19,7 +19,7 @@ const TroubleshootingPage = () => {
         breadcrumbs={[{ title: t('navigation.support'), href: '../support' }]}
       />
       <DocsList
-        dataLink={`https://raw.githubusercontent.com/Aftershock669/amnezia-open-docs/master/docs/${i18n.resolvedLanguage}/troubleshooting/tableOfContents.json`}
+        dataLink={`https://raw.githubusercontent.com/amnezia-vpn/amnezia.org-content/master/docs/${i18n.resolvedLanguage}/troubleshooting/tableOfContents.json`}
       />
     </div>
   );

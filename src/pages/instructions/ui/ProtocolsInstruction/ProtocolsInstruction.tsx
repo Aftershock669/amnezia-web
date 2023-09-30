@@ -11,7 +11,7 @@ const ProtocolsInstruction = () => {
   usePageDecoration('dark');
   const { i18n } = useTranslation();
 
-  const gitLink = `https://raw.githubusercontent.com/Aftershock669/amnezia-open-docs/master/docs/${i18n.resolvedLanguage}/instructions/protocols/img/protocols.png`;
+  const gitLink = `https://raw.githubusercontent.com/amnezia-vpn/amnezia.org-content/master/docs/${i18n.resolvedLanguage}/instructions/protocols/img/protocols.png`;
 
   return (
     <>

@@ -19,7 +19,7 @@ const ErrorCodesLayout = () => {
   const { errCode } = useParams();
 
   useEffect(() => {
-    const gitLink = `https://raw.githubusercontent.com/Aftershock669/amnezia-open-docs/master/docs/${i18n.resolvedLanguage}/troubleshooting/error-codes/tableOfContents.json`;
+    const gitLink = `https://raw.githubusercontent.com/amnezia-vpn/amnezia.org-content/master/docs/${i18n.resolvedLanguage}/troubleshooting/error-codes/tableOfContents.json`;
 
     const fetchData = async () => {
       const res = await fetch(gitLink);
@@ -54,7 +54,7 @@ const ErrorCodesLayout = () => {
         </Breadcrumbs>
         <div className={styles.instructionContent}>
           <DocsArticleMd
-            docUrl={`https://raw.githubusercontent.com/Aftershock669/amnezia-open-docs/master/docs/${i18n.resolvedLanguage}/troubleshooting/error-codes/${errCode}/${errCode}.md`}
+            docUrl={`https://raw.githubusercontent.com/amnezia-vpn/amnezia.org-content/master/docs/${i18n.resolvedLanguage}/troubleshooting/error-codes/${errCode}/${errCode}.md`}
           />
         </div>
         <div className={styles.contactsCardWrapper}>

@@ -29,9 +29,9 @@ const HeaderDownload = () => {
         text={t('headerDownload', { ns: 'main-page' })}
         variant="light"
         className={styles.textContainer}
-        // to="./instructions/starter-guide"
+        to="./instructions/starter-guide"
         // TODO Временная заглушка
-        to={`https://${i18n.resolvedLanguage}-docs.amnezia.org/guides/hosting-instructions/`}
+        // to={`https://${i18n.resolvedLanguage}-docs.amnezia.org/guides/hosting-instructions/`}
       />
       {/* <a href="/" className={styles.textContainer}> */}
       {/*  {t('headerDownload', { ns: 'main-page' })} */}

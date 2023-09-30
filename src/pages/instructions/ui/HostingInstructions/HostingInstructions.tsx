@@ -18,7 +18,7 @@ const HostingInstructions = () => {
   const { i18n } = useTranslation();
   const [data, setData] = useState<any>(null);
   const [status, setStatus] = useState<string>('loading'); // loading | ok | error
-  const gitLink = `https://raw.githubusercontent.com/Aftershock669/amnezia-open-docs/master/docs/${i18n.resolvedLanguage}/instructions/0_starter-guide/0_starter-guide.json`;
+  const gitLink = `https://raw.githubusercontent.com/amnezia-vpn/amnezia.org-content/master/docs/${i18n.resolvedLanguage}/instructions/0_starter-guide/0_starter-guide.json`;
 
   useEffect(() => {
     const fetchData = async () => {

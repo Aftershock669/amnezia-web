@@ -17,7 +17,7 @@ const Faq = () => {
   // const [read, setRead] = useState('');
 
   // useEffect(() => {
-  //   const gitLink = `https://raw.githubusercontent.com/Aftershock669/amnezia-open-docs/master/docs/${i18n.language}/faq/faq.md`;
+  //   const gitLink = `https://raw.githubusercontent.com/amnezia-vpn/amnezia.org-content/master/docs/${i18n.language}/faq/faq.md`;
   //
   //   const fetchData = () => {
   //     return fetch(gitLink)

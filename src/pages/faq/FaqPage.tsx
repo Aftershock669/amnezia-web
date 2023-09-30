@@ -14,9 +14,9 @@ import faqDataRu from '@src/components/Faq/faqDataRu';
 import faqDataEn from '@src/components/Faq/faqDataEn';
 import Accordion from '@src/shared/ui/Accordeon/Accordion';
 import DocsHeader from '@src/components/DocsHeader/DocsHeader';
+import Faq from '@src/components/Faq/Faq';
+import SeoUpdater from '@src/components/SeoUpdater/SeoUpdater';
 import styles from './FaqPage.module.scss';
-import Faq from "@src/components/Faq/Faq";
-import SeoUpdater from "@src/components/SeoUpdater/SeoUpdater";
 
 const FaqPage = () => {
   usePageDecoration('dark');
@@ -25,9 +25,9 @@ const FaqPage = () => {
   const [status, setStatus] = useState('loading');
 
   useEffect(() => {
-    const gitLinkAbout = `https://raw.githubusercontent.com/Aftershock669/amnezia-open-docs/master/docs/${i18n.resolvedLanguage}/faq/about.md`;
-    const gitLinkUsage = `https://raw.githubusercontent.com/Aftershock669/amnezia-open-docs/master/docs/${i18n.resolvedLanguage}/faq/usage.md`;
-    const gitLinkAccTest = `https://raw.githubusercontent.com/Aftershock669/amnezia-open-docs/master/docs/${i18n.resolvedLanguage}/faq/accordion-test.md`;
+    const gitLinkAbout = `https://raw.githubusercontent.com/amnezia-vpn/amnezia.org-content/master/docs/${i18n.resolvedLanguage}/faq/about.md`;
+    const gitLinkUsage = `https://raw.githubusercontent.com/amnezia-vpn/amnezia.org-content/master/docs/${i18n.resolvedLanguage}/faq/usage.md`;
+    const gitLinkAccTest = `https://raw.githubusercontent.com/amnezia-vpn/amnezia.org-content/master/docs/${i18n.resolvedLanguage}/faq/accordion-test.md`;
 
     const fetchData = async (url: string, setter: any) => {
       setStatus('loading');
@@ -68,7 +68,7 @@ const FaqPage = () => {
         variant="secondary"
       />
       <div className={styles.faqWrapper}>
-        {/*<Accordion data={i18n.resolvedLanguage === 'ru' ? faqDataRu : faqDataEn} />*/}
+        {/* <Accordion data={i18n.resolvedLanguage === 'ru' ? faqDataRu : faqDataEn} /> */}
         <Faq />
       </div>
 

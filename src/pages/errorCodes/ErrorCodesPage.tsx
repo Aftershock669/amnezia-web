@@ -22,7 +22,7 @@ const ErrorCodesPage = () => {
         ]}
       />
       <DocsList
-        dataLink={`https://raw.githubusercontent.com/Aftershock669/amnezia-open-docs/master/docs/${i18n.resolvedLanguage}/troubleshooting/error-codes/tableOfContents.json`}
+        dataLink={`https://raw.githubusercontent.com/amnezia-vpn/amnezia.org-content/master/docs/${i18n.resolvedLanguage}/troubleshooting/error-codes/tableOfContents.json`}
       />
     </div>
   );
