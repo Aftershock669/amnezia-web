@@ -29,7 +29,7 @@ const HeaderDownload = () => {
         text={t('headerDownload', { ns: 'main-page' })}
         variant="light"
         className={styles.textContainer}
-        to="./instructions/starter-guide"
+        to="./instructions/0_starter-guide"
         // TODO Временная заглушка
         // to={`https://${i18n.resolvedLanguage}-docs.amnezia.org/guides/hosting-instructions/`}
       />
