@@ -11,8 +11,8 @@ const SidebarNav = ({ children }: SidebarNavProps) => {
     <div className={styles.root}>
       <ScrollArea.Autosize
         type="always"
-        mah="87vh"
-        // h="100vh"
+        // mah="calc(100vh - 70px)"
+        h="100vh"
         scrollbarSize={14}
         offsetScrollbars
         styles={(theme) => ({
