@@ -14,7 +14,8 @@
     "metaContent": "Инструкции",
     "header": {
       "text": "Инструкции"
-    }
+    },
+    "legacyInstructionsLink": "Инструкции для старых версий приложения доступны здесь"
   },
   "troubleshootingPage": {
     "metaTitle": "Решение проблем - Amnezia",
