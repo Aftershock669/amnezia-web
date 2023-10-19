@@ -14,7 +14,8 @@
     "metaContent": "Instructions",
     "header": {
       "text": "Instructions"
-    }
+    },
+    "legacyInstructionsLink": "Instructions for old versions of the Amnezia App are available here"
   },
   "troubleshootingPage": {
     "metaTitle": "Troubleshooting - Amnezia",
