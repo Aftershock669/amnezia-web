@@ -10,6 +10,7 @@ import { useParams } from 'react-router-dom';
 import HostingInstructions from '@src/pages/instructions/ui/HostingInstructions/HostingInstructions';
 // import ProtocolsInstruction from '@src/pages/instructions/ui/ProtocolsInstruction/ProtocolsInstruction';
 import DocsArticleMd from '@src/components/DocsArticleMd/DocsArticleMd';
+import LegacyInstructionsLink from '@src/components/LegacyInstructionsLink/LegacyInstructionsLink';
 import styles from './InstructionLayout.module.scss';
 
 const InstructionLayout = () => {
@@ -77,6 +78,7 @@ const InstructionLayout = () => {
         <div className={styles.contactsCardWrapper}>
           <ContactsCard />
         </div>
+        <LegacyInstructionsLink />
       </div>
     </div>
   );
